@@ -2,9 +2,11 @@
 title: Un peu de math
 email: vincent.knight@gmail.com
 description: "I post stuff here about game theory, queueing theory, Sage, Python and other things..."
-baseurl: ""
+baseurl: "/unpeudemath"
 url: "http://yourdomain.com"
-username: "@drvinceknight"
+github_username: "drvinceknight"
+twitter_username: "@drvinceknight"
+plus_username: "+VincentKnight"
 
 # Build settings
 markdown: kramdown

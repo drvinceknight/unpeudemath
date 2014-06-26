@@ -25,4 +25,4 @@ $ jekyll unpeudemath
 
 Here is a picture:
 
-![some text](/assets/waterfall.jpg)
+![some text]({{site.baseurl}}/assets/waterfall.jpg)
