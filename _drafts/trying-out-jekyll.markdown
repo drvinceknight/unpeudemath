@@ -22,3 +22,7 @@ $ jekyll unpeudemath
 {% endhighlight %}
 
 [Here is another post]({% post_url 2014-06-26-welcome-to-jekyll %}).
+
+Here is a picture:
+
+![some text](/assets/waterfall.jpg)
