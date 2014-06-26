@@ -26,3 +26,7 @@ $ jekyll unpeudemath
 Here is a picture:
 
 ![some text]({{site.baseurl}}/assets/waterfall.jpg)
+
+Here is some mathematics \\(x^2=1\\):
+
+\\[x=\pm 1\\]
