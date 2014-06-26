@@ -98,19 +98,11 @@ a:visited { color: #205caa; }
   margin-right: 10px
 }
 .footer-col-2 {
-  width: 175px; /*fallback*/
-  width: -webkit-calc(23.125% - 10px);
-  width: -moz-calc(23.125% - 10px);
-  width: -o-calc(23.125% - 10px);
-  width: calc(23.125% - 10px);
-  margin-right: 10px
-}
-.footer-col-3 {
-  width: 335px; /*fallback*/
-  width: -webkit-calc(41.875%);
-  width: -moz-calc(41.875%);
-  width: -o-calc(41.875%);
-  width: calc(41.875%);
+  width: 410px; /*fallback*/
+  width: -webkit-calc(65%);
+  width: -moz-calc(65%);
+  width: -o-calc(65%);
+  width: calc(65%);
 }
 
 .site-footer ul { list-style: none; }
