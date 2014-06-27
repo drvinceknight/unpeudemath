@@ -8,6 +8,7 @@ tags:
 - Treasure Hunt
 - Operational Research
 - ESI
+comments: true
 ---
 
 Here is my first post using [jekyll](http://jekyllrb.com/), I'll see how this goes and potentially migrate my blog completely to here.
