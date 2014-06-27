@@ -125,7 +125,7 @@ p
 ![]({{site.baseurl}}/assets/images/ESI_challenge_scatter_plot.png)
 
 This was a tricky problem.
-We had no wifi in our hotel so download a relevant `R` package was out of the question.
+We had no wifi in our hotel so downloading a relevant `R` package was out of the question.
 
 We eventually formulated a non linear integer program but sadly our solver didn't seem able to handle it in time.
 With two minutes to go (the deadline was *dinner*) one of the teams who had been doing things very steadily ran over claiming that they might have a solution.
