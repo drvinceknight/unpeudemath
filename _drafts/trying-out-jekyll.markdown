@@ -21,7 +21,7 @@ Then I created the base site for my blog:
 $ jekyll unpeudemath
 {% endhighlight %}
 
-[Here is another post]({% post_url 2014-06-26-welcome-to-jekyll %}).
+[Here is another post]({{site.baseurl}}{% post_url 2014-06-26-welcome-to-jekyll %}).
 
 Here is a picture:
 
