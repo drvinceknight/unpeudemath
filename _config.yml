@@ -11,3 +11,4 @@ plus_username: "+VincentKnight"
 # Build settings
 markdown: kramdown
 permalink: pretty
+highlighter: pygments
