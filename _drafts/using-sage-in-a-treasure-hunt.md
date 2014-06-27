@@ -19,31 +19,10 @@ The academic activities are really valuable but arguably of more value is the fa
 One such 'good time' was a treasure hunt that because of some people dropping out of I was lucky enough to take part in.
 This was really great fun and in this post I'll describe the problems as well as the [Sage](http://sagemath.org/) code my team used to __almost__ win!
 
-Here's a photo of Pieter, Omar, Jenny and I:
+Here's a photo that Paul Harper took of Pieter, Omar, Jenny and I huddled around Sage:
 
-![]()
+![]({{site.baseurl}}/assets/images/huddled_around_sage.jpg)
 
-So I finally decided to try out `jekyll`. I mist say that I'm really impressed: it's so light weight!
-
-I looked at various tutorials and as I'm planning on deploying this (and possibly moving my [blog](http://drvinceknight.blogspot.co.uk/)) using github I took a look at theirs *but* it seemed a little tricky so I just followed the actual [`jekyll` tutorial](http://jekyllrb.com/docs/quickstart/).
-
-The first step was to install `jekyll`:
-
-{% highlight bash %}
-$ gem install jekyll
-{% endhighlight %}
-
-Then I created the base site for my blog:
-
-{% highlight bash %}
-$ jekyll unpeudemath
-{% endhighlight %}
-
-[Here is another post]({{site.baseurl}}{% post_url 2014-06-26-welcome-to-jekyll %}).
-
-Here is a picture:
-
-![some text]({{site.baseurl}}/assets/waterfall.jpg)
 
 Here is some mathematics \\(x^2=1\\):
 
