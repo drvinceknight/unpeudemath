@@ -23,12 +23,12 @@ $ git status
 
 Once I run the git status that's when I realise that I've now got a bunch of files I don't want to commit `.aux`, `.pyc` etc...
 
-I then normally throw in whatever those files are to a `.gitignore` file.
+I then normally throw whatever those files are to a `.gitignore` file.
 Despite teaching my students to never do anything twice and to always script whatever can be scripted: I have never actually put a `.gitignore` file together that has everything in it.
 
 So here's my first attempt.
 
-This is basically a modification of the Python `.gitignore` and a slight tweak of [this gist](https://gist.github.com/kogakure/149016) (there doesn't seem to be a bespoke LaTeX .gitignore as an option when you create a repository).
+This is basically a modification of the Python github `.gitignore` and a slight tweak of [this gist](https://gist.github.com/kogakure/149016) (there doesn't seem to be a bespoke LaTeX .gitignore as an option when you create a repository).
 
 {% highlight vim %}
 # Byte-compiled / optimized / DLL files
