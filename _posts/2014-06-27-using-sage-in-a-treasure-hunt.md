@@ -31,11 +31,11 @@ Here are the various challenges (again: thanks to Paul for taking the photos!):
 
 **A clinical pathway problem (we did this one by hand):**
 
-![]({{site.baseurl}}/assets/images/ESI_challenge_1.jpg)
+![]({{site.baseurl}}/assets/images/ESI_challenge_1.png)
 
 **A queueing problem:**
 
-![]({{site.baseurl}}/assets/images/ESI_challenge_2.jpg)
+![]({{site.baseurl}}/assets/images/ESI_challenge_2.png)
 
 To solve the above we wrote down the Markov chain (that's actually the picture that Pieter is working on in the first photo of this blog post).
 
@@ -77,7 +77,7 @@ I'm obviously missing out a couple of details (the actually description of the s
 
 **A chinese postman problem:**
 
-![]({{site.baseurl}}/assets/images/ESI_challenge_3.jpg)
+![]({{site.baseurl}}/assets/images/ESI_challenge_3.png)
 
 I'm not entirely sure what we did here as Pieter kind of ran with this one but at some point I was asked to calculate a matching on our graph. Here's the Sage code:
 
@@ -103,7 +103,7 @@ I'm not entirely sure that's the right Graph I was supposed to use but it's what
 
 **A packing problem:**
 
-![]({{site.baseurl}}/assets/images/ESI_challenge_4.jpg)
+![]({{site.baseurl}}/assets/images/ESI_challenge_4.png)
 
 I had remembered seeing that packing problems were implemented in Sage so as we were running back from collecting the clue I yelled: this will take 3 minutes!
 
@@ -112,7 +112,7 @@ As I read around the docs the rest of my team was able to solve this heuristical
 
 **The problem of doom that made everyone cry:**
 
-![]({{site.baseurl}}/assets/images/ESI_challenge_5.jpg)
+![]({{site.baseurl}}/assets/images/ESI_challenge_5.png)
 
 After having pulled in the data here is about as far as Sage got us:
 
