@@ -86,6 +86,6 @@ coverage.xml
 docs/_build/
 {% endhighlight %}
 
-You can find this at [this gist](https://github.com/drvinceknight/EmergencyUnitEmergencyVehicleInterface/blob/master/.gitignore).
+You can find this at [this gist](https://gist.github.com/drvinceknight/060f091a61b91e3b449b).
 
 If anyone can suggest anything I'm missing it'd be great to hear it :)
