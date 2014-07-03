@@ -31,6 +31,35 @@ So here's my first attempt.
 This is basically a modification of the Python github `.gitignore` and a slight tweak of [this gist](https://gist.github.com/kogakure/149016) (there doesn't seem to be a bespoke LaTeX .gitignore as an option when you create a repository).
 
 {% highlight vim %}
+# LaTeX Files
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
