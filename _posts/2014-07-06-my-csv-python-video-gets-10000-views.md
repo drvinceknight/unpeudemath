@@ -6,7 +6,7 @@ tags:
 - code
 - python
 - csv
-comments: false
+comments: true
 ---
 
 So the other day I got the following notification on my phone:
