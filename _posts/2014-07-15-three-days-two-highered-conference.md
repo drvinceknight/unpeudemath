@@ -164,7 +164,7 @@ I really enjoy the vibe at education conferences as they is a slight sense of ur
 
 Two final links:
 
-- The [#innovcardiff](https://twitter.com/hashtag/innovcardiff?src=hash) hash*tag if you would like to see what was being said online about the innovation conference (big applause to [Calvin Smith](https://twitter.com/C_J_Smith) who did a tremendous job on there!);
+- The [#innovcardiff](https://twitter.com/hashtag/innovcardiff?src=hash) hashtag if you would like to see what was being said online about the innovation conference (big applause to [Calvin Smith](https://twitter.com/C_J_Smith) who did a tremendous job on there!);
 - The [#cardiffedu](https://twitter.com/hashtag/cardiffedu?src=hash) hashtag if you would like to see the same for the Cardiff University education conference.
 
 **If anyone who attended the conferences has anything to add it would be great to hear from you and if anyone couldn't make it but would like to know more: please get in touch :)**
