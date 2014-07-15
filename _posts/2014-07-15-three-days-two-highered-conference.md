@@ -108,7 +108,7 @@ Here's a couple of snippets from each session:
 
     > In 2008, students set up a reading group and started to read complex mathematical topics.
 
-- The rest of the conference was a natural continuation from Chris's talk as [Dana Ernst]() and [TJ Hitchman]() spoke about Inquiry Based Learning (a pedagogic term that encompasses the Moore method - I'm sure someone can correct me if I got that subtlety wrong).
+- The rest of the conference was a natural continuation from Chris's talk as [Dana Ernst](https://plus.google.com/+DanaErnst) and [TJ Hitchman](https://plus.google.com/+TheronHitchman/posts) spoke about Inquiry Based Learning (a pedagogic term that encompasses the Moore method - I'm sure someone can correct me if I got that subtlety wrong).
 
     <br>
     ![](https://lh3.googleusercontent.com/-JmHjJHFWEFo/U7ut9LOEFZI/AAAAAAABN9U/VrLpxwt6UHM/w779-h584-no/IMG_20140708_093739.jpg)
@@ -128,6 +128,8 @@ Here's a couple of snippets from each session:
     Another important point was the criteria that defines an IBL approach:
 
     > Students are in charge of not only generating the content but also critiquing the content.
+
+    You can find all of Dana and TJ's content on their [github repository](https://github.com/dcernst/IBL-CardiffWorkshop2014).
 
 After this session I enjoyed a good chat with TJ who helped me figure out how to make my R/SAS course better.
 After that my project student who will be working with me to evaluate my flipped classroom had a great talk with Robert, TJ and Dana who gave some really helpful advice.
