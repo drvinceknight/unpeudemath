@@ -75,4 +75,28 @@ Here's a couple of snippets from each session:
 
     ![](https://lh5.googleusercontent.com/-7684PFj2RDI/U7qSmdm8-kI/AAAAAAABNz8/iBmPGruL4gE/w779-h584-no/IMG_20140707_132840.jpg)
 
-    This was a great talk
+    This was a great talk and it was very neat to have a non mathematical point of view.
+    My first highlight from Steve's talk can be seen in the photo above.
+    I think that that fundamental question ('why am I better than a book') could in fact help improve the instruction of many.
+
+    > A flipped classroom allows some control to be put in the hands of the students.
+
+    > The reason students are at university is to get an education and not necessarily a degree.
+
+- We then moved on to a relaxed panel discussion about the flipped classroom, one of the things that I think was a big highlight of that was the importance of involving students in the pedagogic reasoning behind whatever approach is used in a class.
+
+- The final 'talk' of the day was by [Chris Sangwin](http://www.lboro.ac.uk/departments/mec/staff/chris-sangwin.html) who talked about his Moore Method class.
+
+    ![](https://lh3.googleusercontent.com/-nn35dfS5vcE/U7qn0psfLgI/AAAAAAABN1Q/5Xo0-lxmSD0/w779-h584-no/IMG_20140707_145908.jpg)
+
+    This was a fascinating talk as Chris clearly described the success he has had with implementing a Moore Method class.
+
+    In particular he highlighted the importance of he role of the instructor in this framework where students are given a set of problems to work through and present to their peers (there is no lecturing in a Moore method class).
+
+    Some highlights:
+
+    > In 2007, after his class finished students found the book from which his problems originated and continued to work through them on their own.
+
+    > In 2008, students set up a reading group and started to read complex mathematical topics.
+
+- The rest of the conference was a natural continuation from Chris's talk as [Dana Ernst]() and [TJ Hitchman]() spoke about Inquiry Based Learning (a pedagogic term that encompasses the Moore method).
