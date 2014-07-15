@@ -113,9 +113,22 @@ Here's a couple of snippets from each session:
     2. The importance of creating a safe environment in which students can fail (in order to learn). **Productive failure**.
     3. The various difficulties associated with implementing an IBL approach due to class size (this was a recurring theme with regards to UK vs US class sizes).
 
+    Another important point was the criteria that defines an IBL approach:
+
+    > Students are in charge of not only generating the content but also critiquing the content.
+
 After this session I enjoyed a good chat with TJ who helped me figure out how to make my R/SAS course better.
 After that my project student who will be working with me to evaluate my flipped classroom had a great talk with Robert, TJ and Dana who gave some really helpful advice.
 One of the highlights that came out of this was Robert putting very simply what I believe defines an effective pedagogic approach.
 Hopefully Robert will either correct me or forgive me for paraphrasing:
 
 > Whatever the approach: flipped classroom, IBL, interpretive dance, as long as the system allows you to empower your students and monitor how they are learning it is worth doing.
+
+I'm probably forgetting quite a few details about the workshop (including the 6+ course conference dinner which was pretty awesome).
+Now to describe the next conference which was the [Cardiff University Annual Learning and Teaching Conference](http://learning.cf.ac.uk/events/101/annual-learning-and-teaching-conference-academic-support/)
+
+**Wednesday: Cardiff University Annual Learning and Teaching Conference**
+
+This was my first time attending this conference and I was lucky enough to have my abstract accepted so I was able to give a talk.
+
+You can find my slides [here](http://goo.gl/ESv6H9).
