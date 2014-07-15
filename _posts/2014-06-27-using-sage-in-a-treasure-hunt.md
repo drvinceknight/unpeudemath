@@ -42,7 +42,7 @@ To solve the above we wrote down the Markov chain (that's actually the picture t
 Here's the transition matrix corresponding to the Markov Chain:
 
 \\[\begin{pmatrix}
--\frac{4}{45} & \frac{4}{45} & 0 & 0 & 0 \\\ \\\
+-\frac{4_5}{45} & \frac{4}{45} & 0 & 0 & 0 \\\ \\\
 \frac{1}{20} & -\frac{5}{36} & \frac{1}{45} & \frac{1}{15} & 0 \\\ \\\
 0 & \frac{1}{10} & -\frac{1}{6} & 0 & \frac{1}{15} \\\ \\\
 0 & \frac{1}{20} & 0 & -\frac{13}{180} & \frac{1}{45} \\\ \\\
