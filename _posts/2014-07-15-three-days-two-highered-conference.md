@@ -162,7 +162,7 @@ In all honesty I was kind of tired so I didn't take as detailed notes as I would
 **A great three days**
 
 This brings my attendance at education conference to a total of 3 and I must say that I can't wait to go to the next one (incidentally my abstract for the [CETL-MSOR](http://www.sigma-network.ac.uk/cetl-msor/cetl-msor-conference-2014/) conference got accepted today).
-I really enjoy the vibe at education conferences as they is a slight sense of urgency in case anyone says anything that someone might be able to use/adapt/steal so as to improve their teaching and have a real **impact** on our students' lives.
+I really enjoy the vibe at education conferences as there is a slight sense of urgency in case anyone says anything that someone might be able to use/adapt/steal so as to improve their teaching and have a real **impact** on our students' lives.
 
 Two final links:
 
