@@ -132,3 +132,25 @@ Now to describe the next conference which was the [Cardiff University Annual Lea
 This was my first time attending this conference and I was lucky enough to have my abstract accepted so I was able to give a talk.
 
 You can find my slides [here](http://goo.gl/ESv6H9).
+
+In all honesty I was kind of tired so I didn't take as detailed notes as I would like and/or as many photos but here are some highlights:
+
+- I enjoyed Stephen Rutherford discussing the plans of the Biosciences school to bring in peer assessment:
+
+    > Assessment for learning and not of learning
+
+- I liked [Anne Cunningham](https://twitter.com/amcunningham) reminding everyone that students obtain content from a variety of sources when talking about their using of [scoop.it](http://www.scoop.it/):
+
+    > The curators are not just the staff. The prime curators are the students.
+
+- Rob Wilson and [Nathan Roberts](https://twitter.com/NathanRobertsHE/) gave an overview of the tutoring system that we as a university will be heading towards.
+
+**A great three days**
+
+This brings my attendance at education conference to a total of 3 and I must say that I can't wait to go to the next one (incidentally my abstract for the [CETL-MSOR](http://www.sigma-network.ac.uk/cetl-msor/cetl-msor-conference-2014/) conference got accepted today).
+I really enjoy the vibe at education conferences as they're a slight sense of urgency in case anyone says anything that someone might be able to use/adapt/steal so as to improve their teaching and have a real impact on our students' lives.
+
+Two final links:
+
+- The [#innovcardiff](https://twitter.com/hashtag/innovcardiff?src=hash) hash*tag if you would like to see what was being said online about the innovation conference (big applause to [Calvin Smith](https://twitter.com/C_J_Smith) who did a tremendous job on there!);
+- The [#cardiffedu](https://twitter.com/hashtag/cardiffedu?src=hash) hashtag if you would like to see the same for the Cardiff University education conference.
