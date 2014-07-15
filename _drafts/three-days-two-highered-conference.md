@@ -99,4 +99,23 @@ Here's a couple of snippets from each session:
 
     > In 2008, students set up a reading group and started to read complex mathematical topics.
 
-- The rest of the conference was a natural continuation from Chris's talk as [Dana Ernst]() and [TJ Hitchman]() spoke about Inquiry Based Learning (a pedagogic term that encompasses the Moore method).
+- The rest of the conference was a natural continuation from Chris's talk as [Dana Ernst]() and [TJ Hitchman]() spoke about Inquiry Based Learning (a pedagogic term that encompasses the Moore method - I'm sure someone can correct me if I got that subtlety wrong).
+
+    ![](https://lh3.googleusercontent.com/-JmHjJHFWEFo/U7ut9LOEFZI/AAAAAAABN9U/VrLpxwt6UHM/w779-h584-no/IMG_20140708_093739.jpg)
+
+    ![](https://lh3.googleusercontent.com/od_Jw2Iyur-33NM63ZyWztli0nVg0HIs94jQFECO9Bc=s211-p-n://lh3.googleusercontent.com/-aqds-K3wAVE/U7vYve3ZBMI/AAAAAAABN-0/DvZqxmX6IF4/w779-h584-no/IMG_20140708_123956.jpg)
+
+    This was a really great interactive session that ran over to Tuesday.
+    There is far too much that happened in this session and it was hard to take notes as we were very much involved but here is some of the things that stuck for me.
+
+    1. TJ ran a great first little session that basically got us to think about what we want to be as educators.
+    One of the main things that came out of the 'what do you want your students to remember in 20 years time' question was that very few of us (I'm not sure if anyone did) mentioned the actual content of the courses we teach.
+    2. The importance of creating a safe environment in which students can fail (in order to learn).
+    3. The various difficulties associated with implementing an IBL approach due to class size (this was a recurring theme with regards to UK vs US class sizes).
+
+After this session I enjoyed a good chat with TJ who helped me figure out how to make my R/SAS course better.
+After that my project student who will be working with me to evaluate my flipped classroom had a great talk with Robert, TJ and Dana who gave some really helpful advice.
+One of the highlights that came out of this was Robert putting very simply what I believe defines an effective pedagogic approach.
+Hopefully Robert will either correct me or forgive me for paraphrasing:
+
+> Whatever the approach: flipped classroom, IBL, interpretive dance, as long as the system allows you to empower your students and monitor how they are learning it is worth doing.
