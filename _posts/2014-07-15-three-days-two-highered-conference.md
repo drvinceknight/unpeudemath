@@ -134,7 +134,7 @@ Here's a couple of snippets from each session:
 After this session I enjoyed a good chat with TJ who helped me figure out how to make my R/SAS course better.
 After that my project student who will be working with me to evaluate my flipped classroom had a great talk with Robert, TJ and Dana who gave some really helpful advice.
 One of the highlights that came out of this was Robert putting very simply what I believe defines an effective pedagogic approach.
-Hopefully Robert will either correct me or forgive me for paraphrasing:
+Hopefully Robert will either correct me or forgive me for paraphrasing (**EDIT**: He has corrected me in the comments):
 
 > Whatever the approach: flipped classroom, IBL, interpretive dance, as long as the system allows you to empower your students and monitor how they are learning it is worth doing.
 
