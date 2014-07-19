@@ -6,7 +6,7 @@ tags:
 - Python
 - Conference
 - Github
-comments: false
+comments: true
 ---
 
 I'm very conscious about wanting to share as much of what I do as a research/instructor in as easy a way as possible.
