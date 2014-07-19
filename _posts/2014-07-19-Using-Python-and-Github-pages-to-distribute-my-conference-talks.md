@@ -63,13 +63,13 @@ Talks$ cd 2014-07-25-Measuring-the-Price-of-Anarchy-in-Critical-Care-Unit-Intera
 {% endhighlight %}
 
 I can work on those slides just as I normally would.
-One I'm ready I go back to the root of my Talks directory and run the `serve.py` script:
+Once I'm ready I go back to the root of my Talks directory and run the `serve.py` script:
 
 {% highlight bash %}
 Talks$ python serve.py
 {% endhighlight %}
 
-This file automatically goes through my directories reading the date from the directory names and identifying `.html` and `.pdf` files as talks.
+This file automatically goes through my sub-directories reading the date from the directory names and identifying `.html` or `.pdf` files as talks.
 This creates the `index.html` file which is an index of all my talks (sorted by date) with a link to the right file.
 To get the site online you simply need to push it to the gh-pages branch of your github repository.
 
@@ -130,6 +130,17 @@ index.close()
 
 The main lines that do anything are lines 25-38, everything else just reads in the relevant header and footer files.
 
-There are various things that could be done to improve this and I'm not completely convinced I can't just use `jekyll` for this but it was quicker to write that script then to figure it out (or at least that was my conclusion after googling twice).
+So now getting my talks written and online is hardly an effort at all:
+
+{% highlight bash %}
+# Write awesome talk
+Talks$ git commit -am 'Finished talk on proof of finite number of primes'  # This I would do anyway
+Talks$ python serve.py  # This is the 1 extra thing I need to do
+Talks$ git push origin  # This I would do anyway
+{% endhighlight %}
+
+There are various things that could be done to improve this (including pushing via `serve.py` as an option) and I'm not completely convinced I can't just use `jekyll` for this but it was quicker to write that script then to figure it out (or at least that was my conclusion after googling twice).
+
+If anyone has any fixes/improvements (including: "You idiot just run jekyll with the `build-academic-conference-talk-site` flag") that'd be super appreciated and if you want to see the Talk repository (with python script, css files, header.html etc...) it's here: [github.com/drvinceknight/Talks](https://github.com/drvinceknight/Talks).
 
 Now to finish writing my talk for [ORAHS2014](http://www.orahs2014.fc.ul.pt/)...
