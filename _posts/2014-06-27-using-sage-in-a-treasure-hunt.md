@@ -35,17 +35,13 @@ Here are the various challenges (again: thanks to Paul for taking the photos!):
 
 **A queueing problem:**
 
-![]({{site.baseurl}}/assets/images/ESI_challenge_2.png)
-
-To solve the above we wrote down the Markov chain (that's actually the picture that Pieter is working on in the first photo of this blog post).
-
-Here's the transition matrix corresponding to the Markov Chain:
+![]({{site.baseurl}}/assets/images/ESI_challenge_2.png) To solve the above we wrote down the Markov chain (that's actually the picture that Pieter is working on in the first photo of this blog post).  Here's the transition matrix corresponding to the Markov Chain:
 
 \\[\begin{pmatrix}
--\frac{4_5}{45} & \frac{4}{45} & 0 & 0 & 0 \\\ \\\
-\frac{1}{20} & -\frac{5}{36} & \frac{1}{45} & \frac{1}{15} & 0 \\\ \\\
-0 & \frac{1}{10} & -\frac{1}{6} & 0 & \frac{1}{15} \\\ \\\
-0 & \frac{1}{20} & 0 & -\frac{13}{180} & \frac{1}{45} \\\ \\\
+-\frac{4_5}{45} & \frac{4}{45} & 0 & 0 & 0 \\\ \\
+\frac{1}{20} & -\frac{5}{36} & \frac{1}{45} & \frac{1}{15} & 0 \\\ \\
+0 & \frac{1}{10} & -\frac{1}{6} & 0 & \frac{1}{15} \\\ \\
+0 & \frac{1}{20} & 0 & -\frac{13}{180} & \frac{1}{45} \\\ \\
 0 & 0 & 0 & \frac{1}{10} & -\frac{1}{10}
 \end{pmatrix}\\]
 
