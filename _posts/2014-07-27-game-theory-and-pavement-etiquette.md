@@ -6,7 +6,7 @@ tags:
 - Game Theory
 - Walking
 - Etiquette
-comments: false
+comments: true
 ---
 
 Last week the BBC published an article entitled: ['Advice for foreigners on how Britons walk'](http://www.bbc.co.uk/news/magazine-28352045).
