@@ -24,18 +24,18 @@ Let's consider two people walking along a street.
 We'll call one of them Alexandre and the other one Bernard.
 
 Alexandre and Bernard have two options available to them.
-In game theory we call these strategies and write: \\(S=\{L,R\}\\) where \\(L\\) denotes walk on the left and \\(R\\) denotes walk on the right.
+In game theory we call these strategies and write: \\(S=\\{L,R\\}\\) where \\(L\\) denotes walk on the left and \\(R\\) denotes walk on the right.
 
-We imagine that Alexandre and Bernard were to close there eyes and simply walk towards each other making a choice from \\(S\\).
+We imagine that Alexandre and Bernard close there eyes and simply walk towards each other making a choice from \\(S\\).
 To analyse the outcome of these choices we'll attribute a value of \\(1\\) to someone who doesn't bump in to someone else and \\(-1\\) if they do bump in to the opposite person.
 
 Thus we write:
 
-\\[u\_{A}(L,L)=u\_{B}(R,R)=1\\]
+\\[u\_{A}(L,L)=u\_{B}(L,L)=u\_{A}(R,R)=u\_{B}(R,R)=1\\]
 
 and
 
-\\[u\_{A}(L,R)=u\_{B}(L,R)=-1\\]
+\\[u\_{A}(L,R)=u\_{B}(L,R)=u\_{A}(R,L)=u\_{B}(R,L)=-1\\]
 
 We usually represent this situation using two matrices, one showing the utility of each player:
 
@@ -54,7 +54,7 @@ B = \begin{pmatrix}
 
 From these matrices it is easy to read the outcomes of any strategy pairs.
 If Alexandre plays \\(L\\) and Bernard plays \\(R\\) then they both get a utility of \\(1\\).
-If both are at that strategy pair then neither has a reason to `deviate` their strategy: this is called a [Nash Equilibrium](http://en.wikipedia.org/wiki/Nash_equilibrium).
+If both are at that strategy pair then neither has a reason to 'deviate' their strategy: this is called a [Nash Equilibrium](http://en.wikipedia.org/wiki/Nash_equilibrium).
 
 Of course though (as alluded to in the BBC article), some people might not always do the same thing.
 Perhaps Bernard would randomly choose from \\(S\\).
@@ -78,9 +78,9 @@ At this equilibrium the utility to both players is in fact \\(u\_{A}(\sigma,\sig
 This Nash equilibrium is in fact much **worse** than the other Nash equilibria.
 In a situation with central control (which if you recall the BBC article is not something that happens on British pavements) then we would be operating with either everyone walking on the left or everyone walking on the right so that the utility would be 1.
 As this is also a Nash Equilibrium then there would be no reason for anyone to change.
-Sadly it's possible that we get _stuck_ at the other Nash equilibrium where everyone randomly walks on the right or the left (again: at this point no one has an incentive to move).
+Sadly it is possible that we get _stuck_ at the other Nash equilibrium where everyone randomly walks on the right or the left (again: at this point no one has an incentive to move).
 This idea of comparing **worst case Nash Equilibrium** to the best possible outcome is referred to as the Price of Anarchy and has a lot to do with my personal research.
-If it's of interest [here is a short video on the subject](https://www.youtube.com/watch?v=DWiAAWZfooE) and here's a publication that looked at the [effect of selfish behaviour in public service systems](http://www.sciencedirect.com/science/article/pii/S0377221713003019) (sadly that is behind a paywall but if anyone would like to read it please do get in touch).
+If it is of interest [here is a short video on the subject](https://www.youtube.com/watch?v=DWiAAWZfooE) and here's a publication that looked at the [effect of selfish behaviour in public service systems](http://www.sciencedirect.com/science/article/pii/S0377221713003019) (sadly that is behind a paywall but if anyone would like to read it please do get in touch).
 
 There are some major assumptions being made in all of the above.
 In particular two people walking with their eyes closed towards each other is probably not the best way to think of this.
@@ -89,8 +89,8 @@ In fact as all the people on the pavements of Britain constantly walk around you
 This in fact fits in to a fascinating area of game theory called evolutionary game theory.
 The main idea is to consider multiple agents randomly 'bumping in to each other' and playing the game above.
 
-Below are two plots showing a computer simulation of this (using code I wrote for [this video](https://www.youtube.com/watch?v=Tz-lZy0AKRI)).
-Here is the script that makes use of this small [agent based simulation package](https://github.com/drvinceknight/Gamepy/blob/master/Abm/Abm.py):
+Below are two plots showing a simulation of this (using Python code I describe in [this video](https://www.youtube.com/watch?v=Tz-lZy0AKRI)).
+Here is the script that makes use of this small [agent based simulation script](https://github.com/drvinceknight/Gamepy/blob/master/Abm/Abm.py):
 
 {% highlight python %}
 import Abm
@@ -108,11 +108,11 @@ g.simulate(plot=True)
 {% endhighlight %}
 
 
-We see that if we start with everyone walking on one side of the left side of the pavement then things are pretty stable:
+We see that if we start with everyone walking on one side of the left side of the pavement then things are pretty stable (using a little bit of algebra this can be shown to be a so called 'evolutionary stable strategy'):
 
 ![]({{site.baseurl}}/assets/images/pavement_etiquette_2.svg)
 
-However, if we start with everyone playing the **worst possible Nash Equilibrium** (randomly choosing a side of the pavement) then we see that this is not stable and in fact we slowly converge towards to the population picking a side of the pavement:
+However, if we start with everyone playing the **worst possible Nash Equilibrium** (randomly choosing a side of the pavement) then we see that this is not stable and in fact we slowly converge towards the population picking a side of the pavement (this is what is called a **non** evolutionary stable strategy):
 
 ![]({{site.baseurl}}/assets/images/pavement_etiquette_3.svg)
 
