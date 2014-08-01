@@ -6,7 +6,7 @@ tags:
 - code
 - game theory
 - sage
-comments : false
+comments : true
 ---
 
 [+James Campbell](https://plus.google.com/+JamesCampbell95/posts) and I spent a lot of time this Summer working on implementing some Game Theory in to [Sage](http://sagemath.org/).
