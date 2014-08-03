@@ -52,7 +52,7 @@ To solve our problem we can use cooperative game theory and in particular use a 
 v(c) = \begin{cases}
 0 &\text{if } c = \emptyset, \\\
 5 &\text{if } c = \\{A\\}, \\\
-29 &\text{if } c = \\{B\\}, \\\
+20 &\text{if } c = \\{B\\}, \\\
 39 &\text{if } c = \\{C\\}, \\\
 20 &\text{if } c = \\{A,B\\}, \\\
 39 &\text{if } c = \\{A,C\\}, \\\
@@ -86,7 +86,7 @@ First of all we need to define the characteristic function:
 {% highlight python %}
 sage: v = {(): 0,
 ....:      ('A'): 5,
-....:      ('B'): 29,
+....:      ('B'): 20,
 ....:      ('C'): 39,
 ....:      ('A', 'B'): 20,
 ....:      ('A', 'C'): 39,
@@ -140,10 +140,10 @@ To calculate this we simply get Sage to tell us the Shapley value:
 
 {% highlight python %}
 sage: taxi_game.shapley_value()
-{'A': 1/6, 'B': 73/6, 'C': 80/3}
+{'A': 5/3, 'B': 55/6, 'C': 169/6}
 {% endhighlight %}
 
-This shows that in this particular case Alice should pay £0.17, Bob £12.17 and Celine £26.67 (rounding has obviously caused us to gain a penny along the way but you get the idea) :)
+This shows that in this particular case Alice should pay £1.67, Bob £9.17 and Celine £28.17 (rounding has obviously caused us to gain a penny along the way but you get the idea) :)
 
 **This is the first in a series of 3 posts that I'll get around to writing, in the next one I'll cover ticket 16331 which takes care of matching games :)**
 
