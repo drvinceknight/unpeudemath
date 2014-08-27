@@ -1,6 +1,6 @@
 ---
 layout        : post
-title         : "A Sneak Preview of Game Theory in Sage (2/3): Matching Games
+title         : "A Sneak Preview of Game Theory in Sage (2/3): Matching Games"
 categories    : code
 tags          :
 - code
@@ -20,70 +20,46 @@ In this post I'll talk about the second of 3 tickets that James and I worked on:
 One of the best explanations of a matching game (also called the stable marriage problem) can be found in [this video](https://www.youtube.com/watch?v=w1leqkpDaRw).
 That video really is awesome but it might be a bit long (it's 25 minutes) so this very [short video](http://youtu.be/ZMK3qW4ZHqI) I threw together for a class I teach might be of interest (it is no where near as good as the previous one but it's 3 minutes long).
 
-...
+Basically a matching game attempts to create links between two groups of people (referred to as suitors and reviewers) in such a way as no one wants to break their link:
 
-Here is the definition that I give my students:
+![]({{site.baseurl}}/assets/images/base_matching_game.png)
 
-A characteristic function game G is given by a pair \\(N,v\\) where \\(N\\) is the number of players and \\(v:2[N]\to\mathbb{R}\\) is a characteristic function which maps every coalition of players to a payoff.
+In the above picture we see the _preferences_ of the suitors and the reviewers.
+So \\(a\\), prefers \\(B\\) to \\(A\\), and \\(A\\) to \\(C\\).
 
-Here is something else that I describe to my students:
+Here is the actual definition of a stable matching that I give my students:
 
-> Let's assume that Alice, Bob and Celine all share a taxi. They all live in a straight line (with regards to the trajectory of the taxi) and the costs associated with their trip is Alice: £5, Bob: £20, Celine: £39.
+A matching game of size \\(N\\) is defined by two disjoint sets \\(S\\) and \\(R\\) or suitors and reviewers of size \\(N\\).
+Associated to each element of \\(S\\) and \\(R\\) is a preference list:
 
-> What is the fairest way of sharing out the total taxi fair (which would be £39)?
+$$f:S\to R^N\text{ and }g:R\to S^N$$
 
-From Alice's point of view she needs to pay less than £5 (or their would be no point in her sharing the taxi).
-Similarly for Bob and Celine, however we also want the amount paid by Alice **and** Bob to be less than if **they** had shared a taxi etc...
+A matching \\(M\\) is a any bijection between \\(S\\) and \\(R\\). If \\(s\in S\\) and \\(r\in R\\) are matched by \\(M\\) we denote:
 
-To solve our problem we can use cooperative game theory and in particular use a characteristic function game:
+$$M(s)=r$$
 
-\\[
-v(c) = \begin{cases}
-0 &\text{if } c = \emptyset, \\\
-5 &\text{if } c = \\{A\\}, \\\
-20 &\text{if } c = \\{B\\}, \\\
-39 &\text{if } c = \\{C\\}, \\\
-20 &\text{if } c = \\{A,B\\}, \\\
-39 &\text{if } c = \\{A,C\\}, \\\
-39 &\text{if } c = \\{B,C\\}, \\\
-39 &\text{if } c = \\{A,B,C\\}. \\\
-\end{cases}
-\\]
+The above image defines a matching game, one possible matching could be given below:
 
-This function maps each coalition of players to a value (in particular to their taxi fair).
-So we see that if Alice and Bob shared a taxi without Celine then their taxi fair would be £20.
+![]({{site.baseurl}}/assets/images/unstable_matching.png)
 
-It can be shown (I won't cover that here as I want to get to the Sage code) that the 'fair' way of sharing the cost of the taxi is called the **Shapley value** \\(\phi\\) which is a vector given by:
+**It's immediate to note however that \\(B\\) and \\(c\\) prefer each other to their current matching: so the above matching is unstable.**
+In that example \\((B,c)\\) is called a 'blocking pair'.
 
-\\[
-\phi\_i(G) = \frac{1}{N!} \sum\_{\pi\in\Pi\_n} \Delta\_{\pi}^G(i)
-\\]
+Luckily Gale and Shapley obtained an algorithm that guarantees a stable matching and this is what James and I put together in to Sage.
 
-
-where:
-
-\\[ \Delta\_{\pi}^G(i) = v\bigl( S\_{\pi}(i) \cup \{i\} \bigr) - v\bigl( S\_{\pi}(i) \bigr) \\]
-
-where \\(S\_{\pi}(i)\\) is the set of predecessors of \\(i\\) in some permutation of the players \\(\pi\\), i.e.  \\(S\_{\pi}(i) = \\{ j \mid \pi(i) > \\pi(j) \\}\\).
-
-**I've got a video that describes all this if it's helpful: [https://www.youtube.com/watch?v=aThG4YAFErw](https://www.youtube.com/watch?v=aThG4YAFErw).**
-Here however I want to give a sneak preview of how to figure out what Alice, Bob and Celine should pay using a future release of Sage:
-
-First of all we need to define the characteristic function:
-
+First, let's define a matching game:
 
 {% highlight python %}
-sage: v = {(): 0,
-....:      ('A'): 5,
-....:      ('B'): 20,
-....:      ('C'): 39,
-....:      ('A', 'B'): 20,
-....:      ('A', 'C'): 39,
-....:      ('B', 'C'): 39,
-....:      ('A', 'B', 'C'): 39}
+sage: suitr_pref = {'a': ('B', 'A', 'C'),
+....:               'b': ('B', 'C', 'A'),
+....:               'c': ('A', 'B', 'C')}
+sage: reviewr_pref = {'A': ('a', 'b', 'c'),
+....:                 'B': ('a', 'c', 'b'),
+....:                 'C': ('b', 'c', 'a'),
+sage: m = MatchingGame([suitr_pref, reviewr_pref])
 {% endhighlight %}
 
-As you can see we do this using a Python dictionary which allows us to map tuples (or indeed coalitions) to values (which is exactly what a characteristic function is).
+You can
 
 We then create an instance of the `CooperativeGame` class (which is what James and I put together):
 
