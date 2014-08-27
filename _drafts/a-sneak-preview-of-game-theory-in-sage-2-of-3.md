@@ -55,63 +55,53 @@ sage: suitr_pref = {'a': ('B', 'A', 'C'),
 ....:               'c': ('A', 'B', 'C')}
 sage: reviewr_pref = {'A': ('a', 'b', 'c'),
 ....:                 'B': ('a', 'c', 'b'),
-....:                 'C': ('b', 'c', 'a'),
+....:                 'C': ('b', 'c', 'a')}
 sage: m = MatchingGame([suitr_pref, reviewr_pref])
 {% endhighlight %}
 
-You can
+You can see that python dictionaries are used for the functions \\(f\\) and \\(g\\) described above (the suitor preferences).
 
-We then create an instance of the `CooperativeGame` class (which is what James and I put together):
-
-{% highlight python %}
-sage: taxi_game = CooperativeGame(v)
-{% endhighlight %}
-
-If you tab complete after typing `taxi_game.` you can see some of the methods and attributes associated with the `CooperativeGame` class:
+If you tab complete after typing `m.` you can see some of the methods and attributes associated with the `MatchingGame` class:
 
 {% highlight python %}
-sage: taxi_game.
-taxi_game.category          taxi_game.dump              taxi_game.is_monotone       taxi_game.nullplayer        taxi_game.rename            taxi_game.shapley_value
-taxi_game.ch_f              taxi_game.dumps             taxi_game.is_superadditive  taxi_game.number_players    taxi_game.reset_name        taxi_game.version
-taxi_game.db                taxi_game.is_efficient      taxi_game.is_symmetric      taxi_game.player_list       taxi_game.save
+sage: m.
+m.add_reviewer  m.bi_partite    m.db            m.dumps         m.rename        m.reviewers     m.solve         m.version
+m.add_suitor    m.category      m.dump          m.plot          m.reset_name    m.save          m.suitors
 {% endhighlight %}
 
 I won't go in to much of the details of that year but you can get some help on anyone of those by typing `?` after one of them (below you can see some of the output):
 
 {% highlight python %}
-sage: taxi_game.is_symmetric?
-Type:       instancemethod
-String Form:<bound method CooperativeGame.is_symmetric of A 3 player co-operative game>
-File:       /Users/vince/sage/local/lib/python2.7/site-packages/sage/game_theory/cooperative_game.py
-Definition: taxi_game.is_symmetric(self, payoff_vector)
+sage: m.solve?
+
+Type:            instancemethod
+File:            /Users/vince/sage/local/lib/python2.7/site-packages/sage/game_theory/matching_game.py
+Definition:      m.solve(self, invert=False)
 Docstring:
-   Return "True" if "payoff_vector" possesses the symmetry property.
+   Computes a stable matching for the game using the Gale-Shapley
+   algorithm.
 
-   A payoff vector possesses the symmetry property if v(C cup i) =
-   v(C cup j) for all C in 2^{Omega} setminus {i,j}, then x_i =
-   x_j.
-
-   INPUT:
-
-   * "payoff_vector" -- a dictionary where the key is the player and
-     the value is their payoff
 ...
 {% endhighlight %}
 
-
-**But what we really want to know is how much should Alice, Bob and Celine pay the taxi?**
-
-To calculate this we simply get Sage to tell us the Shapley value:
+Let's give that method a spin (as you can see it'll use the Gale-Shapley algorithm).
 
 {% highlight python %}
-sage: taxi_game.shapley_value()
-{'A': 5/3, 'B': 55/6, 'C': 169/6}
+sage: m.solve()
+{'C': ['b'], 'a': ['B'], 'b': ['C'], 'A': ['c'], 'c': ['A'], 'B': ['a']}
 {% endhighlight %}
 
-This shows that in this particular case Alice should pay £1.67, Bob £9.17 and Celine £28.17 (rounding has obviously caused us to gain a penny along the way but you get the idea) :)
+We see that a matching has been obtained.
+Another nice method that we implemented is to use the awesome graph theory stuff that's in Sage so you can obtain the corresponding bi-partite graph:
 
-**This is the first in a series of 3 posts that I'll get around to writing, in the next one I'll cover ticket 16331 which takes care of matching games :)**
+{% highlight python %}
+sage: p = m.bi_partite()
+Bipartite graph on 6 vertices
+sage: p.show()
+{% endhighlight %}
 
-To go back to the process of contributing to an open source project, I really think this is something everyone with any interests in code should have a go at doing as it has a large number of benefits.
-None more so than improving the standard of code that one writes.
-When you're writing because you hope that someone will look at **and review** your code you make sure it's well written (or at least try to!).
+You can see the corresponding plot here:
+
+![]({{site.baseurl}}/assets/images/stable_matching.png)
+
+**This is the second in a series of 3 posts that I'll get around to writing, in the next one I'll cover ticket 16333: Normal Form Game. This is the biggest contribution by James as it involved interfacing with two other packages and also coding up a bespoke support enumeration algorithm.**
