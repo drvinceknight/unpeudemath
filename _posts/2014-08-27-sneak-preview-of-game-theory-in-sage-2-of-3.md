@@ -6,11 +6,11 @@ tags          :
 - code
 - game theory
 - sage
-comments      : false
+comments      : true
 ---
 
 In my previous post [here](http://vincent-knight.com/unpeudemath/code/2014/08/01/a-sneak-preview-of-game-theory-in-sage-1-of-3/) I described some of the [Sage](http://sagemath.org/) development that [+James Campbell](https://plus.google.com/+JamesCampbell95/posts) and I spent a lot of time this Summer working on.
-In that post I described some work that has subsequently been accepted and including in the latest release of Sage (here's the latest [changlog](http://www.sagemath.org/mirror/src/changelogs/sage-6.3.txt): code to calculate the Shapley value.
+In that post I described some work that has subsequently been accepted and included in the latest release of Sage (here's the latest [changlog](http://www.sagemath.org/mirror/src/changelogs/sage-6.3.txt)): code to calculate the Shapley value.
 
 In this post I'll talk about the second of 3 tickets that James and I worked on: looking at Matching games.
 **This has not actually been reviewed yet so please do help us get this code in to Sage by taking a look at the ticket: [16331](http://trac.sagemath.org/ticket/16331).**
@@ -92,6 +92,10 @@ sage: m.solve()
 {% endhighlight %}
 
 We see that a matching has been obtained.
+You can see the corresponding matching here:
+
+![]({{site.baseurl}}/assets/images/stable_matching.png)
+
 Another nice method that we implemented is to use the awesome graph theory stuff that's in Sage so you can obtain the corresponding bi-partite graph:
 
 {% highlight python %}
@@ -102,6 +106,9 @@ sage: p.show()
 
 You can see the corresponding plot here:
 
-![]({{site.baseurl}}/assets/images/stable_matching.png)
+![]({{site.baseurl}}/assets/images/graph_stable_matching.png)
+
+All of the above has not been reviewed yet so if you do have any comments they'd be very gratefully received.
+If you actually went over to [trac](http://trac.sagemath.org/ticket/16331) and took a look at it there that would be great but otherwise just commenting here would be awesome.
 
 **This is the second in a series of 3 posts that I'll get around to writing, in the next one I'll cover ticket 16333: Normal Form Game. This is the biggest contribution by James as it involved interfacing with two other packages and also coding up a bespoke support enumeration algorithm.**
