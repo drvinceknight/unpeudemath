@@ -25,7 +25,7 @@ Basically a matching game attempts to create links between two groups of people 
 ![]({{site.baseurl}}/assets/images/base_matching_game.png)
 
 In the above picture we see the _preferences_ of the suitors and the reviewers.
-So \\(a\\), prefers \\(B\\) to \\(A\\), and \\(A\\) to \\(C\\).
+So \\(c\\), prefers \\(B\\) to \\(A\\), and \\(A\\) to \\(C\\).
 
 Here is the actual definition of a stable matching that I give my students:
 
