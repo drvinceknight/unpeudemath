@@ -21,6 +21,7 @@ It is assumed here (as is very familiar in queueing theory) that the service rat
 
 Individuals arrive at the queue with mean inter arrival time \\(\Lambda\\) (once again exponentially distributed).
 
+There is room for up to \\(N\\) individuals to wait for a free server at the first station.
 After their service at the first station is complete, individuals leave the system with probability \\(p\\), but if they don't and there is no free place in the next station (ie there are not less than \\(c_2\\) individuals in the second service center) then they become blocked.
 
 There are a vast array of applications of queueing systems like the above (in particular in the paper we're working on we're using it to model a healthcare system).
@@ -32,6 +33,8 @@ I have discussed Markov chains before (mainly posts on my old blog) and so I won
 **The state space**
 
 One has to think about this carefully as it's important to keep track not only of where individuals are but whether or not they are blocked.
+Based on that one might think of using a 3 dimensional state space: \\((i,j,k)\\) where \\(i\\) would denote the number of people at the first station, \\(j\\) the number at the second and \\(k\\) the number at the first who are blocked.
+This wouldn't be a terrible idea but we can actually do things in a slightly neater and more compact way:
 
 - 3 dimensional state
 - 2 dimensional state
