@@ -36,5 +36,38 @@ One has to think about this carefully as it's important to keep track not only o
 Based on that one might think of using a 3 dimensional state space: \\((i,j,k)\\) where \\(i\\) would denote the number of people at the first station, \\(j\\) the number at the second and \\(k\\) the number at the first who are blocked.
 This wouldn't be a terrible idea but we can actually do things in a slightly neater and more compact way:
 
-- 3 dimensional state
-- 2 dimensional state
+$$
+S = \left\{(i,j)\in\mathbb{Z}^{2}_{\geq 0}\;|\;0\leq j \leq c_1+c_2,\; 0\leq i\leq c_1+N-\max(j-c_2,0)\right\}
+$$
+
+In the above \\(i\\) denotes the number of individuals in service or waiting for service at the first station and \\(j\\) denotes the number of individuals in service at the second station **or** blocked at the second station.
+
+The continuous time transition rates between two states \\((i_1,j_1)\\) and \\((i_2, j_2)\\) are given by:
+
+$$
+q_{(i_1,j_1), (i_2,j_2)}=
+    \begin{cases}
+    \Lambda, & \text{ if } \delta = (1,0)\\
+    \min(c_1-\max(j_1-c_2,0),i_1)(1-p)\mu_1, & \text{ if } \delta = (-1,1)\\
+    \min(c_1-\max(j_1-c_2,0),i_1)p\mu_1, & \text{ if } \delta = (-1,0)\\
+    \min(c_2, j_1)\mu_2, & \text{ if } \delta = (0,-1)
+    \end{cases}
+$$
+
+where \\(\delta=(i_2,j_2)-(i_1,j_1)\\).
+
+Here's a picture of the Markov Chain for \\(N=c_1=c_2=2\\):
+
+![]({{site.baseurl}}/assets/images/small_chain.png)
+
+Using the above we can index our states and keep all the information in a matrix \\(Q\\), to obtain the steady state distributions of the chain (the probabilities of finding the queue in a given state) we then simply solve the following equation:
+
+$$
+\pi Q = 0
+$$
+
+subject to \\(\sum \pi = 1\\).
+
+Here's how we can do this using [Sage](http://sagemath.org/):
+
+
