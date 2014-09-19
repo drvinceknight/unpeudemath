@@ -6,7 +6,7 @@ tags       :
 - mathematics
 - queueing theory
 - sage
-comments   : false
+comments   : true
 ---
 
 In this post I'll describe a particular mathematical model that I've been working on for the purpose of a research paper.
