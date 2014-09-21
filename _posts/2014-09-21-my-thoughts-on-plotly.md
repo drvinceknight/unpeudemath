@@ -10,7 +10,7 @@ comments   : true
 ---
 
 A while ago I saw [plotly](https://plot.ly/) appear on my G+ stream.
-People seemed excited about it but I was too busy to look at it properly and just assumed: _must be some sort of new matplotlib_: **ain't nobody got time for that!**.
+People seemed excited about it but I was too busy to look at it properly and just assumed: _must be some sort of new matplotlib_: **ain't nobody got time for that!**
 
 Then, one of the guys from plotly reached out saying I should take a look.
 I took a brief glance and realised that this was **nothing like a new matplotlib** and in fact looked pretty cool.
