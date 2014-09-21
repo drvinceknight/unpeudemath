@@ -47,7 +47,7 @@ ax.grid()
 plot_url = py.plot_mpl(fig)
 {% endhighlight %}
 
-That code automatically creates the following plotly plot (which you can edit, zoom in etc...):
+That code automatically creates the following [plotly plot](https://plot.ly/~drvinceknight/1) (which you can edit, zoom in etc...):
 
 <iframe width="460" height="345" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~drvinceknight/1.embed?width=460&height=345"></iframe>
 
@@ -109,9 +109,9 @@ plot_url = py.plot_mpl(fig)
 
 If you'd like to repeat the above you can download the [analytical]({{site.baseurl}}/assets/data/analytical.csv) and [simulated]({{site.baseurl}}/assets/data/simulated.csv) datafiles.
 
-The result of that can be seen here:
+The result of that can be seen [here](https://plot.ly/~drvinceknight/2):
 
-<iframe width="460" height="345" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~drvinceknight/2.embed?width=460&height=345"></iframe>
+<iframe width="460" height="539" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~drvinceknight/2.embed?width=460&height=539"></iframe>
 
 Further more that is just a 'thing' on my plotly profile so you can see it at this url: [https://plot.ly/~drvinceknight/2](https://plot.ly/~drvinceknight/2).
 
