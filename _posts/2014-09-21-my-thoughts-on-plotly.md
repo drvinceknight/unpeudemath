@@ -120,8 +120,8 @@ Further more that is just a 'thing' on my plotly profile so you can see it at th
 On that page I can tweak the graph if I wanted to and finally I can just grab the plot in whatever format I want by simply adding the correct format extension to the url:
 
 - pdf: [https://plot.ly/~drvinceknight/2.pdf](https://plot.ly/~drvinceknight/2.pdf)
-- png: [https://plot.ly/~drvinceknight/2.pdf](https://plot.ly/~drvinceknight/2.png)
-- svg: [https://plot.ly/~drvinceknight/2.pdf](https://plot.ly/~drvinceknight/2.svg)
+- png: [https://plot.ly/~drvinceknight/2.png](https://plot.ly/~drvinceknight/2.png)
+- svg: [https://plot.ly/~drvinceknight/2.svg](https://plot.ly/~drvinceknight/2.svg)
 
 **My overall thoughts**
 
