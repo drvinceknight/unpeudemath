@@ -13,7 +13,7 @@ People seemed excited about it but I was too busy to look at it properly and jus
 ![](http://i0.kym-cdn.com/photos/images/newsfeed/000/284/529/e65.gif)
 
 Then, one of the guys from plotly reached out saying I should take a look.
-I took a brief glance and realise this was **nothing like a new matplotlib** and in fact looked pretty cool.
+I took a brief glance and realised that this was **nothing like a new matplotlib** and in fact looked pretty cool.
 So I dutifully put it on my to do list but very much near the bottom.
 
 I'm writing this sat in between sessions at [PyconUK 2014](http://pyconuk.org/).
@@ -51,6 +51,8 @@ That code automatically creates the following plotly plot (which you can edit, z
 
 <iframe width="460" height="345" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~drvinceknight/1.embed?width=460&height=345"></iframe>
 
+By 'automatically' I mean: 'opens up web browser and your plots is there'!!
+
 **Doing something of my own**
 
 In [my previous post]({{site.baseurl}}/code/2014/09/19/the-expected-waiting-time-in-a-tandem-queue-with-blocking-using-sage/) I wrote about how to use Markov Chains to obtain the expected wait in a tandem qeue.
@@ -63,8 +65,9 @@ The code to obtain that particular plot is below:
 
 {% highlight python %}
 # Libraries
-import csv
 from matplotlib.pyplot import plt
+import csv
+import plotly.plotly as py
 
 # Get parameters
 
@@ -114,7 +117,7 @@ Further more that is just a 'thing' on my plotly profile so you can see it at th
 
 **Getting other formats**
 
-So on that page I can tweak the graph if I wanted to and finally I can just grab the plot in whatever format I want by simply adding the correct format extension to the url:
+On that page I can tweak the graph if I wanted to and finally I can just grab the plot in whatever format I want by simply adding the correct format extension to the url:
 
 - pdf: [https://plot.ly/~drvinceknight/2.pdf](https://plot.ly/~drvinceknight/2.pdf)
 - png: [https://plot.ly/~drvinceknight/2.pdf](https://plot.ly/~drvinceknight/2.png)
@@ -131,8 +134,11 @@ So maybe that's something the plotly guys could think about...
 At the end of the day: this is an awesome tool. Plotly 'abstractifies' plots so that people using different packages/languages can still talk to each other.
 One of the big things I'm forgetting to talk about in detail is that there's a web tool that allows you to change colors, change titles, mess with the data etc.
 That's also a very cool collaborative tool obviously as I can imagine throwing up a plot that a co-author who doesn't like code could then tweak.
-Similarly (if/when) publications start using smarter formats (then things that are restricted by the need to use paper) you could even just embed the plots like I've done here (so people could zoom, grab the data etc...).
-**Very cool**.
+
+Similarly (if/when) publications start using smarter formats (than things that are restricted by the need to be printed on paper) you could even just embed the plots like I've done here (so people could zoom, grab the data etc...).
+Here's another way I could put that:
+
+_Papers are where plots go to die, they can go to plotly to live..._
 
 Woops, I've started blurting out some ideas... Hopefully they're good ones.
 
