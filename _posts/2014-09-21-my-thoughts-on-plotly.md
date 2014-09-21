@@ -4,6 +4,8 @@ title      : "My thoughts on plotly ('the github for plots')"
 categories : code
 tags       :
 - python
+- matplotlib
+- plotly
 comments   : true
 ---
 
