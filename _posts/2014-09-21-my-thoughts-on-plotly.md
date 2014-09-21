@@ -4,7 +4,7 @@ title      : "My thoughts on plotly ('the github for plots')"
 categories : code
 tags       :
 - python
-comments   : false
+comments   : true
 ---
 
 A while ago I saw [plotly](https://plot.ly/) appear on my G+ stream.
