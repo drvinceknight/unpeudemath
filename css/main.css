@@ -396,6 +396,14 @@ a:visited { color: #205caa; }
 
 }
 
+iframe {
+    width:70%;
+    display: block;
+    border: 0;
+    margin: 0 auto;
+    border: 0;
+ }
+
 img { border: 0;
       width:70%;
       display: block;
