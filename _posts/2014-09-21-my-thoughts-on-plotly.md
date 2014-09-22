@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "My thoughts on plotly ('the github for plots')"
+title      : "My thoughts on plotly (the github for plots)"
 categories : code
 tags       :
 - python
