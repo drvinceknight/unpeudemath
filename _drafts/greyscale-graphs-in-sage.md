@@ -8,6 +8,13 @@ comments : false
 ---
 
 {% highlight python %}
+from sage.graphs.graph_coloring import chromatic_number
+from sage.graphs.graph_coloring import vertex_coloring
+from sage.graphs.graph_coloring import number_of_n_colorings
+from sage.graphs.graph_coloring import edge_coloring
+{% endhighlight %}
+
+{% highlight python %}
 def grey_rainbow(n, black=False):
     """
     Return n greyscale colors
