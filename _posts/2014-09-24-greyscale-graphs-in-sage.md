@@ -118,6 +118,6 @@ p.show()
 
 Now what would be really nice would be to be able to just use any `matplotlib` color map in the Graph coloring.
 This might actually already be possible, I'll fish through the Sage source code at some point and take a look (the awesome thing about Sage is **that I can do that**).
-Otherwise, it might just be a quick fix (and hopefully a less hacky one then above - I still laugh at the formulae I use and that seem to work), who nows I might even see if it's worth opening an actual ticket for this.
+Otherwise, it might just be a quick fix (and hopefully a less hacky one then above - I still laugh at the formulae I use and that seems to work), who nows I might even see if it's worth opening an actual ticket for this.
 
 [Here is a Sage script with the above code]({{site.baseurl}}/assets/code/greyscale-graphs-in-sage.sage)
