@@ -4,7 +4,9 @@ title:  "Grey scale network graph colorings in Sage"
 categories: code
 tags:
 - sage
-comments : false
+- graph theory
+- colorings
+comments : true
 ---
 
 This is a quick post following a request for some Sage help that a colleague asked for.
