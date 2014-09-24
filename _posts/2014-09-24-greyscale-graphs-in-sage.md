@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Grey scale graphs in Sage"
+title:  "Grey scale network graph colorings in Sage"
 categories: code
 tags:
 - sage
