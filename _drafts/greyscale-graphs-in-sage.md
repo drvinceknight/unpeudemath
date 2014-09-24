@@ -8,7 +8,7 @@ comments : false
 ---
 
 This is a quick post following a request for some Sage help that a colleague asked for.
-It's based on a quick fix and I'm wondering if someone might come up with a better way of doing this that I've missed or if it's worth actually raising a ticket to incorporate something like it on Sage.
+It's based on a quick fix and I'm wondering if someone might come up with a better way of doing this that I've missed or if it's worth actually raising a ticket to incorporate something like it in Sage.
 
 So my colleague is writing a book on Graph theory and recently started taking a look at Sage's capacity to handle Graph theory stuff and colorings in particular.
 The issue was that said colleague ideally wanted grey scale pictures of the colorings (I'm guessing this is due to the publisher or something - I didn't ask).
@@ -25,10 +25,10 @@ sage: P.show(partition=c)
 
 ![]({{site.baseurl}}/assets/images/multi_color_petersen_graph_coloring.png)
 
-Now to get that in to grey scale we could of course open up [inkscape]() or something similar and convert it but it would be nice to be able to directly use something like the `matplotlib` grey scale [color map]().
+Now to get that in to grey scale we could of course open up [inkscape](http://www.inkscape.org/en/) or something similar and convert it but it would be nice to be able to directly use something like the `matplotlib` grey scale [color map]().
 This is in fact what I started to look for but with no success so I then started to look for how one converts an RGB tuple (3 floats corresponding to the makeup of a color) to something on a grey scale.
 
-Turns out (see [this stackoverflow question]() which leads to [this wiki page]()), that for \\(\text{rgb}=(r,g,b)\\), the corresponding grey scale color is given by \\(\text{grey}=(Y,Y,Y)\\) where \\(Y\\) is given by:
+Turns out (see [this stackoverflow question](http://stackoverflow.com/questions/12201577/convert-rgb-image-to-grayscale-in-python) which leads to [this wiki page](http://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale)), that for \\(\text{rgb}=(r,g,b)\\), the corresponding grey scale color is given by \\(\text{grey}=(Y,Y,Y)\\) where \\(Y\\) is given by:
 
 $$
 Y = \begin{cases}
@@ -82,11 +82,12 @@ def grey_rainbow(n, black=False):
     return output
 {% endhighlight %}
 
+Note that we're including the option to use black as one of the colours or not (it covers up the vertex labels on the corresponding plot if we do).
 We can then use that function to create our own partition coloring:
 
 {% highlight python %}
 def grey_coloring(G, black=False):
-    chromatic_nbr = G.chromatic_nbr()
+    chromatic_nbr = G.chromatic_number()
     coloring = G.coloring()
     grey_colors = grey_rainbow(chromatic_nbr, black)
     d = {}
@@ -95,13 +96,7 @@ def grey_coloring(G, black=False):
     return P.graphplot(vertex_colors=d)
 {% endhighlight %}
 
-We thus,
-
-{% highlight python %}
-P = graphs.PetersenGraph()
-p = grey_coloring(P,black=True)
-p.show()
-{% endhighlight %}
+Here is how we can simply use the above to get a grey scale coloring of a graph:
 
 {% highlight python %}
 P = graphs.PetersenGraph()
@@ -109,5 +104,18 @@ p = grey_coloring(P)
 p.show()
 {% endhighlight %}
 
-[Random stack overflow question](http://stackoverflow.com/questions/12201577/convert-rgb-image-to-grayscale-in-python)
-[wiki page](http://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale)
+![]({{site.baseurl}}/assets/images/grey_petersen_graph_coloring.png)
+
+{% highlight python %}
+P = graphs.PetersenGraph()
+p = grey_coloring(P,black=True)
+p.show()
+{% endhighlight %}
+
+![]({{site.baseurl}}/assets/images/grey_petersen_graph_coloring_with_black.png)
+
+Now what would be really nice would be to be able to just use any `matplotlib` color map in the Graph coloring.
+This might actually already be possible, I'll fish through the Sage source code at some point and take a look (the awesome thing about Sage is **that I can do that**).
+Otherwise, it might just be a quick fix (and hopefully a less hacky one then above - I still laugh at the formulae I use and that seem to work), who nows I might even see if it's worth opening an actual ticket for this.
+
+[Here is a Sage script with the above code]({{site.baseurl}}/assets/code/greyscale-graphs-in-sage.sage)
