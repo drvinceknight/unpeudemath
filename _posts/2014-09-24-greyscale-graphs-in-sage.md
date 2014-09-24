@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Greyscale graphs in Sage"
+title:  "Grey scale graphs in Sage"
 categories: code
 tags:
 - sage
