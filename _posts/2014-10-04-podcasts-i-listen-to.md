@@ -4,7 +4,7 @@ title:  "A list of podcasts I listen to"
 categories: other
 tags:
 - podcasts
-comments : false
+comments : true
 ---
 
 I've recently gotten in to podcasts again (again) and really enjoy listening to most of these in the background of whatever it is I'm doing.
