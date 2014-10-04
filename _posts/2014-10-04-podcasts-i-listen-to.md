@@ -26,7 +26,7 @@ I'm sure I'm missing a bunch so I thought I'd write a blog post in the hope that
 - [All about android](http://twit.tv/aaa): Again, this one feels like hanging out with friends (the probably with real friends being that I can't work at the same time but I'm working on that).
 - [Security Now](http://twit.tv/sn): Another twit podcast, this one is about security and although I miss a lot about what is talked about I still enjoy it.
 - [Le Rendez-Vous Tech](http://www.patreon.com/rdvtech): A French podcast very similar to this week in tech. Probably the only bit of exercise my French still gets.
-- [Healthy Hacker](http://twit.tv/sn): This is probably one of my favourite podcasts. Chris talks about code but also general fitness stuff.
+- [Healthy Hacker](http://www.healthyhacker.com/): This is probably one of my favourite podcasts. Chris talks about code but also general fitness stuff.
 - [vimcasts.org](http://vimcasts.org/): Not really a podcast (low frequency) but it's on my podcast catcher so I thought I'd list it here.
 
 **Science**
