@@ -5,7 +5,7 @@ categories : code
 tags       :
 - sage
 - LaTeX
-comments   : false
+comments   : true
 ---
 
 About a year ago I put together 21 videos showing very basic LaTeX syntax.
