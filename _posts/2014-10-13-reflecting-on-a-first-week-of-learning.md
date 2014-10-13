@@ -28,7 +28,7 @@ I was delighted with this idea and thought that I might as well blog these refle
 The first thing I will say is I think this first week went really well.
 Students turned up to their lab sessions having almost universally carried out all the required work which was awesome.
 There was one major change with last year shifting some of the content from each week to the next.
-This had the major effect of making the first week a bit lighter which I think has had a positive effect.
+This had the effect of making the first week a bit lighter which I think has been a good thing.
 
 **Some labs could have been a bit 'noisier'.**
 
@@ -41,14 +41,14 @@ I think this has now been addressed.
 
 I strive for a student centred learning environment.
 This isn't always easy to obtain but the first class meeting went extremely well.
-I came in to the meeting expecting us to talk about the `index` method no strings (which finds the location of the first occurrence of a substring in a string) as this was the main piece of feedback I had from the labs as to the difficulties of the students.
+I came in to the meeting expecting us to talk about the `index` method on strings (which finds the location of the first occurrence of a substring in a string) as this was the main piece of feedback I had from the labs as to the difficulties of the students.
 We started talking about it that but then the students really took over and wanted to know how to calculate the location of _all the subtrings_.
 This was a really awesome session as we went in to a particular thing in much more detail than we would have otherwise.
 Most importantly students would never have been able to have that conversation with me if they knew nothing about strings and the index function...
 
 **Not leaving anyone behind.**
 
-When teaching in a classic lecture based settings it's extremely difficult to gain an understanding of how your students are doing.
+When teaching in a classic lecture based setting it's extremely difficult to gain an understanding of how your students are doing.
 This flipped environment is **all about** finding out how students are doing, I am constantly getting feedback as to what students are having difficulty with.
 I have to make sure that students understand that that is what the labs are for, I'm constantly saying this but will continue to do so.
 
@@ -56,6 +56,10 @@ Further more there are some students who are having difficulties with the conten
 
 **Big thanks to the tutors.**
 
-Finally, this wee of class would not have gone so smoothly if it weren't for the great tutors who have helped in the labs.
-These include some of my colleagues who have thankfully given up my time, [Jason Young](https://plus.google.com/+JasonYoung/posts) who has done an awesome job organising the undergraduate tutors and most importantly the undergraduate tutors themselves.
-They all did a great job and I hope more importantly will also continue to learn and enjoy writing code.
+Finally, this week of class would not have gone so smoothly if it weren't for the great tutors who have helped in the labs.
+These include some of my colleagues who have gratefully given up their time, [Jason Young](https://plus.google.com/+JasonYoung/posts) who has done an awesome job organising the undergraduate tutors and most importantly the undergraduate tutors themselves.
+They all did a great job and I hope will also continue to learn and enjoy writing code.
+
+---
+
+This has been written down in a slight rush before my next set of labs but hopefully will be useful to Imogen (and indeed perhaps my students).
