@@ -8,7 +8,7 @@ tags       :
 comments   : false
 ---
 
-This academic year [+Imogen Dunne]() (a final year student here at Cardiff University) is doing her final year project looking at evaluating student attitudes in my "Computing for Mathematics" course.
+This academic year [Imogen Dunne](http://vincent-knight.com/research/students/current/2014/09/30/Imogen-Dunne/) (a final year student here at Cardiff University) is doing her final year project looking at evaluating student attitudes in my "Computing for Mathematics" course.
 
 The idea is to use questionnaires, focus groups and interviews to evaluate (longitudinally) mathematics students' attitudes towards:
 
@@ -57,5 +57,5 @@ Further more there are some students who are having difficulties with the conten
 **Big thanks to the tutors.**
 
 Finally, this wee of class would not have gone so smoothly if it weren't for the great tutors who have helped in the labs.
-These include some of my colleagues who have thankfully given up my time, [Jason Young]() who has done an awesome job organising the undergraduate tutors and most importantly the undergraduate tutors themselves.
-They all did a great job and I hope more
+These include some of my colleagues who have thankfully given up my time, [Jason Young](https://plus.google.com/+JasonYoung/posts) who has done an awesome job organising the undergraduate tutors and most importantly the undergraduate tutors themselves.
+They all did a great job and I hope more importantly will also continue to learn and enjoy writing code.
