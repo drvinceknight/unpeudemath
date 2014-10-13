@@ -41,4 +41,21 @@ I think this has now been addressed.
 
 I strive for a student centred learning environment.
 This isn't always easy to obtain but the first class meeting went extremely well.
-I came in expecting to talk about the `index` method no strings (which allows...
+I came in to the meeting expecting us to talk about the `index` method no strings (which finds the location of the first occurrence of a substring in a string) as this was the main piece of feedback I had from the labs as to the difficulties of the students.
+We started talking about it that but then the students really took over and wanted to know how to calculate the location of _all the subtrings_.
+This was a really awesome session as we went in to a particular thing in much more detail than we would have otherwise.
+Most importantly students would never have been able to have that conversation with me if they knew nothing about strings and the index function...
+
+**Not leaving anyone behind.**
+
+When teaching in a classic lecture based settings it's extremely difficult to gain an understanding of how your students are doing.
+This flipped environment is **all about** finding out how students are doing, I am constantly getting feedback as to what students are having difficulty with.
+I have to make sure that students understand that that is what the labs are for, I'm constantly saying this but will continue to do so.
+
+Further more there are some students who are having difficulties with the content, this is completely expected but the great thing about teaching using this approach is that I've already been able to identify them and will be meeting with them during my office hours to help (I'm always happy to help students who want to work).
+
+**Big thanks to the tutors.**
+
+Finally, this wee of class would not have gone so smoothly if it weren't for the great tutors who have helped in the labs.
+These include some of my colleagues who have thankfully given up my time, [Jason Young]() who has done an awesome job organising the undergraduate tutors and most importantly the undergraduate tutors themselves.
+They all did a great job and I hope more
