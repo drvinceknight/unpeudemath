@@ -38,3 +38,4 @@ In a way it seems logical to do after having run the course twice. This would fu
 - On another good note not entirely irrelevant to the class: code club is going well!
 The last session was a very busy one and students are actively participating which is great.
 Some first years are starting to work on the Euler problems and other formed a bit of a revision group for the upcoming class test they have...
+You can see the site (that has been really nicely stylised by the students): [http://cardiffmathematicscodeclub.github.io/](http://cardiffmathematicscodeclub.github.io/).
