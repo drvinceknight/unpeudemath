@@ -16,7 +16,7 @@ We are now at the end of Week 4 of the course and I'm glad to say that I think o
 This is awesome.
 Students are coming to see me, genuinely having struggled with concepts and this is often a result of myself or another tutor identifying specific issues in a lab session and saying something like:
 
-> I'll give you the tick for that but come and see me during office hours to talk about it as I think you're a bit confused there.
+    > I'll give you the tick for that but come and see me during office hours to talk about it as I think you're a bit confused there.
 
 - I think students are understanding _now_ that the role of the 'ticks' is to help identify difficulties.
 I need to do a better job next year at explaining this from the offset.
