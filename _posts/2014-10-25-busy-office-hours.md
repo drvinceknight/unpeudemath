@@ -25,7 +25,7 @@ I'll think about this...
 
 - Imogen's focus group went really well with 15 students participating.
 I still need to carefully reflect on the particular issues that were raised.
-I feel again that some need to be addressed through a better communication on my part (for example students wanted to have a list of alternative resources, there is such a list on the class site and I thought I'd mentioned it in sufficiently but I will need to do that better).
+I feel again that some need to be addressed through a better communication on my part (for example students wanted to have a list of alternative resources, there is such a list on the class site and I thought I'd mentioned it sufficiently but I will need to do that better).
 
 - There are a large number of tutors now and with that comes the tricky task of ensuring they understand their role.
 Jason was mentioned in Imogen's focus group as doing a great job as "he didn't just give the answer but pushed students to identify their difficulties".
