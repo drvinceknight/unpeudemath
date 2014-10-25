@@ -32,3 +32,9 @@ Jason was mentioned in Imogen's focus group as doing a great job as "he didn't j
 I need to think very carefully about how to get this across to all the tutors (I think this has been addressed for the current year).
 
 - I've been thinking about the resources and am thinking that I might create a second set of videos.
+This would be a large quantity of work (3/4 weekends probably) but I think I could really help student further.
+In a way it seems logical to do after having run the course twice. This would further 'flip the class'...
+
+- On another good note not entirely irrelevant to the class: code club is going well!
+The last session was a very busy one and students are actively participating which is great.
+Some first years are starting to work on the Euler problems and other formed a bit of a revision group for the upcoming class test they have...
