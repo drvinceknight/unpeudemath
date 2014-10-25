@@ -5,7 +5,7 @@ categories : pedagogy
 tags       :
 - flippedlearningenvironment
 - coding
-comments   : false
+comments   : true
 ---
 
 Here's my second reflective post for [Imogen Dunne's](http://vincent-knight.com/research/students/current/2014/09/30/Imogen-Dunne/) final year project (you can find the first [here]({{site.baseurl}}/pedagogy/2014/10/13/reflecting-on-a-first-week-of-learning/)).
