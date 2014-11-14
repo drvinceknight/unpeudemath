@@ -36,7 +36,7 @@ The course is now on the final straight as students have finished the class test
     Some students were questioning the timing of my office hours: they are after the class meeting (which is in turn after the lab sessions).
     Whilst most students are on board and understand I think that the fact that a couple of students didn't understand this shows that I didn't do the best job of communicating the ideas.
 
-    Involving the students in a discussion about the pedagogy they are experiencing is something I think is very important (especially when using something they might not have experiendds before).
+    Involving the students in a discussion about the pedagogy they are experiencing is something I think is very important (especially when using something they might not have experienced before).
     As such I have tried and continue to try to talk about this throughout my interactions with students (from 1 to 1 meetings all the way to class meetings) but perhaps I could do more.
     Perhaps even just showing a picture like this would be helpful:
 
