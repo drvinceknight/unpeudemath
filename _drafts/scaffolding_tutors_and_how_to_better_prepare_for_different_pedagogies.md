@@ -36,5 +36,16 @@ The course is now on the final straight as students have finished the class test
     Some students were questioning the timing of my office hours: they are after the class meeting (which is in turn after the lab session).
     I think this shows that I didn't do the best job of communicating the ideas.
     Involving the students in a discussion about the pedagogy they are experience is something I think is very important (especially when using something they might not have experiendds before).
-    As such I have tried and continue to try to talk about this throughout my interactions with students (from 1 to 1 meetings all the way to class meetings) but perhaps I could do more...
-    [picture]
+    As such I have tried and continue to try to talk about this throughout my interactions with students (from 1 to 1 meetings all the way to class meetings) but perhaps I could do more.
+    Perhaps even just showing a picture like this would be helpful:
+
+    ![]({{site.baseurl}}/assets/images/class_support_structure.png)
+
+    That shows the reason why I have my class test at the end of a week, the idea being that most students will be happy with content through labs, some will be happy after the class meeting and a small amount will require specific time with me to help them through.
+    This goes back to the premise of a flipped environment which aims to make best use of contact time: my class meetings are meant for us to further understanding and go towards the tip of Bloom's taxonomy but also address specific difficulties.
+
+On a whole I'm very happy with how this class is going, I feel that most students are engaging fully with the course and seem to be enjoying it.
+I also feel that I've gotten certain things a bit better than last year this year which could be an explanation of the slightly better mark in the class test (I still have 70 scripts to mark this weekend so it's probably too early to tell).
+
+On particularly nice piece of feedback is how students like the new class site and in particular have enjoyed the use of a comment system on all pages: it's always nice to have that permanent record of discussions I'm having with the students which in turn could help other students.
+Ideally the discussion would be peer to peer but that hasn't happened much this year (mainly me answering queries) but it has happened once which I'm happy about :)
