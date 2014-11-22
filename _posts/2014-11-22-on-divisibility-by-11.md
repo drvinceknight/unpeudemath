@@ -156,7 +156,7 @@ At this point we probably can attempt to prove that the conjecture is true:
 
 ### Proof
 
-Let \(n_i\) be the \\(i\\)th digit of the \\(m\\) digit number \\(N\\), so we have \\(N=\sum_{i=1}^{m}n_i10^{i-1}\\).
+Let \\(n_i\\) be the \\(i\\)th digit of the \\(m\\) digit number \\(N\\), so we have \\(N=\sum_{i=1}^{m}n_i10^{i-1}\\).
 Using arithmetic modulo \\(11\\) we have:
 
 $$N\equiv \sum_{i=1}^{m}n_i10^{i-1} \mod 11$$
