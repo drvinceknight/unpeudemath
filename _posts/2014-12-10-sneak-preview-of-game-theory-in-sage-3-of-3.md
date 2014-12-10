@@ -3,8 +3,8 @@ layout     : post
 title         : "A Sneak Preview of Game Theory in Sage (3/3): Normal Form Games"
 categories : code
 tags       :
-- python
-- mathematics
+- gametheory
+- sage
 comments   : true
 ---
 
