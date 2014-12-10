@@ -103,11 +103,11 @@ I've also told Sage to make sure it uses the `'lrs'` algorithm (although `'enume
 
 Finally if you're not actually sure what that game is take a look at this little video:
 
-    <div class="video">
-        <figure>
-        <iframe width="420" height="315" align='middle' src="//www.youtube.com/embed/iapcKVn7DdY" frameborder="0" allowfullscreen></iframe>
-        </figure>
-    </div>
+<div class="video">
+    <figure>
+    <iframe width="420" height="315" align='middle' src="//www.youtube.com/embed/iapcKVn7DdY" frameborder="0" allowfullscreen></iframe>
+    </figure>
+</div>
 
 
 I'm very excited to see this in Sage (soon!) and am actively working on various other things that I know at least I will find useful in my research and teaching but hopefully others will also.
