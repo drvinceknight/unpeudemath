@@ -5,7 +5,7 @@ categories : code
 tags       :
 - python
 - mathematics
-comments   : false
+comments   : true
 ---
 
 In two previous posts I have discussed two game theoretical concepts that are in/on their way in to [Sage](http://sagemath.org/):
@@ -105,4 +105,4 @@ Finally if you're not actually sure what that game is take a look at this little
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/iapcKVn7DdY" frameborder="0" allowfullscreen></iframe>
 
-I'm very excited to see this in Sage (soon!) and am actively working on various other things that I know at least I will find useful in my research and teaching but hopefully other will also.
+I'm very excited to see this in Sage (soon!) and am actively working on various other things that I know at least I will find useful in my research and teaching but hopefully others will also.
