@@ -17,7 +17,7 @@ Since writing those and alluding to more development that myself and an undergra
 
 **The purpose of this post is to say: extremely soon!** A `NormalFormGame` class has now also been merged in to the develop branch of Sage (so it will be in the next release).
 
-# What is a normal form game
+## What is a normal form game?
 
 These are sometimes referred to as bi-matrix games or strategic form games.
 I wrote a blog post about these in reference to choosing a side of the pavement to walk on: [here]({{site.baseurl}}/mathematics/2014/07/27/game-theory-and-pavement-etiquette/).
@@ -40,6 +40,7 @@ B = \begin{pmatrix}
 \\]
 
 Matrix \\(A\\) gives the utility to the first person (assuming they control the rows) and the matrix \\(B\\) gives the utility to the second person (assuming they control the columns).
+So if both individuals walk on their left then they both get a utility of 1 (ie they don't bump in to each other).
 
 ## Defining a game
 
@@ -60,7 +61,7 @@ sage: g
 Normal Form Game with the following utilities: {(0, 1): [-1, -1], (1, 0): [-1, -1], (0, 0): [1, 1], (1, 1): [1, 1]}
 {% endhighlight python %}
 
-This returns a dicionary of the strategy:utility pairs.
+This displays a dictionary of the strategy:utility pairs.
 The form of the output is actually based on [gambit](http://www.gambit-project.org/) syntax.
 
 We can use this class to very easily obtain equilibria of games:
