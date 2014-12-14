@@ -12,3 +12,4 @@ plus_username: "+VincentKnight"
 markdown: kramdown
 permalink: pretty
 highlighter: pygments
+paginate: 5
