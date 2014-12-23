@@ -6,7 +6,7 @@ tags       :
 - jekyll
 - python
 - selenium
-comments   : false
+comments   : true
 ---
 
 Over the past six months or so I've become a huge Jekyll fan.
