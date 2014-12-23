@@ -113,9 +113,11 @@ The above is an extremely simple example of what Selenium can do and also of how
 1. If you know how to write unit tests but are not sure about Selenium take a look at [the Selenium site](http://docs.seleniumhq.org/docs/03_webdriver.jsp) (you can click on a button for Python or indeed whatever interface you would like to use). That site has a good collection of what Selenium can do (check what happens when clicking on links, checking content etc...). This is also helpful: [https://selenium-python.readthedocs.org/](https://selenium-python.readthedocs.org/).
 2. If you are happy with Selenium but not unit tests then there are a variety of great tutorials around but to be honest I cannot recommend the [Test Driven Development with Python Book](http://chimera.labs.oreilly.com/books/1234000000754/ch01.html) enough. [Harry Percival](https://twitter.com/hjwp) did a great job.
 
-Here are some tests I wrote today for the site my students have put together for [Code Club](http://cardiffmathematicscodeclub.github.io/): [https://github.com/CardiffMathematicsCodeClub/CardiffMathematicsCodeClub.github.io/blob/tests/functional_tests.py](https://github.com/CardiffMathematicsCodeClub/CardiffMathematicsCodeClub.github.io/blob/tests/functional_tests.py)
+Here are some tests I wrote today for the site my students have put together for [Code Club](http://cardiffmathematicscodeclub.github.io/):
 
-In there you can see examples of all of the above (clicking on links, checking content etc...) but also the way I document the code (using what is called a 'User Story' which explains what a user should/would see).
+{% gist drvinceknight/fe5fc98748013dc09930 %}
+
+In there you can see examples of all of the above (clicking on links, checking content, checking things against a database etc...) but also the way I document the code (using what is called a 'User Story' which explains what a user should/would see).
 You can also see the way to properly 'tear down' the tests (so that Firefox closes).
 
 I hope this is helpful for some: in essence you can use Selenium via Python for any site, to use it with jekyll all you need to do is have the local server running.
