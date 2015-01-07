@@ -4,7 +4,7 @@ title      : "My Otis King Calculator"
 categories : mathematics
 tags       :
 - mathematics
-comments   : false
+comments   : true
 ---
 
 I was given a very cool present this Christmas period by my in laws (Check out Rachel's fitness blog [here](http://rbhfitness.blogspot.co.uk/) and also this pretty incredible photo of Bryn in Antartica [here](https://twitter.com/RachelPrytherch/status/533148818163134464)). It's an old school [Otis King calulator](http://en.wikipedia.org/wiki/Otis_King) which based on wikipedia was made sometime between 1922 and 1972.
