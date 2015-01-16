@@ -1,5 +1,4 @@
 from matplotlib import pyplot as plt
-import numpy as np
 plt.xkcd()
 
 ymin = -25

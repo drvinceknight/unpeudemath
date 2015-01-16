@@ -7,7 +7,7 @@ tags       :
 comments   : false
 ---
 
-After hearing about it on [TWIS](http://www.twis.org/) I spent some time reading [Learning and Individual Differences](http://www.sciencedirect.com/science/article/pii/S104160801400106X) by[Poropat](http://www.griffith.edu.au/health/school-applied-psychology/staff/dr-arthur-poropat).
+After hearing about it on [TWIS](http://www.twis.org/) I spent some time reading [Other-rated personality and academic performance: Evidence and implications ](http://www.sciencedirect.com/science/article/pii/S104160801400106X) by [Poropat](http://www.griffith.edu.au/health/school-applied-psychology/staff/dr-arthur-poropat).
 This paper is a meta analysis of various works and (TLDR): indicates that 'intelligence' is not as good an indicator of academic performance as is 'conscientiousness' (my loose interpretation of this is: 'willingness to work hard') and 'openness' (my loose interpretation of this is: 'curiosity and interest in a subject').
 
 My ears really perked up when this was mentioned on the TWIS podcast as it is something I have always believed myself.
@@ -39,15 +39,15 @@ I am mainly going to concentrate on what the paper says about Openness and Consc
 
 > "Although more extraverted students may get greater attention leading to higher performance at primary level, the reduced strength of teacher student relationships at higher levels of education appear to eliminate this effect."
 
-Whilst this effect no longer being present at higher levels of education is perhaps a positive I feel that it does not show a 'levelling of the playing field' but rather that the student specific education has a lesser emphasis at higher levels of education.
+Whilst this effect no longer being present at higher levels of education is perhaps a positive I feel that it does not show a 'levelling of the playing field' but rather that the student specific education has a lesser emphasis at higher levels of education (that is a beast of a long and terribly written sentence, it is late and I am too tired to fix it so instead added this parenthesis that makes it even longer; if you have read this far: I congratulate you).
 I will not dwell on this as I am not sure it is the main point of the paper nor that there is a quick solution (I teach 150+ students in my first year class...) but I thought it was interesting.
 
 ### Self vs non-self evaluation
 
 One of the important things when trying to correlate academic performance and personality is obviously getting the correct measurement for the Five Factor Model.
-An in depth overview of self versus non self evaluation is then given in the paper and Poropat describes how various studies have shown that non-self evaluation is a better predictor of academic performance than self evaluation (note that at this point no comparison is given to the general intelligence factor - that comes late).
+An in depth overview of self versus non self evaluation is then given in the paper and Poropat describes how various studies have shown that non-self evaluation is a better predictor of academic performance than self evaluation (note that at this point no comparison is given to the general intelligence factor - that comes later).
 I think this kind of points to the idea that 'teachers and peers know you better than you know yourself' (or at least in terms of the Five Factor Model).
-It is particularly relevant to the work of Poropat's paper as he then collects studies that half look at the correlation of the Five Factor Model with the academic performance: in particular only non-self evaluation studies are used.
+It is particularly relevant to the work of Poropat's paper as he then collects studies that look at the correlation of the Five Factor Model with academic performance: in particular only non-self evaluation studies are considered.
 
 ### Using the Five Factor Model
 
@@ -59,7 +59,8 @@ I need to think about this in relation to the fact that there is other research 
 
 ### Hard work and curiosity are better predictors of academic performance than intellect
 
-This is one of the nicer takeaways of the paper, by analysing 16 reports of studies that linked the five factor model to academic performance; Poropat shows that the correlation of Conscientiousness is stronger than the correlation of Openness which is in turn stronger than previously reported correlations of the general intelligence factor.
+This is one of the nicer takeaways of the paper, by analysing 16 reports of studies that linked the five factor model to academic performance; Poropat shows that the correlation of Conscientiousness is stronger than the correlation of Openness.
+This is in turn stronger than previously reported correlations of the general intelligence factor.
 
 I am sure that there will be studies and findings that report different things but I know that I'll be using this meta analysis as a basis for further pedagogic work (in particular this paper will be very helpful for my current undergraduate research student and I: we are looking at student personality in a flipped classroom).
 
@@ -81,7 +82,9 @@ This is mentioned in particular in Poropat's paper as there is evidence that per
 
 To finish off this blog I thought I would throw in an xkcd style graph of my own personal 'academic journey' (to fully understand it, the blog post about my Physics teacher I linked to earlier is probably of interest):
 
-![](xkcd_vks_learning.png)
+![]({{site.baseurl}}/assets/images/xkcd_vks_learning.png)
+
+([Matplotlib code here if it is of interest](https://gist.github.com/drvinceknight/296e5765ab3921f93b08))
 
 As a general summary I can certainly say that I firmly believe that any/all of my academic achievements have had very little to do with my 'intellectual ability' as opposed to my work ethic.
 Here's a quote of Larry Bird that I really fell in love with the first time I heard it:
