@@ -78,6 +78,9 @@ If there was one point I wish all students would **believe** it would be that la
 I often feel that some students believe that they have to settle for a certain level of achievement ('because that is just how smart they are') and this is something I have never personally been satisfied with.
 This is mentioned in particular in Poropat's paper as there is evidence that personality can be modified more easily than general intelligence factor (even in older students).
 
+It also seems evident as students of higher intellect would perhaps have been used to getting by without effort.
+Once things became 'hard' then perhaps those students who are used to working hard could indeed achieve success...
+
 ### My personal experience
 
 To finish off this blog I thought I would throw in an xkcd style graph of my own personal 'academic journey' (to fully understand it, the blog post about my Physics teacher I linked to earlier is probably of interest):
