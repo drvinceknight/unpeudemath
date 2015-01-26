@@ -63,3 +63,5 @@ Now for something a bit more interesting.
 
 This is ([just like last year](http://drvinceknight.blogspot.co.uk/2014/01/matching-pennies-in-class.html)) not quite what we expect (which is cool).
 It's pretty late as I'm writing this and I need to head to sleep so I'll point you towards the post from last year ([here](http://drvinceknight.blogspot.co.uk/2014/01/matching-pennies-in-class.html)) and encourage you to read that and perhaps offer your own interpretation of what is happening :)
+
+Finally: **a big thanks** to my students for engaging so much, I really appreciate it.
