@@ -4,7 +4,7 @@ title      : "Recreating golden balls in class"
 categories : pedagogy
 tags       :
 - gametheory
-comments   : false
+comments   : true
 ---
 
 Here is a blog post that mirrors [this post](http://drvinceknight.blogspot.co.uk/2014/02/an-attempt-at-golden-balls-in-class.html) from last year.
