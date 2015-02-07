@@ -4,12 +4,12 @@ title      : "Playing against a mixed strategy in class"
 categories : pedagogy
 tags       :
 - gametheory
-comments   : false
+comments   : true
 ---
 
 This post if very late but I have been very busy with some really exciting things.
 I will describe some of the data gathered in class when we played against a random strategy played by a computer.
-I have recently helped organise a conference in [Namibia](www.python-namibia.org) teaching Python.
+I have recently helped organise a conference in [Namibia](https://www.python-namibia.org) teaching Python.
 It was a tremendous experience and I will write a post about that soon.
 
 We played against a modified version of matching pennies which we have used quite a few times:
@@ -23,7 +23,7 @@ $$
 
 I wrote a sage interact that allows for a quick visualisation of a random sample from a mixed strategy.
 You can find the code for that [at the blog post I wrote last year](http://drvinceknight.blogspot.co.uk/2014/02/best-responses-to-mixed-strategies-in.html).
-You can also find a python script with all the data [here](https://gist.github.com/d9af5f1bc6b24b9033d2).
+You can also find a python script with all the data from this year [here](https://gist.github.com/d9af5f1bc6b24b9033d2).
 
 I handed out sheets of papers on which students would input their preferred strategies ('H' or 'T') whilst I sampled randomly from 3 different mixed strategies:
 
@@ -32,7 +32,7 @@ I handed out sheets of papers on which students would input their preferred stra
 3. \\(\sigma_1 = (1/3, 2/3\\)
 
 Based on the class notation that implies that the computer was the row player and the students the column player.
-The sampled strategies were:
+The sampled strategies were (we played 6 rounds for each mixed strategy):
 
 1. TTTTTH
 2. HHHHHH
@@ -98,7 +98,7 @@ Here is what the distribution looked like:
 
 ![]({{site.baseurl}}/assets/images/2score_histogram.png)
 
-It looks like we have a few more losers than winner but not by much.
+It looks like we have a few more losers than winners but not by much.
 In fact I would suggest (because I know the theory covered in Chapter 5 of my class) that the students were in fact indifferent against this \\(\sigma_1\\).
 Indeed:
 
@@ -112,13 +112,13 @@ $$
 u_2(\sigma_1,(0,1))=\frac{2}{3}+\frac{-2}{3}=0
 $$
 
-In fact, this particular \\(\sigma_1\\) ensure that the expected result for the students is not influenced by what they do:
+In fact, this particular \\(\sigma_1\\) ensures that the expected result for the students is not influenced by what they _actually_ do:
 
 $$
 u_2(\sigma_1,(x,1-x))=\frac{1}{3}(-2x+2-2x)+\frac{2}{3}(x-1+x)=\frac{2}{3}(1-2x)\frac{2}{3}(2x-1)=0
 $$
 
-What strategy could the students have played to ensure the same situation for the computer's strategy?
+**What strategy could the students have played to ensure the same situation for the computer's strategy?**
 At the moment, the mixed strategy \\(\sigma_2=(.61,.39)\\) has expected utility for player 1 (the computer):
 
 $$
