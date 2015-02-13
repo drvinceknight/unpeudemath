@@ -47,4 +47,6 @@ and here are the losing strategies:
 
 ![]({{site.baseurl}}/assets/images/losingstrategies.png)
 
+(All the code used to draw and analyse those plots is [here](https://gist.github.com/drvinceknight/17b2798f08a08989d474).)
+
 Hopefully my class found this interesting and fun.
