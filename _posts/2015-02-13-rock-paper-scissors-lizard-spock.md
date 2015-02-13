@@ -4,7 +4,7 @@ title      : "Rock paper scissors lizard spock tournement"
 categories : pedagogy
 tags       :
 - gametheory
-comments   : false
+comments   : true
 ---
 
 At the beginning of the week we played had one of my favourite class activity for my game theory class: the rock paper scissors lizard tournament :)
