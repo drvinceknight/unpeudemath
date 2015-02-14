@@ -52,12 +52,12 @@ First of all let us build some basic utilities (to be clear I am more or less pu
 
 Our normal form game then looks like this (assuming that the game is zero sum):
 
-\[
+$$
 \begin{pmatrix}
 (60,-60)&(98,-98)\\
-(90,-90)&(50,-50)\\
+(90,-90)&(50,-50)
 \end{pmatrix}
-\]
+$$
 
 __If the Seahawks were 100% going to run the ball__, in such a way as that the defence were in no doubt then the obvious best response is to use a rush defence (in reality this is actually what happened and the defensive player that was fairly isolated just made an amazing play).
 Then, the chance of the Seahawks scoring is 60%.
@@ -69,6 +69,6 @@ The theory tells us that the offence should make the defense indifferent.
 So let us assume that the offence runs \\(x\\) of the time so that the player is playing mixed strategy: \\(\sigma_{\text{O}}=(x,1-x)\\).
 The Nash equilibrium strategy for the offence would then obey the following equation:
 
-\[
-u_{\text{D}}(\sigma_{\text{O}},\text{RD})=u_{\text{D}}(\sigma_{\text{O}},\text{PD}
-\]
+$$
+u_{\text{D}}(\sigma_{\text{O}},\text{RD})=u_{\text{D}}(\sigma_{\text{O}},\text{PD})
+$$
