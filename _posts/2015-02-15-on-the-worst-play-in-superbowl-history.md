@@ -213,6 +213,8 @@ The mean ratio (based on our assumptions) is \\(1.24\\) and importantly the mini
 All of this shows that even with a very broad relaxation of our assumptions it makes sense to _at times_ run the ball.
 So game theory does in effect say that this was not 'the worst play in super bowl history' as it makes sense to _at times_ pass in that situation.
 
+TLDR: (Based on the assumptions) the coach who truly will at time pass in that situation will win the superbowl 24% more of the time than the coach who would only ever run.
+
 Nonetheless this is ignoring a lot of the subtleties of the game itself, non more so than the fact the Patriots in fact came out in a run defense formation and the game was simply won by a great defensive play.
 
 The code for all this can be found [here](https://gist.github.com/33a13a6ce053178c3c52).
