@@ -450,6 +450,6 @@ img { border: 0;
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
-.video figure { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video figure { position: relative; padding-bottom: 56.25%;  width:70%; overflow: hidden; margin-left:auto; margin-right: auto}
 
 .video iframe, .video object, .video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

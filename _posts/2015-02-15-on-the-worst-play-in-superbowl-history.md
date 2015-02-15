@@ -43,7 +43,7 @@ Now, to return to what is being called 'the worst play in superbowl history':
 Everyone seems to be saying that 'not rushing' was an idiotic thing to do.
 [This article by the Economist](http://www.economist.com/blogs/gametheory/2015/02/game-theory-american-football) explains things pretty well (including the back story), but in my class on Friday I thought I would go through the mathematics of it all.
 
-First of all let us build some basic utilities (to be clear I am more or less pulling these out of a hat although I will carry out some monte carlo simulation at the end of this blog post).
+First of all let us build some basic utilities (to be clear I am more or less pulling these out of a hat although I will carry out some Monte Carlo simulation at the end of this blog post).
 
 - Let us assume (because Lynch is awesome) that on average running against a run defence would work 60% of the time;
 - Running against a pass defence would work 98% of the time;
@@ -133,3 +133,86 @@ $$
 (C, -C), (D, -D)\\
 \end{pmatrix}
 $$
+
+If the __offense always runs__ then the expected chance of scoring is simply \\(A\\).
+
+Let us make the following assumptions:
+
+1. Running against a pass defense is always better than running against a run defense: \\(A<B\\).
+2. Passing against a run defense is always better than passing against a pass defense: \\(C>D\\).
+3. Passing against a run defense is always better than running against a run defense: \\(A<C\\).
+4. Running against a pass defense is always better than passing against a pass defense: \\(B>D\\).
+
+This simple set of assumptions ensures that no strategies are dominated for either player and so our Nash equilibria will be a mixed Nash equilibrium.
+Let us find the expected chance of scoring for the offence at the Nash equilibrium.
+
+The defense will ensure that the offense is indifferent:
+
+$$u_{\text{O}}(\text{R}, \sigma_{\text{D}})=u_{\text{O}}(\text{P}, \sigma_{\text{D}})$$
+
+which is equivalent to:
+
+$$Ay+B(1-y)=Cy+D(1-y)$$
+
+This has solution:
+
+$$
+y=\frac{D-B}{D-B+A-C}
+$$
+
+(which thanks to our assumptions is indeed a probability distribution.)
+
+Now thanks to this we can compute \\(\alpha\\) which will be some measure of how much better things are for the offense at the Nash equilibria (calculated as \\(1.24\\) earlier on).
+
+$$
+\alpha=\frac{y(A-B)+B}{A}
+$$
+
+which we can compute at Nash equilibrium as:
+
+$$
+\alpha=\frac{\frac{D-B}{D-B+A-C}(A-B)+B}{A}
+$$
+
+**Monte carlo simulation**
+
+Now that that hard work is done let us write some very simple Python code that will randomly sample values for \\(A,B,C,D\\) according to our assumptions and then we can see what effect this has on \\(alpha\\).
+
+Let us sample our input parameters according to the following:
+
+- \\(A \sim \mathcal{N} (60,10^2)\\): normal distribution with mean 60 and standard deviation 10.
+    Running against a run defense would work on average 60% of the time with a fair bit of variation.
+- \\(B \sim \mathcal{N} (95,5^2)\\): normal distribution with mean 95 and standard deviation 5.
+    Running against a pass defense works predictably well.
+- \\(C \sim \mathcal{N} (85,15^2)\\): normal distribution with mean 85 and standard deviation 15.
+    Passing against a run defense works well but not robustly.
+
+- \\(D \sim \mathcal{N} (50,20^2)\\): normal distribution with mean 50 and standard deviation 20.
+    Passing against a pass defense does not well very well.
+
+After sampling each parameter, a set of parameters is only accepted as valid if it follows the assumptions mentioned earlier (all the inequalities).
+Here is what the parameters look like after running 100000 simulations:
+
+![]({{site.baseurl}}/assets/images/parameters.png)
+
+Now to look at some of the results.
+Here is what \\(y\\) looks like:
+
+![]({{site.baseurl}}/assets/images/y.png)
+
+Recall that \\(y\\) is the probability with which the defense should defend the run.
+Finally, let us take a look at what \\(\alpha\\) looks like:
+
+![]({{site.baseurl}}/assets/images/alpha.png)
+
+Recall that \\(\alpha\\) denotes the ratio of the scoring probability when the Nash equilibrium is played over the 'just run all the time'.
+The graph is rather unhelpful as the tail is extremely long _but_ there are some instances of our Monte Carlo simulation that have yielded a ten fold increase in scoring probability (this will occur when \\(A\\) is pretty low to begin with).
+
+The mean ratio (based on our assumptions) is \\(1.24\\) and importantly the minimum is greater than \\(1\\).
+
+All of this shows that even with a very broad relaxation of our assumptions it makes sense to _at times_ run the ball.
+So game theory does in effect say that this was not 'the worst play in super bowl history' as it makes sense to _at times_ pass in that situation.
+
+Nonetheless this is ignoring a lot of the subtleties of the game itself, non more so than the fact the Patriots in fact came out in a run defense formation and the game was simply won by a great defensive play.
+
+The code for all this can be found [here](https://gist.github.com/33a13a6ce053178c3c52).

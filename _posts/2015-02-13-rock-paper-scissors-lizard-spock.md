@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "Rock paper scissors lizard spock tournement"
+title      : "Rock paper scissors lizard spock tournament"
 categories : pedagogy
 tags       :
 - gametheory
