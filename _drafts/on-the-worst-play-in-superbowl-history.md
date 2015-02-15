@@ -72,3 +72,64 @@ The Nash equilibrium strategy for the offence would then obey the following equa
 $$
 u_{\text{D}}(\sigma_{\text{O}},\text{RD})=u_{\text{D}}(\sigma_{\text{O}},\text{PD})
 $$
+
+the above corresponds to:
+
+$$
+-60x-90(1-x)=-98x-50(1-x)
+$$
+
+which has solution: \\(x=20/30\approx.51\\).
+So to make the defense indifferent, the offense should run _only_ 51% of the time!
+
+**This in itself is not a Nash equilibria:** we need to calculate the strategy that the defense should play so as to make the offense indifferent.
+We let \\(\sigma_{\text{D}}=(y,1,y)\\) and now need to solve:
+
+$$
+u_{\text{O}}(\text{R}, \sigma_{\text{D}})=u_{\text{O}}(\text{P}, \sigma_{\text{D}})
+$$
+
+the above corresponds to:
+
+$$
+60y+98(1-y)=90y+50(1-y)
+$$
+
+which has solution: \\(y=8/13\approx.62\\).
+So to make the offense indifferent, the defense should defend the run 62% of the time.
+
+**How good is the Nash equilibria?**
+
+We discussed earlier that if the offense passed with 0 probability (so in fact __always__ ran in that situation) then the probability of scoring would be 60% (because the defense would know and just defend the run).
+The Nash equilibria we have calculated ensured that the play calling is balanced: which 'keeps the defense honest'.
+What is the effect of this on offenses chances of scoring?
+
+To find this out we can simply calculate the utility at the Nash equilibria.
+We can do this by calculating:
+
+$$
+u_{\text{O}}((20/39,19/39),(8/13,5/13))
+$$
+
+**or** because of the indifference ensured earlier we can just calculate:
+
+$$
+u_{\text{O}}(\text{R},(8/13,5/13))=u_{\text{O}}(\text{P},(8/13,5/13))=8\times 60/13 + 5\times 98/13=970/13\approx 74.62
+$$
+
+So the Nash Equilibria makes things \\(74.62/60\approx 1.24\\) times better for the offense.
+Thus, in way, by picking a strategy in that particular instance that ended up not paying off, the offense ensured a larger long term chance of scoring in a similar situation.
+
+**Some sensitivity analysis**
+
+I have completely picked numbers more or less out of a hat.
+Thankfully we can combine the above analysis with some [Monte Carlo simulation](http://en.wikipedia.org/wiki/Monte_Carlo_method) to see how much of an effect the assumptions have.
+
+Let us consider the general form of our game as:
+
+$$
+\begin{pmatrix}
+(A, -A), (B, -B)\\
+(C, -C), (D, -D)\\
+\end{pmatrix}
+$$
