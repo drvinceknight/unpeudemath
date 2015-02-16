@@ -5,7 +5,7 @@ categories : gametheory
 tags       :
 - sport
 - superbowl
-comments   : false
+comments   : true
 ---
 
 In my last game theory class I gave students the choice between starting to rigorously look at extensive form games or to look at the last play of this years superbowl.
