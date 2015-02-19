@@ -140,9 +140,15 @@ strategies = [
 Now if you want to be super awesome you can also add a test for your strategy (this helps keep things organised and working but do not let this be an obstacle to contributing a strategy).
 If you want to see what the test for the alternator looks like you can find it [here](https://github.com/drvinceknight/Axelrod/blob/master/axelrod/tests/test_alternator.py) (the README has info as to how to run the tests).
 
-The latest results (which as of the time of writing now only include the alternator as an extra strategy) can be found seen here:
+The latest results (which as of the time of writing now only include the alternator as an extra strategy - **EDIT** Just before publishing this Geraint sent me a pull request for another strategy: this image is the live one from the github repo so will have more and more strategies) can be found seen here:
 
 ![](https://github.com/drvinceknight/Axelrod/raw/master/results.png)
+
+If you clone this repository you can obtain that plot by running:
+
+{% highlight bash %}
+$ python run_tournament.py
+{% endhighlight %}
 
 **TLDR**: Please contribute a strategy to this Python based version of Axelrod's tournament on github: [https://github.com/drvinceknight/Axelrod](https://github.com/drvinceknight/Axelrod).
 
