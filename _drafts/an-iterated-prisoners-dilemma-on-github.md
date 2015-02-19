@@ -66,7 +66,7 @@ class TitForTat(Player):
 {% endhighlight %}
 
 That is more or less just 3 lines of code.
-I'll now briefly describe adding another strategy to this repository (and I will do it entirely using the github web interface).
+I'll now briefly describe adding another strategy to [this repository](https://github.com/drvinceknight/Axelrod) (and I will do it entirely using the github web interface).
 
 I am going to add a strategy called: 'alternator' which simply alternates strategies.
 
@@ -144,7 +144,7 @@ The latest results (which as of the time of writing now only include the alterna
 
 ![](https://github.com/drvinceknight/Axelrod/raw/master/results.png)
 
-If you clone this repository you can obtain that plot by running:
+If you clone [this repository](https://github.com/drvinceknight/Axelrod) you can obtain that plot by running:
 
 {% highlight bash %}
 $ python run_tournament.py
