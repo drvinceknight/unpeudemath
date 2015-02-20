@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "An iterated prisoner's dilemma on github"
+title      : "An iterated prisoners dilemma on github"
 categories : code
 tags       :
 - gametheory
