@@ -5,12 +5,12 @@ categories : code
 tags       :
 - gametheory
 - axelrod
-comments   : false
+comments   : true
 ---
 
 In the 1980s Axelrod ran a computer tournament inviting people to contribute code that specified strategies in an iterated prisoner's dilemma tournament.
-I have just finished putting the final pieces on a Python framework to carry out the same tournament and would be delighted for people to contribute strategies via pull request (or indeed via any way possible: just get in touch).
-In this post I'll describe the process of adding a strategy to the repository.
+I have just finished putting the final pieces on a Python repository on github ([github.com/drvinceknight/Axelrod](https://github.com/drvinceknight/Axelrod)) to carry out the same tournament and would be delighted for people to contribute strategies via pull request (or indeed via any way possible: just get in touch).
+In this post I'll describe the process of adding a strategy to the repository (the first 3 minutes of a video at the end of this post show you exactly what you are required to do).
 
 For a good overview of the iterated prisoner's dilemma take a look at this page about [Axelrod's tournament](http://cs.stanford.edu/people/eroberts/courses/soco/projects/1998-99/game-theory/axelrod.html) but in a nutshell the idea is that two players (prisoners) repeatedly play the following game:
 
@@ -158,3 +158,11 @@ This would hopefully be of interest if:
 - You like Python
 - You like Game Theory
 - You have never had a pull request accepted before
+
+Here is a short video showing exactly how to contribute using nothing else than the github web interface (the first 3 minutes are all you really need to do):
+
+<div class="video">
+    <figure>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5kOUVdktxAo" frameborder="0" allowfullscreen></iframe>
+    </figure>
+</div>
