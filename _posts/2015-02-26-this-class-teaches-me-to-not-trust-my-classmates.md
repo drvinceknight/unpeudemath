@@ -4,7 +4,7 @@ title      : "This class teaches me to not trust my classmates: An iterated pris
 categories : pedagogy
 tags       :
 - gametheory
-comments   : false
+comments   : true
 ---
 
 On Monday, in class we played an iterated prisoner's dilemma tournament.
