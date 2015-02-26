@@ -26,15 +26,21 @@ The utilities represent 'years in prison' and over the 3 matches that each team 
 
 Here are some photos from the game:
 
-![{{site.baseurl}}/assets/images/pd_2015_01.png]
-![{{site.baseurl}}/assets/images/pd_2015_02.png]
-![{{site.baseurl}}/assets/images/pd_2015_03.png]
+![]({{site.baseurl}}/assets/images/pd_2015_01.jpg)
+
+![]({{site.baseurl}}/assets/images/pd_2015_02.jpg)
+
+![]({{site.baseurl}}/assets/images/pd_2015_03.jpg)
 
 Here are the scores:
 
-![{{site.baseurl}}/assets/images/pd_2015_results.png]
+![]({{site.baseurl}}/assets/images/pd_2015_results.jpg)
 
-We see that 'team name' acquired the least total score and so they won the collection of cookies etc...
+We see that 'We will take the gun' acquired the least total score and so they won the collection of cookies etc...
+
+![]({{site.baseurl}}/assets/images/pd_2015_cookies.jpg)
+
+(The names followed a promise from me to let the team with the coolest name have a nerf gun... Can't say this had the wanted effect...)
 
 At one point during the tournament, one team actually almost declared a strategy which was cool:
 
@@ -44,12 +50,16 @@ This was pretty cool as I hadn't discussed at all what a strategy means in a rep
 
 Here are all the actual duels:
 
-![{{site.baseurl}}/assets/images/pd_2015_results.png]
+![]({{site.baseurl}}/assets/images/pd_2015_duels.jpg)
 
 You'll also notice at the end that a coalition formed and one team agreed to defect so that they could share the prize.
 This happens about 50% of the time when we play this game but I never cease to be amused by it.
 Hopefully everyone found this fun and perhaps some even already agree with a bit of feedback I received on this course last year:
 
 > 'This class teaches me to not trust my classmates'
+
+One of the other really cool things that happened after this class was H asking for a hand to submit a strategy to my Axelrod repository.
+She built a strategy called 'Once Bitten' that performs pretty well!
+You can see it [here](https://github.com/drvinceknight/Axelrod/blob/master/axelrod/strategies/oncebitten.py) (click on 'Blame' and you can see the code that she wrote).
 
 (Big thanks to Jason for keeping track of the scores and to Geraint for helping and grabbing some nice pictures)
