@@ -4,7 +4,8 @@ title      : "Incomplete information games in class"
 categories : gametheory
 tags       :
 - pedagogy
-comments   : false
+- sage
+comments   : true
 ---
 
 Last week my class and I looked at the basics of games with incomplete information.
