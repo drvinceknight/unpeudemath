@@ -62,10 +62,10 @@ In class we obtained the Nash equilibria for this game by realising that the thi
 Here let us just throw it at Sage ([here is a video showing and explaining some of the code](https://www.youtube.com/watch?v=QjXAvRiU4Og)):
 
 <div class="compute"><script type="text/x-sage">
-A = matrix([[1/2,-1/2,0,-1],
-            [-1,-1/2,0,1/2]])
-B = matrix([[-1/2,1/2,0,1],
-            [1,1/2,0,-1/2]])
+A = matrix([[1/2, -1/2, 0, -1],
+            [-1, -1/2, 0, 1/2]])
+B = matrix([[-1/2, 1/2, 0, 1],
+            [1, 1/2, 0, -1/2]])
 g = NormalFormGame([A,B])
 g.obtain_nash()
 </script></div>
