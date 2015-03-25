@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "A one week flipped teaching environment to introduce Object Oriented Programming"
+title      : "A one week flipped learning environment to introduce Object Oriented Programming"
 categories : pedagogy
 tags       :
 - python
