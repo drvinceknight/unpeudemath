@@ -12,6 +12,10 @@ The activity is revolves around a two day hackathon that gets students to use Py
 
 This year is the third installment of this exercise which came as a result of the MSc advisory board requesting that object oriented programming be introduced to our MSc.
 
+Before describing the activity itself let me just put this simple diagram that describes the flipped learning environment here (if you would like more info about it be sure to talk to [Robert Talbert](https://plus.google.com/+RobertTalbert/posts) who has always been very helpful to me):
+
+![]({{site.baseurl}}/assets/images/flipped_environment.svg)
+
 ## Description of what happens
 
 After 3 iterations and a number of discussions about the format with [Paul Harper](https://plus.google.com/u/0/+PaulHarper/posts) (the director of the MSc) I think the last iteration is pretty spot on and it goes something like this:
@@ -40,6 +44,7 @@ Here is a photo of some of the groups getting to work:
 
 At the very end of the day (starting at 1600 for about 30 minutes with each group).
 During this feedback session go through the code written by each group in detail, highlighting things they are having difficulty with and agreeing on a course of action for the next day.
+**This is the point at which the class 'flips' so to speak: transfer of content is done and difficulties are identified and conceptualised**.
 
 Here is a photo of Jason, Geraint and I at the end of a very long day after the feedback sessions:
 
@@ -77,3 +82,13 @@ Here is a photo of the team who did the best this year:
 ![]({{site.baseurl}}/assets/images/oop_winners.jpg)
 
 If I could sit with students over the 11 week period of the other courses I teach and get to know them and assess them that way, that is indeed how I would do it.
+
+## Summary
+
+Here is a summary of how I feel this activity fits in the original diagram I had:
+
+![]({{site.baseurl}}/assets/images/oop_day_as_a_flipped_environment.svg)
+
+As you can see despite 'being in contact' with students for most of Thursday I would not consider this contact time in the usual sense as most of that contact is part of the assessment.
+
+This is always a very fun (and exhausting) two days and I look forward to next year.
