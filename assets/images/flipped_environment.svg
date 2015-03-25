@@ -38,7 +38,7 @@
      inkscape:cx="796.70089"
      inkscape:cy="320.04407"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5253"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -129,7 +129,7 @@
            y="326.64789"
            x="-654.28571"
            id="tspan5251"
-           sodipodi:role="line">Non Contact Time</tspan></text>
+           sodipodi:role="line">Pre Contact Time</tspan></text>
     </g>
     <rect
        y="267.73709"
