@@ -4,11 +4,12 @@ title      : "A one week flipped teaching environment to introduce Object Orient
 categories : pedagogy
 tags       :
 - python
-comments   : false
+comments   : true
 ---
 
-This post describes a teaching activity that I run for the Cardiff MSc. programmes.
+This post describes a teaching activity that is run for the Cardiff MSc. programmes.
 The activity is revolves around a two day hackathon that gets students to use Python and object oriented programming to solve a challenge.
+The activity is placed within a flipped learning environment and makes use of what I feel is a very nice form of assessment (we just get to know the students).
 
 This year is the third installment of this exercise which came as a result of the MSc advisory board requesting that object oriented programming be introduced to our MSc.
 
