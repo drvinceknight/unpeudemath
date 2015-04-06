@@ -1,10 +1,10 @@
 ---
 layout     : post
-title      : "My 5 reasons why jekyll is a terrible teaching tool."
+title      : "My 5 reasons why jekyll + github is a terrible teaching tool."
 categories : pedagogy
 tags       :
 - jekyll
-comments   : false
+comments   : true
 ---
 
 For the past year or so I have been using [jekyll](http://jekyllrb.com/) for all
@@ -144,3 +144,8 @@ Github + Jekyll works seamlessly and ensures that I have more time to respond to
 student queries and think.
 This time for reflection on teaching practice is dangerous: I might choose to do
 things differently than how they have been done for the past 100 years.
+
+(_In case my tone is unclear: I am such a huge jekyll fan and think it is a
+brilliant pedagogic tool.
+There might well be various other static site generators and other options so please do
+comment about them below :)_)
