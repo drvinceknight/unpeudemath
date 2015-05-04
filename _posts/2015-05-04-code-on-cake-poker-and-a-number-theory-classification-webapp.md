@@ -4,7 +4,7 @@ title      : "Code on cake, poker and a number theory classification web app"
 categories : pedagogy
 tags       :
 - computing
-comments   : false
+comments   : true
 ---
 
 I have just finished writing feedback and obtaining marks for my first year
