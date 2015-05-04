@@ -32,8 +32,9 @@ Some of the great projects included:
 
 - A story based game with an original storyline stemming from the zodiac. The
   presentation culminated in Geraint, Jason and I (who were the audience)
-  retaliating to their Nerf gun attack with our hidden Nerf guns (we had a hunch
-  that this group would ambush us...). This was almost written in Django (that
+  retaliating to their Nerf gun attack with our (hidden under the desk) Nerf guns (we had a hunch
+  that this group would ambush us...). The game mechanics itself was coded in
+  pure Python and the UI was almost written in Django (that
   was the goal but they didn't have the time to fully implement it).
 
     ![]({{site.baseurl}}/assets/images/cardiff_elite_four.jpg)
