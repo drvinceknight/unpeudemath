@@ -76,9 +76,13 @@ Some of the great projects included:
 
   Here are a couple of screen shots of the app itself:
 
+  Home screen:
+
+    ![]({{site.baseurl}}/assets/images/oddson_1.png)
+
+  The input card screen:
 
     ![]({{site.baseurl}}/assets/images/oddson_0.png)
-    ![]({{site.baseurl}}/assets/images/oddson_1.png)
 
 I am missing out a bunch of great projects (including an impressive _actual_
 business that I will be delighted to talk about more when appropriate). I am
