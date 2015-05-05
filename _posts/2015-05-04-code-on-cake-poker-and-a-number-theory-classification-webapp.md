@@ -74,6 +74,12 @@ Some of the great projects included:
 
     ![]({{site.baseurl}}/assets/images/team_super_awesome_funsies_selfie.jpg)
 
+  Here are a couple of screen shots of the app itself:
+
+
+    ![]({{site.baseurl}}/assets/images/oddson_0.png)
+    ![]({{site.baseurl}}/assets/images/oddson_1.png)
+
 I am missing out a bunch of great projects (including an impressive _actual_
 business that I will be delighted to talk about more when appropriate). I am
 very grateful to the efforts put in by all the students and wish them well
