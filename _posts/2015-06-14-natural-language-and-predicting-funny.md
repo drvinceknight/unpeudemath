@@ -133,7 +133,7 @@ We can now (**in one line of code!!!!**) create a classifier:
 classifier = nltk.NaiveBayesClassifier.train(df[df['Year'] <= 2013]['Labeled_Feature'])
 {% endhighlight %}
 
-This classifier will take in to account all the words in a given joke and spit out if it's funny or not.
+This classifier will take into account all the words in a given joke and spit out if it's funny or not.
 It can also give us some indication as to what makes a joke funny or not:
 
 {% highlight python %}
