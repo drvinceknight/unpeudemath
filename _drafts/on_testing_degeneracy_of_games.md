@@ -73,9 +73,9 @@ sage: g.obtain_nash()
 [[(0, 1/3, 2/3), (1/3, 2/3)], [(4/5, 1/5, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
 {% endhighlight %}
 
-We see that we there has 3 Nash equilibrium. For each of them we see that the
-supports (number of non zero entries) of both players' strategies have the
-same size. This is in fact a theoretic certainly when games are **non
+We see that this game has 3 Nash equilibrium. For each of them we see that the
+supports (number of non zero entries) of both players' strategies are/have? the
+same size. This is in fact a theoretic certainty when games are **non
 degenerate**.
 
 If we modify the game slightly:
@@ -104,8 +104,8 @@ sage: g.obtain_nash()
 [[(0, 1/3, 2/3), (1/3, 2/3)], [(1, 0, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
 {% endhighlight %}
 
-We see that the second equilibria there has supports of different size. In fact
-though if the first player did play \\((1,0,0)\\) (in other words just play the
+We see that the second equilibria there has supports of different sizes. In fact,
+ if the first player did play \\((1,0,0)\\) (in other words just play the
 first row) the second player could play **any mixture** of strategies as a best
 response and not particularly \((2/3,1/3)\\). This is because the game in
 consideration is now **degenerate**.
@@ -193,16 +193,27 @@ is sufficient to test.
 
 ## A sufficient mixed strategy to test for degeneracy
 
+Given a support \\(\sigma\\) for Player 1, we want to find a strategy \\(x\\)
+with support \\(\sigma\\) that maximises the number of best respones for Player 2.
+If the game is degenerate then there will exist an \\(x\\) which has more best
+responses than the size of its support \\(\sigma\\).
+
+Here we show that for a degenerate game, it is sufficient to make Player 1 and
+Player 2 indifferent to each other in order to find the strategy which maximises
+the number of best responses.
+
 Let \\(X\\) be the set of all strategies for Player1.
 Let \\(Y\\) be the set of all strategies for Player2.
 For any \\(x \in X\\) let \\(S(x)\\) be the size of the support of \\(x\\).
 (Similar for any \\(y \in Y\\)).
 
-If the game is degenerate, then there exists \\(x_* \in X\\) such that \\(S(x_*) = K\\) and Player2 has pure best responses \\(y_1, y_2,...,y_N\\) with \\(N > K\\).
-(By definition)
+If the game is degenerate, then there exists \\(x_* \in X\\) such that
+\\(S(x_*) = K\\) and Player2 has pure best responses \\(y_1, y_2,...,y_N\\) with
+\\(N > K\\). (By definition)
 
-For all \\(y_1, y_2,...,y_N\\) to be best responses, \\(x_* \\) must make each of them have the same utility.
-Then there must also exist \\(y_* \in Y\\) with the same utility where the support of \\(y_* \\) is the strategies \\(y_1, y_2,...,y_N\\).
+For all \\(y_1, y_2,...,y_N\\) to be best responses, \\(x_* \\) must make each
+of them have the same utility. Then there must also exist \\(y_* \in Y\\) with
+the same utility where the support of \\(y_* \\) is all the strategies \\(y_1, y_2,...,y_N\\).
 For this to be possible, \\(x_* \\) must make Player2 indifferent.
 
 
