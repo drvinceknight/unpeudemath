@@ -224,6 +224,12 @@ and \\( x = x^\* \\) where \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j
 
 Therefore \\( x^\* \\) is a solution.
 
+**Proof - Backwards**
+
+Let \\( x = x^\* \\), then \\( \mid \sigma_1\mid < \mid \sigma_2\mid \implies \mid S(x^\*) \mid < \mid \sigma_2\mid \\)
+where \\( x^\* \\) is a solution of \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+
+Therefore \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j \\) in \\( \sigma_2 \\)
 
 ## References
 
