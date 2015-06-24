@@ -110,7 +110,8 @@ first row) the second player could play **any mixture** of strategies as a best
 response and not particularly \((2/3,1/3)\\). This is because the game in
 consideration is now **degenerate**.
 
-(Note that both of the games above are taken from [AGT]().)
+(Note that both of the games above are taken from
+[Nisan et al. 2007 [pdf]](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.cambridge.org%2Fjournals%2Fnisan%2Fdownloads%2FNisan_Non-printable.pdf&ei=bymLVdTxBaS27gbYhILABg&usg=AFQjCNGcYWvHGjECHZGGUuCMaENGCP2HYw&sig2=w6RVpLM9DYILh2gbzOPRqw&bvm=bv.96339352,bs.1,d.bGg).)
 
 ## What is a degenerate game
 
@@ -151,11 +152,13 @@ size 2 this implies that the game above is degenerate.
 
 ## What does the literature say about degenerate games
 
-The original definition of degenerate games was given in [Lemke, Howson 19..]()
+The original definition of degenerate games was given in [Lemke, Howson
+1964 [pdf]](http://www.math.mcgill.ca/vetta/CS764.dir/lemke.pdf)
 and their definition was dependent on the labeling polytope that they used for
 their famous algorithm for the computation of equilibria (which is currently
 being implemented in Sage!).
-Further to this [Stengel 19...]() offers a nice overview of a variety of
+Further to this [Stengel
+1999 [ps]](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.cis.upenn.edu%2F~mkearns%2Fteaching%2Fcgt%2Fstengel.ps&ei=HCmLVZ-vJOWM7Aa8_7kQ&usg=AFQjCNGb_r3PDIvTBl4N3UXi55kDR_01OQ&sig2=9yUZEl49EmM5nAUD95oOjg&bvm=bv.96339352,bs.1,d.bGg) offers a nice overview of a variety of
 equivalent definitions.
 
 Sadly, all of these definitions require finding a particular mixed strategy
@@ -273,6 +276,10 @@ pair.
 
 ## References
 
-- [Lemkey Howson...]()
-- [Stengel ...]()
-- [AGT ...]()
+- N Nisan, T Roughgarden, E Tardos, VV Vazirani Vol. 1. Cambridge:
+  Cambridge University Press, 2007. [[pdf]](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.cambridge.org%2Fjournals%2Fnisan%2Fdownloads%2FNisan_Non-printable.pdf&ei=bymLVdTxBaS27gbYhILABg&usg=AFQjCNGcYWvHGjECHZGGUuCMaENGCP2HYw&sig2=w6RVpLM9DYILh2gbzOPRqw&bvm=bv.96339352,bs.1,d.bGg)
+- Lemke, Carlton E., and Joseph T. Howson, Jr. "Equilibrium points of bimatrix
+  games." Journal of the Society for Industrial & Applied Mathematics 12.2
+  (1964): 413-423. [[pdf]](http://www.math.mcgill.ca/vetta/CS764.dir/lemke.pdf)
+- von Stengel, B. "Computing equilibria for two person games." Technical report.
+  [[ps]](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.cis.upenn.edu%2F~mkearns%2Fteaching%2Fcgt%2Fstengel.ps&ei=HCmLVZ-vJOWM7Aa8_7kQ&usg=AFQjCNGb_r3PDIvTBl4N3UXi55kDR_01OQ&sig2=9yUZEl49EmM5nAUD95oOjg&bvm=bv.96339352,bs.1,d.bGg)
