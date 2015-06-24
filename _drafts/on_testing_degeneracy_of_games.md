@@ -63,4 +63,9 @@ Let \\(Y\\) be the set of all strategies for Player2.
 For any \\(x \in X\\) let \\(S(x)\\) be the size of the support of \\(x\\).
 (Similar for any \\(y \in Y\\)).
 
-If the game is degenerate, then there exists \\(x_* \in X\\) such that \\(S(x_*) = K\\) and Player2 has \\(N\\) best responses with \\(N > K\\).
+If the game is degenerate, then there exists \\(x_* \in X\\) such that \\(S(x_*) = K\\) and Player2 has pure best responses \\(y_1, y_2,...,y_N\\) with \\(N > K\\).
+(By definition)
+
+For all \\(y_1, y_2,...,y_N\\) to be best responses, \\(x_* \\) must make each of them have the same utility.
+Then there must also exist \\(y_* \in Y\\) with the same utility where the support of \\(y_* \\) is the strategies \\(y_1, y_2,...,y_N\\).
+For this to be possible, \\(x_* \\) must make Player2 indifferent.
