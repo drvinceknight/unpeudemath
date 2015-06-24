@@ -13,9 +13,15 @@ on implementing code in [Sage](http://www.sagemath.org/) to test if a game is
 degenerate or not. In this post we'll prove a simple result that is used in the
 algorithm that we are/have implemented.
 
-# What is a bi-matrix
+## Bi-Matrix games
+
+For a general overview of these sorts of things take a look at [this post from a
+while ago on the subject of bi-matrix games in
+Sage]({{site.baseurl}}/code/2014/12/10/sneak-preview-of-game-theory-in-sage-3-of-3/).
 A bi-matrix is a matrix of tuples corresponding to payoffs for a 2 player Normal Form Game.
-Rows represent strategies for Player1 and columns represent strategies for player2.
+Rows represent strategies for the first player and columns represent strategies
+for the second player, and each tuple of the bi-matrix corresponds to a tuple of
+payoffs. Here is an example:
 
 $$
 \begin{pmatrix}
@@ -25,7 +31,54 @@ $$
 \end{pmatrix}
 $$
 
-This could also be written as two seperate matrices. A matrix \\(A\\) for Player1 and \\(B\\) for Player2.
+We see that if the first player plays their first row strategy and the second
+player their second column strategy then the first player gets a utility of 5
+and the second player a utility of 6.
+
+This can also be written as two separate matrices.
+A matrix \\(A\\) for Player 1 and \\(B\\) for Player 2.
+
+$$
+A =
+\begin{pmatrix}
+3&3\\
+2&5\\
+0&6\\
+\end{pmatrix}
+\quad
+B =
+\begin{pmatrix}
+3&2\\
+2&6\\
+3&1\\
+\end{pmatrix}
+$$
+
+Here is how this can be constructed in Sage using the `NormalFormGame` class:
+
+{% highlight python %}
+sage: A = matrix([[3,3],[2,5],[0,6]])
+sage: B = matrix([[3,2],[2,6],[3,1]])
+sage: g = NormalFormGame([A, B])
+sage: g
+Normal Form Game with the following utilities: {(0, 1): [3, 2], (0, 0): [3, 3],
+(2, 1): [6, 1], (2, 0): [0, 3], (1, 0): [2, 2], (1, 1): [5, 6]}
+{% endhighlight %}
+
+What is presently implemented in Sage is that we can obtain the Nash equilibria
+of games:
+
+{% highlight python %}
+sage: g.obtain_nash()
+[[(0, 1/3, 2/3), (1/3, 2/3)], [(4/5, 1/5, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
+{% endhighlight %}
+
+We see that we there has 3 Nash equilibrium. For each of them we see that the
+supports (number of non zero entries) of both players' strategies have the
+same size. This is in fact a theoretic certainly when games are **non
+degenerate**.
+
+If we modify the game slightly:
 
 $$
 A =
@@ -43,30 +96,103 @@ B =
 \end{pmatrix}
 $$
 
-We could do this Normal Form game in sage using
-
 {% highlight python %}
 sage: A = matrix([[3,3],[2,5],[0,6]])
 sage: B = matrix([[3,3],[2,6],[3,1]])
-sage:g = NormalFormGame([A, B])
+sage: g = NormalFormGame([A, B])
+sage: g.obtain_nash()
+[[(0, 1/3, 2/3), (1/3, 2/3)], [(1, 0, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
 {% endhighlight %}
 
-# What is a degenerate game
-A bimatrix game is called nondegenerate if the number of pure best responses to a mixed strategy never exceeds the size of its support.
-In a degenerate game, this definition is violated, for example if there is a pure strategy that has two pure best responses.
+We see that the second equilibria there has supports of different size. In fact
+though if the first player did play \\((1,0,0)\\) (in other words just play the
+first row) the second player could play **any mixture** of strategies as a best
+response and not particularly \((2/3,1/3)\\). This is because the game in
+consideration is now **degenerate**.
 
-# What does the literature say about it
-The following are equivalent:
+(Note that both of the games above are taken from [AGT]().)
 
-- The game is nondegenerate according to Definition 2.6
-- For any \\(x \in X\\) and \\(y \in Y\\), the rows of IMB for the labels of \\(x\\) are linearly independent, and the rows of AIN for the labels of \\(y\\) are linearly independent.
-- For any \\(x \in X\\) with set of labels \\(K\\) and \\(y \in Y\\) with set of labels \\(L\\), the set has dimension \\(m − K\\), and the set has dimension \\(n − L\\).
-- P1 andP2 in  (2.18)  are  simple  polytopes,  and  any  pure  strategy  of  a  player  thatis weakly dominated by or payoff equivalent to another mixed strategy is strictlydominated by some mixed strategy.
-- In any basic feasible solution to (2.20), all basic variables have positive values.
+## What is a degenerate game
 
-2002 - Von Stengel - Computing equilibria for two-person games
+A bimatrix game is called nondegenerate if the number of pure best responses to
+a mixed strategy never exceeds the size of its support.
+In a degenerate game, this definition is violated, for example if there is a
+pure strategy that has two pure best responses (as in the example above), but
+it is also possible to have a mixed strategy with support size \\(k\\) that
+has \\(k+1\\) strategies that are a best response.
 
-# Our result
+Here is an example of this:
+
+$$
+A =
+\begin{pmatrix}
+3&0\\
+0&3\\
+1.5&1.5\\
+\end{pmatrix}
+\quad
+B =
+\begin{pmatrix}
+4&3\\
+2&6\\
+3&1\\
+\end{pmatrix}
+$$
+
+If we consider the mixed strategy for player 2: \\(y=(1/2,1/2)\\), then the
+utility to player 1 is given by:
+
+$$
+Ay=(3/2,3/2,3/2)
+$$
+
+We see that there are 3 best responses to \\(y\\) and as \\(y\\) has support
+size 2 this implies that the game above is degenerate.
+
+## What does the literature say about degenerate games
+
+The original definition of degenerate games was given in [Lemke, Howson 19..]()
+and their definition was dependent on the labeling polytope that they used for
+their famous algorithm for the computation of equilibria (which is currently
+being implemented in Sage!).
+Further to this [Stengel 19...]() offers a nice overview of a variety of
+equivalent definitions.
+
+Sadly, all of these definitions require finding a particular mixed strategy
+profile \\(x,y\\) for which a particular condition holds.
+To be able to implement a test for degeneracy based on any of these definitions
+would require a continuous search over possible mixed strategy pairs.
+
+In the previous example (where we take \\(y=(1/2,1/2)\\) we could have
+identified this \\(y\\) by looking at the utilities for each pure strategy for
+player 1 against \\(y=(y_1, 1-y_1)\\):
+
+$$
+u_1(r_1, y_1) = 3y_1
+$$
+
+$$
+u_1(r_2, y_1) = 3-3y_1
+$$
+
+$$
+u_1(r_3, y_1) = 3/2
+$$
+
+(\\(r_i\\) denotes row strategy \\(i\\) for player 1.)
+A plot of this is shown:
+
+![]({{site.baseurl}}/assets/images/plot_for_degenerate_game_post.svg)
+
+We can (in this instance) quickly search through values of \\(y_1\\) and
+identify the point that has **the most** best responses which gives the best
+chance of passing the degeneracy condition (\\(y_1=1/2\\)).
+This is not really practical from a generic point of view which leads to
+this blog post: we have identified what the particular \\(x, y\\) is that
+is sufficient to test.
+
+## A sufficient mixed strategy to test for degeneracy
+
 Let \\(X\\) be the set of all strategies for Player1.
 Let \\(Y\\) be the set of all strategies for Player2.
 For any \\(x \in X\\) let \\(S(x)\\) be the size of the support of \\(x\\).
@@ -78,3 +204,10 @@ If the game is degenerate, then there exists \\(x_* \in X\\) such that \\(S(x_*)
 For all \\(y_1, y_2,...,y_N\\) to be best responses, \\(x_* \\) must make each of them have the same utility.
 Then there must also exist \\(y_* \in Y\\) with the same utility where the support of \\(y_* \\) is the strategies \\(y_1, y_2,...,y_N\\).
 For this to be possible, \\(x_* \\) must make Player2 indifferent.
+
+
+## References
+
+- [Lemkey Howson...]()
+- [Stengel ...]()
+- [AGT ...]()
