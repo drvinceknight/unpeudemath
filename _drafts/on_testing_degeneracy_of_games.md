@@ -159,7 +159,7 @@ Further to this [Stengel 19...]() offers a nice overview of a variety of
 equivalent definitions.
 
 Sadly, all of these definitions require finding a particular mixed strategy
-profile \\(x,y\\) for which a particular condition holds.
+profile \\((x, y)\\) for which a particular condition holds.
 To be able to implement a test for degeneracy based on any of these definitions
 would require a continuous search over possible mixed strategy pairs.
 
@@ -193,38 +193,54 @@ is sufficient to test.
 
 ## A sufficient mixed strategy to test for degeneracy
 
-**Def.** A Normal Form Game is degenerate if:
+The definition of degeneracy can be written as:
 
-\\( \exists \enspace x \\) s.t. \\( \mid S(x) \mid < \mid \sigma_2\mid \\)
-where \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+**Def.** A Normal Form Game is degenerate iff:
 
-OR
-
-\\( \exists \enspace y \\) s.t. \\( \mid S(y) \mid < \mid \sigma_1\mid \\)
-where \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
-
-
-**Theorem.** A Normal Form Game is degenerate if:
-
-\\( \exists \enspace \sigma_1 \subseteq X \\) and \\( \sigma_2 \subseteq Y \\)
-such that \\( \mid \sigma_1\mid < \mid \sigma_2\mid \\) and \\( S(x^\*) = \sigma_1 \\)
-where \\( x^\* \\) is a solution of \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+There exists \\(x\in \Delta X\\) such that \\( |S(x)| < |\sigma_2| \\)
+where \\(\sigma_2\\) is the support such that \\( (xB)_j = \max(xB) \\), for all
+\\(j \\) in \\( \sigma_2\\).
 
 OR
 
-\\( \exists \enspace \sigma_2 \subseteq Y \\) and \\( \sigma_1 \subseteq X \\)
-such that \\( \mid \sigma_2\mid < \mid \sigma_1\mid \\) and \\( S(y^\*) = \sigma_2 \\)
-where \\( y^\* \\) is a solution of \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
+There exists \\(y\in \Delta Y\\) such that \\( |S(x)| < |\sigma_1| \\)
+where \\(\sigma_1\\) is the support such that \\( (Ay)_i = \max(Ay) \\), for all
+\\(i \\) in \\( \sigma_1\\).
 
-**Proof - Forward**
+(\\(X\\) and \\(Y\\) are the pure strategies for player 1 and 2 and \\(\Delta X,
+\Delta Y\\) the corresponding mixed strategies spaces.
+
+The result we are implementing in Sage aims to remove the need to search
+particular mixed strategies \\(x, y\\) (a continuous search) and replace
+that by a search over supports (a discrete search).
+
+**Theorem.** A Normal Form Game is degenerate iff:
+
+There exists \\( \sigma_1 \subseteq X \\) and \\( \sigma_2 \subseteq Y \\)
+such that \\( |\sigma_1| < |\sigma_2| \\) and \\( S(x^\*) = \sigma_1 \\)
+where \\( x^\* \\) is a solution of \\( (xB)_j = \max(xB) \\), for
+all \\(j \\) in \\( \sigma_2 \\).
+
+OR
+
+There exists \\( \sigma_1 \subseteq X \\) and \\( \sigma_2 \subseteq Y \\)
+such that \\( |\sigma_1| > |\sigma_2| \\) and \\( S(y^\*) = \sigma_2 \\)
+where \\( y^\* \\) is a solution of \\( (Ay)_i = \max(Ay) \\), for
+all \\(i \\) in \\( \sigma_1 \\).
+
+Using the definition given above the proof is relatively straightforward but we
+will include it below (mainly to try and convince ourselves that we haven't made a
+mistake).
+
+**Proof \\(\Rightarrow\\)**
 
 Let \\( S(x) = \sigma_1 \\),
-then \\( \mid S(x) \mid < \mid \sigma_2\mid \implies \mid \sigma_1\mid < \mid \sigma_2\mid \\)
+then \\( |S(x)| < |\sigma_2| \implies |\sigma_1| < |\sigma_2| \\)
 and \\( x = x^\* \\) where \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j \\) in \\( \sigma_2 \\)
 
 Therefore \\( x^\* \\) is a solution.
 
-**Proof - Backwards**
+**Proof \\(\Leftarrow\\)**
 
 Let \\( x = x^\* \\), then \\( \mid \sigma_1\mid < \mid \sigma_2\mid \implies \mid S(x^\*) \mid < \mid \sigma_2\mid \\)
 where \\( x^\* \\) is a solution of \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
