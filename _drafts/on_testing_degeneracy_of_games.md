@@ -252,8 +252,24 @@ and further more that \\( (xB)_j = \max(xB) \\), for all \\(j \\) in \\( \sigma_
 If we now assume that we have \\(\sigma_1, \sigma_2, x^\*\\) as per the first part
 of the theorem then we have \\(|\sigma_1|<|\sigma_2|\\) and taking \\(x=x^\*\\)
 implies that \\(|S(x)|<|\sigma_2|\\). Furthermore as \\(x^\*\\) is a solution of
-\\( (xB)_j = \max(xB) \\) the result follows (by the **definition** given above).
+\\( (xB)\_j = \max(xB) \\) the result follows (by the **definition** given above).
 
+## Implementation
+
+This result implies that we simply need to consider all potential pairs of
+supports. Depending on the relative size of the supports we can use one of the
+two conditions of the result. If we ordered the supports by size the situation
+for the two player game looks somewhat like this:
+
+![]({{site.baseurl}}/assets/images/diagram_for_search_space_for_post_on_degenerate_game.png)
+
+Note that for an \\(m\times n\\) game there are \\((2^m-1)\\) potential supports
+for player 1 (the size of the powerset of strategy set without the empty set)
+and \\((2^n-1)\\) potential supports of for player 2.
+Thus the rectangle drawn above has dimension \\((2^m-1)\times(2^n-1)\\).
+Needless to say that our implementation will not be efficient but at least we
+have identified exactly which mixed strategy we need to test for each support
+pair.
 
 ## References
 
