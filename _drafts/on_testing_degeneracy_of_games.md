@@ -193,14 +193,28 @@ is sufficient to test.
 
 ## A sufficient mixed strategy to test for degeneracy
 
-Def.
+**Def.** A Normal Form Game is degenerate if:
 
-\\( \exists x \\) s.t. \\( \mid S(x) \mid < \mid \sigma_2\mid \\) where \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+\\( \exists \enspace x \\) s.t. \\( \mid S(x) \mid < \mid \sigma_2\mid \\)
+where \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
 
 OR
 
-\\( \exists y \\) s.t. \\( \mid S(y) \mid < \mid \sigma_1\mid \\) where \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
+\\( \exists \enspace y \\) s.t. \\( \mid S(y) \mid < \mid \sigma_1\mid \\)
+where \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
 
+
+**Theorem.** A Normal Form Game is degenerate if:
+
+\\( \exists \enspace \sigma_1 \subseteq X \\) and \\( \sigma_2 \subseteq Y \\)
+such that \\( \mid \sigma_1\mid < \mid \sigma_2\mid \\) and \\( S(x^\*) = \sigma_1 \\)
+where \\( x^\* \\) is a solution of \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+
+OR
+
+\\( \exists \enspace \sigma_2 \subseteq Y \\) and \\( \sigma_1 \subseteq X \\)
+such that \\( \mid \sigma_2\mid < \mid \sigma_1\mid \\) and \\( S(y^\*) = \sigma_2 \\)
+where \\( y^\* \\) is a solution of \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
 
 
 ## References
