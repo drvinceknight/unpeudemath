@@ -193,35 +193,14 @@ is sufficient to test.
 
 ## A sufficient mixed strategy to test for degeneracy
 
-Given a support \\(\sigma\\) for Player 1, we want to find a strategy \\(x\\)
-with support \\(\sigma\\) that maximises the number of best respones for Player 2.
-If the game is degenerate then there will exist an \\(x\\) which has more best
-responses than the size of its support \\(\sigma\\).
+Def.
 
-Here we show that for a degenerate game, it is sufficient to make Player 1 and
-Player 2 indifferent to each other in order to find the strategy which maximises
-the number of best responses.
+\\( \exists x \\) s.t. \\( \mid S(x) \mid < \mid \sigma_2\mid \\) where \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
 
-Let \\(X\\) be the set of all strategies for Player 1.
-Let \\(Y\\) be the set of all strategies for Player 2.
-For any \\(x \in X\\) let \\(S(x)\\) be the size of the support of \\(x\\).
-(Similar for any \\(y \in Y\\)).
+OR
 
-If the game is degenerate, then there exists \\(x_* \in X\\) such that
-\\(S(x_*) = K\\) and Player 2 has pure best responses \\(y_1, y_2,...,y_N\\) with
-\\(N > K\\). (By definition)
+\\( \exists y \\) s.t. \\( \mid S(y) \mid < \mid \sigma_1\mid \\) where \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
 
-For all \\(y_1, y_2,...,y_N\\) to be best responses, \\(x_* \\) must make each
-of them have the same utility. Then there must also exist \\(y_* \in Y\\) with
-the same utility where the support of \\(y_* \\) is all the strategies \\(y_1, y_2,...,y_N\\).
-For this to be possible, \\(x_* \\) must make Player 2 indifferent.
-
-Player 1 must also be indifferent, as we have fixed the strategy \\(x_*\\) and
-they must not deviate from this.
-
-So we have shown that there exists a support for Player 1 and a **larger** support
-for Player 2 that will produce valid strategies for both players when solved for
-indifference.
 
 
 ## References
