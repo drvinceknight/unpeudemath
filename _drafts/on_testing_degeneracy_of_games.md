@@ -232,20 +232,28 @@ Using the definition given above the proof is relatively straightforward but we
 will include it below (mainly to try and convince ourselves that we haven't made a
 mistake).
 
-**Proof \\(\Rightarrow\\)**
-
-Let \\( S(x) = \sigma_1 \\),
-then \\( |S(x)| < |\sigma_2| \implies |\sigma_1| < |\sigma_2| \\)
-and \\( x = x^\* \\) where \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j \\) in \\( \sigma_2 \\)
-
-Therefore \\( x^\* \\) is a solution.
+We will only consider the first part of each condition (the ones for the first
+player). The result follows in the same way for the second player.
 
 **Proof \\(\Leftarrow\\)**
 
-Let \\( x = x^\* \\), then \\( \mid \sigma_1\mid < \mid \sigma_2\mid \implies \mid S(x^\*) \mid < \mid \sigma_2\mid \\)
-where \\( x^\* \\) is a solution of \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+Assume a game defined by \\(A, B\\) is degenerate, by the above **definition**
+without loss of generality this implies that there exists an
+\\(x\in \Delta X\\) such that \\( |S(x)| < |\sigma_2| \\)
+where \\(\sigma_2\\) is the support such that \\( (xB)_j = \max(xB) \\), for all
+\\(j \\) in \\( \sigma_2\\).
 
-Therefore \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+If we denote \\(S(x)\\) by \\(\sigma_1\\)
+then the definition implies that \\(|\sigma_1| < |\sigma_2| \\)
+and further more that \\( (xB)_j = \max(xB) \\), for all \\(j \\) in \\( \sigma_2 \\) as required.
+
+**Proof \\(\Rightarrow\\)**
+
+If we now assume that we have \\(\sigma_1, \sigma_2, x^\*\\) as per the first part
+of the theorem then we have \\(|\sigma_1|<|\sigma_2|\\) and taking \\(x=x^\*\\)
+implies that \\(|S(x)|<|\sigma_2|\\). Furthermore as \\(x^\*\\) is a solution of
+\\( (xB)_j = \max(xB) \\) the result follows (by the **definition** given above).
+
 
 ## References
 
