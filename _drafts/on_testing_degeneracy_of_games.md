@@ -216,6 +216,14 @@ OR
 such that \\( \mid \sigma_2\mid < \mid \sigma_1\mid \\) and \\( S(y^\*) = \sigma_2 \\)
 where \\( y^\* \\) is a solution of \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
 
+**Proof - Forward**
+
+Let \\( S(x) = \sigma_1 \\),
+then \\( \mid S(x) \mid < \mid \sigma_2\mid \implies \mid \sigma_1\mid < \mid \sigma_2\mid \\)
+and \\( x = x^\* \\) where \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+
+Therefore \\( x^\* \\) is a solution.
+
 
 ## References
 
