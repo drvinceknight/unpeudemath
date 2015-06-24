@@ -73,9 +73,9 @@ sage: g.obtain_nash()
 [[(0, 1/3, 2/3), (1/3, 2/3)], [(4/5, 1/5, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
 {% endhighlight %}
 
-We see that we there has 3 Nash equilibrium. For each of them we see that the
-supports (number of non zero entries) of both players' strategies have the
-same size. This is in fact a theoretic certainly when games are **non
+We see that this game has 3 Nash equilibrium. For each of them we see that the
+supports (number of non zero entries) of both players' strategies are/have? the
+same size. This is in fact a theoretic certainty when games are **non
 degenerate**.
 
 If we modify the game slightly:
@@ -104,8 +104,8 @@ sage: g.obtain_nash()
 [[(0, 1/3, 2/3), (1/3, 2/3)], [(1, 0, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
 {% endhighlight %}
 
-We see that the second equilibria there has supports of different size. In fact
-though if the first player did play \\((1,0,0)\\) (in other words just play the
+We see that the second equilibria there has supports of different sizes. In fact,
+ if the first player did play \\((1,0,0)\\) (in other words just play the
 first row) the second player could play **any mixture** of strategies as a best
 response and not particularly \((2/3,1/3)\\). This is because the game in
 consideration is now **degenerate**.
@@ -193,18 +193,43 @@ is sufficient to test.
 
 ## A sufficient mixed strategy to test for degeneracy
 
-Let \\(X\\) be the set of all strategies for Player1.
-Let \\(Y\\) be the set of all strategies for Player2.
-For any \\(x \in X\\) let \\(S(x)\\) be the size of the support of \\(x\\).
-(Similar for any \\(y \in Y\\)).
+**Def.** A Normal Form Game is degenerate if:
 
-If the game is degenerate, then there exists \\(x_* \in X\\) such that \\(S(x_*) = K\\) and Player2 has pure best responses \\(y_1, y_2,...,y_N\\) with \\(N > K\\).
-(By definition)
+\\( \exists \enspace x \\) s.t. \\( \mid S(x) \mid < \mid \sigma_2\mid \\)
+where \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
 
-For all \\(y_1, y_2,...,y_N\\) to be best responses, \\(x_* \\) must make each of them have the same utility.
-Then there must also exist \\(y_* \in Y\\) with the same utility where the support of \\(y_* \\) is the strategies \\(y_1, y_2,...,y_N\\).
-For this to be possible, \\(x_* \\) must make Player2 indifferent.
+OR
 
+\\( \exists \enspace y \\) s.t. \\( \mid S(y) \mid < \mid \sigma_1\mid \\)
+where \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
+
+
+**Theorem.** A Normal Form Game is degenerate if:
+
+\\( \exists \enspace \sigma_1 \subseteq X \\) and \\( \sigma_2 \subseteq Y \\)
+such that \\( \mid \sigma_1\mid < \mid \sigma_2\mid \\) and \\( S(x^\*) = \sigma_1 \\)
+where \\( x^\* \\) is a solution of \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+
+OR
+
+\\( \exists \enspace \sigma_2 \subseteq Y \\) and \\( \sigma_1 \subseteq X \\)
+such that \\( \mid \sigma_2\mid < \mid \sigma_1\mid \\) and \\( S(y^\*) = \sigma_2 \\)
+where \\( y^\* \\) is a solution of \\( (Ay)_i = \text{ Max}(Ay) \\), \\( \forall i \\) in \\( \sigma_1 \\)
+
+**Proof - Forward**
+
+Let \\( S(x) = \sigma_1 \\),
+then \\( \mid S(x) \mid < \mid \sigma_2\mid \implies \mid \sigma_1\mid < \mid \sigma_2\mid \\)
+and \\( x = x^\* \\) where \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+
+Therefore \\( x^\* \\) is a solution.
+
+**Proof - Backwards**
+
+Let \\( x = x^\* \\), then \\( \mid \sigma_1\mid < \mid \sigma_2\mid \implies \mid S(x^\*) \mid < \mid \sigma_2\mid \\)
+where \\( x^\* \\) is a solution of \\( (xB)_j = \text{ Max}(xB) \\), \\( \forall j \\) in \\( \sigma_2 \\)
+
+Therefore \\( (x^\*B)_j = \text{ Max}(x^\*B) \\), \\( \forall j \\) in \\( \sigma_2 \\)
 
 ## References
 
