@@ -65,17 +65,16 @@ Normal Form Game with the following utilities: {(0, 1): [3, 2], (0, 0): [3, 3],
 (2, 1): [6, 1], (2, 0): [0, 3], (1, 0): [2, 2], (1, 1): [5, 6]}
 {% endhighlight %}
 
-What is presently implemented in Sage is that we can obtain the Nash equilibria
-of games:
+Currently, within Sage, we can obtain the Nash equilibria of games:
 
 {% highlight python %}
 sage: g.obtain_nash()
 [[(0, 1/3, 2/3), (1/3, 2/3)], [(4/5, 1/5, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
 {% endhighlight %}
 
-We see that this game has 3 Nash equilibrium. For each of them we see that the
-supports (number of non zero entries) of both players' strategies are/have? the
-same size. This is in fact a theoretic certainty when games are **non
+We see that this game has 3 Nash equilibria. For each, we see that the
+supports (the number of non zero entries) of both players' strategies are the
+same size. This is, in fact, a theoretical certainty when games are **non
 degenerate**.
 
 If we modify the game slightly:
@@ -104,10 +103,10 @@ sage: g.obtain_nash()
 [[(0, 1/3, 2/3), (1/3, 2/3)], [(1, 0, 0), (2/3, 1/3)], [(1, 0, 0), (1, 0)]]
 {% endhighlight %}
 
-We see that the second equilibria there has supports of different sizes. In fact,
+We see that the second equilibrium has supports of different sizes. In fact,
  if the first player did play \\((1,0,0)\\) (in other words just play the
 first row) the second player could play **any mixture** of strategies as a best
-response and not particularly \((2/3,1/3)\\). This is because the game in
+response and not particularly \\((2/3,1/3)\\). This is because the game in
 consideration is now **degenerate**.
 
 (Note that both of the games above are taken from
