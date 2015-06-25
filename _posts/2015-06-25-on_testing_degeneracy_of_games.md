@@ -270,16 +270,21 @@ Note that for an \\(m\times n\\) game there are \\((2^m-1)\\) potential supports
 for player 1 (the size of the powerset of strategy set without the empty set)
 and \\((2^n-1)\\) potential supports of for player 2.
 Thus the rectangle drawn above has dimension \\((2^m-1)\times(2^n-1)\\).
-Needless to say that our implementation will not be efficient but at least we
+Needless to say that our implementation will not be efficient (testing
+degeneracy is after all an NP complete problem in linear programming (see [Chandrasekaran 1982 - [pdf]](http://www-personal.umich.edu/~murty/np-comp_prob_lin_prog.pdf)) but at least we
 have identified exactly which mixed strategy we need to test for each support
 pair.
 
 ## References
 
-- N Nisan, T Roughgarden, E Tardos, VV Vazirani Vol. 1. Cambridge:
-  Cambridge University Press, 2007. [[pdf]](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.cambridge.org%2Fjournals%2Fnisan%2Fdownloads%2FNisan_Non-printable.pdf&ei=bymLVdTxBaS27gbYhILABg&usg=AFQjCNGcYWvHGjECHZGGUuCMaENGCP2HYw&sig2=w6RVpLM9DYILh2gbzOPRqw&bvm=bv.96339352,bs.1,d.bGg)
+- Chandrasekaran, R., Santosh N. Kabadi, and Katta G. Murthy. "Some NP-complete
+  problems in linear programming." Operations Research Letters 1.3 (1982):
+  101-104.
+  [[pdf]](http://www-personal.umich.edu/~murty/np-comp_prob_lin_prog.pdf)
 - Lemke, Carlton E., and Joseph T. Howson, Jr. "Equilibrium points of bimatrix
   games." Journal of the Society for Industrial & Applied Mathematics 12.2
   (1964): 413-423. [[pdf]](http://www.math.mcgill.ca/vetta/CS764.dir/lemke.pdf)
+- N Nisan, T Roughgarden, E Tardos, VV Vazirani Vol. 1. Cambridge:
+  Cambridge University Press, 2007. [[pdf]](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.cambridge.org%2Fjournals%2Fnisan%2Fdownloads%2FNisan_Non-printable.pdf&ei=bymLVdTxBaS27gbYhILABg&usg=AFQjCNGcYWvHGjECHZGGUuCMaENGCP2HYw&sig2=w6RVpLM9DYILh2gbzOPRqw&bvm=bv.96339352,bs.1,d.bGg)
 - von Stengel, B. "Computing equilibria for two person games." Technical report.
   [[ps]](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.cis.upenn.edu%2F~mkearns%2Fteaching%2Fcgt%2Fstengel.ps&ei=HCmLVZ-vJOWM7Aa8_7kQ&usg=AFQjCNGb_r3PDIvTBl4N3UXi55kDR_01OQ&sig2=9yUZEl49EmM5nAUD95oOjg&bvm=bv.96339352,bs.1,d.bGg)
