@@ -31,9 +31,9 @@ $$
 \end{pmatrix}
 $$
 
-We see that if the first player plays their first row strategy and the second
-player their second column strategy then the first player gets a utility of 5
-and the second player a utility of 6.
+We see that if the first player plays their third row strategy and the second
+player their second column strategy then the first player gets a utility of 6
+and the second player a utility of 1.
 
 This can also be written as two separate matrices.
 A matrix \\(A\\) for Player 1 and \\(B\\) for Player 2.
