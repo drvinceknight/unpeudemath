@@ -5,7 +5,7 @@ categories : code
 tags       :
 - sage
 - game theory
-comments   : false
+comments   : true
 ---
 
 We (James Campbell and Vince Knight are writing this together) have been working
