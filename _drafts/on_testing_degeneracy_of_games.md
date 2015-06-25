@@ -221,7 +221,8 @@ that by a search over supports (a discrete search).
 There exists \\( \sigma_1 \subseteq X \\) and \\( \sigma_2 \subseteq Y \\)
 such that \\( |\sigma_1| < |\sigma_2| \\) and \\( S(x^\*) = \sigma_1 \\)
 where \\( x^\* \\) is a solution of \\( (xB)_j = \max(xB) \\), for
-all \\(j \\) in \\( \sigma_2 \\).
+all \\(j \\) in \\( \sigma_2 \\) (note that a valid \\(x^\*\\) is understood to
+be a mixed strategy vector).
 
 OR
 
