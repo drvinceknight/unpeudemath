@@ -33,7 +33,7 @@ I use this all the time in class and during outreach events. I start by asking
 participants to play without more explanation than the basic rules of the game.
 Following this, as a group we go over some simple best response dynamics that
 indicate that the equilibrium play for the game is for everyone to guess 0.
-**After this explanation, everyone plas again.**
+**After this explanation, everyone plays again.**
 
 Below you can see how this game has gone as a collection of all the data I've
 put together:
