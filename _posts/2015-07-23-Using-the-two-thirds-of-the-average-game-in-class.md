@@ -65,7 +65,7 @@ sequence represents each guess (using [code by Marshall
 Hampton](http://wiki.sagemath.org/interact/dynsys)):
 
 $$
-X\_n = X_{n-1}/3 \quad X\_0 = 66
+X_n = X_{n-1}/3 \quad X_0 = 66
 $$
 
 <div class="compute"><script type="text/x-sage">
