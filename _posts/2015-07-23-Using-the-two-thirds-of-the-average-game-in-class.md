@@ -7,7 +7,7 @@ tags       :
 - game theory
 - python
 - publication
-comments   : false
+comments   : true
 ---
 
 This past week I have been delighted to have a short pedagogic paper accepted
@@ -19,7 +19,8 @@ here](https://github.com/drvinceknight/Playing-games-a-case-study-in-active-lear
 As well as describing some literature on active learning I also present some
 data I've been collecting (with the help of others) as to how people play two
 subsequent plays of the [two thirds of the average
-game](https://en.wikipedia.org/wiki/Guess_2/3_of_the_average).
+game](https://en.wikipedia.org/wiki/Guess_2/3_of_the_average) (and talk about
+another game also).
 
 In this post I'll briefly put up the results here as well as mention a
 Python library I'm working on.
