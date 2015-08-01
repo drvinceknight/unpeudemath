@@ -69,7 +69,7 @@ Thus, if we were to randomly observe this chain:
 
 Now, the markov chain in question means that if we're in the first state the
 rate at which a change happens to go to the second state is 2 and the rate at
-which a change happens that goes to the third state is 3.
+which a change happens that goes to the third state is 1.
 
 Given that this is all Markovian we can sample two random numbers from the
 exponential distribution and find out which of those 'changes' would happen
