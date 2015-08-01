@@ -6,7 +6,7 @@ tags       :
 - jekyll
 - sage
 - python
-comments   : false
+comments   : true
 ---
 
 In a blog post I wrote in 2013, [I showed how to simulate a discrete Markov
