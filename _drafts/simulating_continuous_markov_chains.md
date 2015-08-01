@@ -19,7 +19,7 @@ A continuous Markov chain is defined by a transition **rate** matrix which shows
 the rates at which transitions from 1 state to an other occur. Here is an
 example of a continuous Markov chain:
 
-![]({{site.baseurl}}/assets/images/continuous_markov_chain_example)
+![]({{site.baseurl}}/assets/images/continuous_markov_chain.svg)
 
 This has transition rate matrix \\(Q\\) given by:
 
@@ -150,7 +150,7 @@ Q = matrix(QQ, [[-3, 2, 1], [1, -5, 4], [1, 8, -9]])
 simulate_cmc(Q, 3000, 500)
 </script></div>
 
-which gives:
+which gave (on one particular run):
 
 {% highlight python %}
 [0.25447326473556037, 0.49567517998307603, 0.24985155528136352]
