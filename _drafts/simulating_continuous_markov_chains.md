@@ -43,12 +43,12 @@ if we include the fact that the sum of \\(\pi\\) must be 1 (so that it is indeed
 a probability vector) we can obtain the probabilities in
 [Sagemath](http://www.sagemath.org/) using the following:
 
-You can run this here (just click on 'Evaluate'):
-
 {% highlight python %}
 Q = matrix(QQ, [[-3, 2, 1], [1, -5, 4], [1, 8, -9]])
 (transpose(Q).stack(vector([1,1,1])).solve_right(vector([0,0,0,1])))
 {% endhighlight %}
+
+You can run this here (just click on 'Evaluate'):
 
 <div class="compute"><script type="text/x-sage">
 Q = matrix(QQ, [[-3, 2, 1], [1, -5, 4], [1, 8, -9]])
