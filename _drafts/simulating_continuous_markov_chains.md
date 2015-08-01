@@ -11,7 +11,8 @@ comments   : false
 
 In a blog post I wrote in 2013, [I showed how to simulate a discrete Markov
 chain](http://drvinceknight.blogspot.co.uk/2013/10/pigeon-holes-markov-chains-and-sagemath.html).
-In this post I'll show how to do the same with a continuous chain which can be
+In this post we'll (written with a bit of help from [Geraint
+Palmer](https://twitter.com/geraintpalmer)) show how to do the same with a continuous chain which can be
 used to speedily obtain steady state distributions for models of queueing
 processes for example.
 
