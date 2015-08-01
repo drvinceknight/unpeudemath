@@ -150,3 +150,18 @@ Q = matrix(QQ, [[-3, 2, 1], [1, -5, 4], [1, 8, -9]])
 simulate_cmc(Q, 3000, 500)
 </script></div>
 
+which gives:
+
+{% highlight python %}
+[0.25447326473556037, 0.49567517998307603, 0.24985155528136352]
+{% endhighlight %}
+
+This approach was first brought to my attention by [Geraint
+Palmer](https://twitter.com/geraintpalmer) who is doing a PhD with [Paul
+Harper](http://www.profpaulharper.com/) and I. He used this to verify that
+calculations were being carried out correctly when he was trying to fit a
+model. [James Campbell](https://plus.google.com/+JamesCampbell95/posts) and I
+are going to try to use this to get an approximation for bigger chains that
+cannot be solved analytically in a reasonable amount of time. In essence the
+simulation of the Markov chain makes sure we spend time calculating
+probabilities in states that are common.
