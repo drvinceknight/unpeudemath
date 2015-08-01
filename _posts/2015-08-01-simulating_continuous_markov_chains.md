@@ -105,8 +105,13 @@ We can use this to write a function that will take a transition rate matrix,
 simulate the transitions and keep track of the time spent in each state:
 
 {% highlight python %}
-def simulate_cmc(Q, time, warm_up):
+def sample_from_rate(rate):
     import random
+    if rate == 0:
+        return oo
+    return random.expovariate(rate)
+
+def simulate_cmc(Q, time, warm_up):
     Q = list(Q)  # In case a matrix is input
     state_space = range(len(Q))  # Index the state space
     time_spent = {s:0 for s in state_space}  # Set up a dictionary to keep track of time
@@ -114,9 +119,9 @@ def simulate_cmc(Q, time, warm_up):
     current_state = 0  # First state
     while clock < time:
         # Sample the transitions
-        sojourn_times = [random.expovariate(rate) for rate in Q[current_state][:current_state]]
+        sojourn_times = [sample_from_rate(rate) for rate in Q[current_state][:current_state]]
         sojourn_times += [oo]  # An infinite sojourn to the same state
-        sojourn_times += [random.expovariate(rate) for rate in Q[current_state][current_state + 1:]]
+        sojourn_times += [sample_from_rate(rate) for rate in Q[current_state][current_state + 1:]]
 
         # Identify the next state
         next_state = min(state_space, key=lambda x: sojourn_times[x])
@@ -133,8 +138,13 @@ def simulate_cmc(Q, time, warm_up):
 Here are the probabilities from the same Markov chain as above:
 
 <div class="compute"><script type="text/x-sage">
-def simulate_cmc(Q, time, warm_up):
+def sample_from_rate(rate):
     import random
+    if rate == 0:
+        return oo
+    return random.expovariate(rate)
+
+def simulate_cmc(Q, time, warm_up):
     Q = list(Q)  # In case a matrix is input
     state_space = range(len(Q))  # Index the state space
     time_spent = {s:0 for s in state_space}  # Set up a dictionary to keep track of time
@@ -142,9 +152,9 @@ def simulate_cmc(Q, time, warm_up):
     current_state = 0  # First state
     while clock < time:
         # Sample the transitions
-        sojourn_times = [random.expovariate(rate) for rate in Q[current_state][:current_state]]
+        sojourn_times = [sample_from_rate(rate) for rate in Q[current_state][:current_state]]
         sojourn_times += [oo]  # An infinite sojourn to the same state
-        sojourn_times += [random.expovariate(rate) for rate in Q[current_state][current_state + 1:]]
+        sojourn_times += [sample_from_rate(rate) for rate in Q[current_state][current_state + 1:]]
 
         # Identify the next state
         next_state = min(state_space, key=lambda x: sojourn_times[x])
