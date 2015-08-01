@@ -43,12 +43,12 @@ if we include the fact that the sum of \\(\pi\\) must be 1 (so that it is indeed
 a probability vector) we can obtain the probabilities in
 [Sagemath](http://www.sagemath.org/) using the following:
 
+You can run this here (just click on 'Evaluate'):
+
 {% highlight python %}
 Q = matrix(QQ, [[-3, 2, 1], [1, -5, 4], [1, 8, -9]])
 (transpose(Q).stack(vector([1,1,1])).solve_right(vector([0,0,0,1])))
 {% endhighlight %}
-
-You can run this here (just click on 'Evaluate'):
 
 <div class="compute"><script type="text/x-sage">
 Q = matrix(QQ, [[-3, 2, 1], [1, -5, 4], [1, 8, -9]])
@@ -71,9 +71,14 @@ Now, the markov chain in question means that if we're in the first state the
 rate at which a change happens to go to the second state is 2 and the rate at
 which a change happens that goes to the third state is 1.
 
-Given that this is all Markovian we can sample two random numbers from the
-exponential distribution and find out which of those 'changes' would happen
-first so and move to that state:
+This is analagous to waiting at a bus stop at the first city. Buses to the second city arrive randomly 2 per hour, and buses to the third city arrive randomly 1 per hour. Everyone waiting for a bus catches the first one that arrives.
+So at steady state the population will be spread amongst the three cities according to \\(\pi\\).
+
+Consider yourself at at this bus stop. As all this is Markovian we do not care what time you arrived at the bus stop (memoryless property). You expect the bus to the second city to arrive 1/2 hours from now, with randomness, and the bus to the third city to arrive 1 hour from now, with randomness.
+
+To simulate this we can sample two random numbers from the
+exponential distribution and find out which bus arrives
+first so catch that bus:
 
 {% highlight python %}
 import random
@@ -86,9 +91,8 @@ The above returned (for this particular instance):
 [0.5003491524841699, 0.6107995795458322]
 {% endhighlight %}
 
-So here it's going to take .5 time units to go to the second state whereas it
-would take .61 time units to go to the third. Thus, the chain would transition
-to the second state.
+So here it's going to take .5 hours for a bus to the second city to arrive, whereas it
+would take .61 time units for a bus to the third. So we would catch the bust to the second city after spending 0.5 hours at the first city.
 
 We can use this to write a function that will take a transition rate matrix,
 simulate the transitions and keep track of the time spent in each state:
