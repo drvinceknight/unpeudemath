@@ -104,7 +104,7 @@ def simulate_cmc(Q, time, warm_up):
     while clock < time:
         # Sample the transitions
         sojourn_times = [random.expovariate(rate) for rate in Q[current_state][:current_state]]
-        sojourn_times += [oo]
+        sojourn_times += [oo]  # An infinite sojourn to the same state
         sojourn_times += [random.expovariate(rate) for rate in Q[current_state][current_state + 1:]]
 
         # Identify the next state
@@ -132,7 +132,7 @@ def simulate_cmc(Q, time, warm_up):
     while clock < time:
         # Sample the transitions
         sojourn_times = [random.expovariate(rate) for rate in Q[current_state][:current_state]]
-        sojourn_times += [oo]
+        sojourn_times += [oo]  # An infinite sojourn to the same state
         sojourn_times += [random.expovariate(rate) for rate in Q[current_state][current_state + 1:]]
 
         # Identify the next state
