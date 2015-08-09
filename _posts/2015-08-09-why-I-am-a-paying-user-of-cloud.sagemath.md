@@ -4,7 +4,7 @@ title      : "Why I am a paying member of cloud.sagemath"
 categories : code
 tags       :
 - sage
-comments   : false
+comments   : true
 ---
 
 If you are not familiar with [Sagemath](http://www.sagemath.org/) it is a free
