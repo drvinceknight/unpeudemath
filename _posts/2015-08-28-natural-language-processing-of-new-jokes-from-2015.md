@@ -7,7 +7,7 @@ tags       :
 - natural language processing
 - Edinburgh fringe festival
 - jokes
-comments   : false
+comments   : true
 ---
 
 This is a brief update to a previous post: ["Python, natural language processing
