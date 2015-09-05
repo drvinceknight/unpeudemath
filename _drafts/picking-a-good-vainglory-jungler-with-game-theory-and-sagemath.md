@@ -38,27 +38,27 @@ playing strategy in the game:
 - Roam: a hero who roams in between the two and whose main job is to support the
   other two players.
 
-My personal strategy is to pick a roamer/protector: Ardan (pic below),
+My personal strategy is to pick a roamer/protector: [Ardan]() (pic below),
 
 ![Ardan](http://www.gamezebo.com/wp-content/uploads/2015/02/ardan.jpg)
 
 I generally help out the jungler in my team and try my best to not be a
 liability by dying.
 
-The [wiki](http://www.vaingloryfire.com) has a bunch of information for players.
-If you google something like 'vainglory best strategy' it comes up. If you look
-up each hero you get **a collection of guides ranked by votes** each with all
-sorts of information which includes the where each and every other hero sits on
-a threat level (from 1 to 10). Here is the threat meter for Ardan from the top
-guide:
+The [wiki](http://www.vaingloryfire.com) has a bunch of information for
+players.  If you google something like 'vainglory best strategy' it comes up.
+If you look up each hero you get **a collection of guides ranked by votes**
+each with all sorts of information which includes the where each and every
+other hero sits on a threat level (from 1 to 10). Here is the threat meter for
+[Ardan]() from the top guide:
 
 ![Threat for Ardan]()
 
 So from that guide it looks like if your opponent is going to be isolated with
-Ardan then you should pick **HERO**. **In some guides the threat meter does not
-list all the heros**. This is particularly important as it's these threat
-meters that I've used as a source of data for **how good a given hero is against
-other heros**.
+[Ardan]() then you should pick **HERO**. **In some guides the threat meter does
+not list all the heros**. This is particularly important as it's these threat
+meters that I've used as a source of data for **how good a given hero is
+against other heros**.
 
 This is where the keener player/reader will note that the threat meter only
 describes the threat to a single player and not any information about how this
@@ -75,18 +75,12 @@ library. For example here is how I got the lists of all the heroes (and the url
 to their own respective page on the wiki):
 
 {% highlight python %}
-page = requests.get('http://www.vaingloryfire.com/vainglory/wiki/heroes')
-soup = BeautifulSoup(page.text, 'html.parser')
-root = '/vainglory/wiki/heroes'
-urls = [link.get('href') for link in soup.find_all('a')]
-heroes = {url[len(root) + 1:]:url for url in urls[2:] if url.startswith(root +
-'/')}
-del heroes['skye'] # Removing skye as she is brand new
-{% endhighlight %}
-
-This gives:
-
-{% highlight python %}
+>>> page = requests.get('http://www.vaingloryfire.com/vainglory/wiki/heroes')
+>>> soup = BeautifulSoup(page.text, 'html.parser')
+>>> root = '/vainglory/wiki/heroes'
+>>> urls = [link.get('href') for link in soup.find_all('a')]
+>>> heroes = {url[len(root) + 1:]:url for url in urls[2:] if url.startswith(root + '/')}
+>>> del heroes['skye'] # Removing skye as she is brand new
 {u'adagio': u'/vainglory/wiki/heroes/adagio',
  u'ardan': u'/vainglory/wiki/heroes/ardan',
  u'catherine': u'/vainglory/wiki/heroes/catherine',
@@ -118,10 +112,9 @@ Here for example is the threats data for [Adagio]() if you only look at [this
 first guide]():
 
 {% highlight python %}
-[0, 5, 0, 6, 4, 7, 6, 4, 3, 0, 7, 5, 6, 3, 0, 2]
+[0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 7, 0, 0]
 {% endhighlight %}
 
-**SOMETHING NOT CLEAR HERE CHECK WHEN YOU HAVE INTERNET**
 Cross referencing that with the order given by the list of heroes above we see
 that [Skaarf]() ranks a 7 on the threat meter to [Adagio](), and [Ringo]() and
 [Joule]() a 4. **All the 0s are what I've decided to do when a threat meter
@@ -130,6 +123,16 @@ that hero.** I don't really like this as a solution but it's probably the least
 worst way to deal with it (if anyone has a better way of handling this please
 let me know in the comments).
 
+Here is the threats data for [Krul]():
+
+{% highlight python %}
+[6, 3, 4, 3, 6, 4, 3, 7, 5, 5, 4, 0, 6, 6, 5, 0]
+{% endhighlight %}
+
+We see that in this case the only heroes that pose no threat to [Krul]() are
+[Fortress]() and [Rona](). Thus if your opponent is playing those heroes
+[Krul]() is a best response.
+
 As will be described in the next section, we need to build up a matrix of these
 rows which basically shows how well a given hero does against others. Here is
 the matrix of this when considering the row players and taking the opposite of
@@ -137,24 +140,31 @@ the threats **when using just the top guide**:
 
 $$
 \left(\begin{array}{rrrrrrrrrrrrrrrr}
-0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & -0.25 & 0.00 & 0.00 & 0.00 & -0.25 & 0.00 & 0.00 & -0.44 & 0.00 & 0.00 \\
--0.31 & -0.19 & 0.00 & -0.25 & 0.00 & -0.31 & -0.12 & -0.25 & -0.50 & -0.44 & -0.44 & 0.00 & -0.31 & -0.56 & -0.19 & 0.00 \\
+0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & -4.0 & 0.00 & 0.00 & 0.00 & -4.0 & 0.00 & 0.00 & -7.0 & 0.00 & 0.00 \\
+-5.0 & -3.0 & 0.00 & -4.0 & 0.00 & -5.0 & -2.0 & -4.0 & -8.0 & -7.0 & -7.0 & 0.00 & -5.0 & -9.0 & -3.0 & 0.00 \\
 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
--0.38 & -0.19 & -0.25 & -0.19 & -0.38 & -0.25 & -0.19 & -0.44 & -0.31 & -0.31 & -0.25 & 0.00 & -0.38 & -0.38 & -0.31 & 0.00 \\
--0.25 & -0.38 & -0.31 & -0.44 & -0.12 & -0.25 & -0.31 & -0.38 & -0.56 & -0.56 & -0.19 & 0.00 & -0.31 & -0.062 & -0.25 & -0.38 \\
--0.44 & 0.00 & 0.00 & -0.12 & 0.00 & 0.00 & -0.62 & 0.00 & -0.50 & 0.00 & -0.44 & 0.00 & -0.31 & -0.38 & -0.50 & 0.00 \\
--0.38 & 0.00 & 0.00 & -0.19 & 0.00 & -0.38 & -0.50 & -0.19 & -0.19 & -0.19 & -0.50 & 0.00 & -0.38 & -0.19 & -0.19 & 0.00 \\
--0.25 & -0.31 & -0.56 & -0.62 & 0.00 & -0.62 & -0.38 & 0.00 & -0.56 & -0.62 & -0.25 & 0.00 & -0.38 & -0.062 & -0.12 & 0.00 \\
--0.19 & 0.00 & 0.00 & -0.56 & 0.00 & -0.25 & -0.44 & 0.00 & -0.31 & 0.00 & -0.12 & 0.00 & -0.56 & -0.12 & -0.44 & 0.00 \\
+-6.0 & -3.0 & -4.0 & -3.0 & -6.0 & -4.0 & -3.0 & -7.0 & -5.0 & -5.0 & -4.0 & 0.00 & -6.0 & -6.0 & -5.0 & 0.00 \\
+-4.0 & -6.0 & -5.0 & -7.0 & -2.0 & -4.0 & -5.0 & -6.0 & -9.0 & -9.0 & -3.0 & 0.00 & -5.0 & -1.0 & -4.0 & -6.0 \\
+-7.0 & 0.00 & 0.00 & -2.0 & 0.00 & 0.00 & -10. & 0.00 & -8.0 & 0.00 & -7.0 & 0.00 & -5.0 & -6.0 & -8.0 & 0.00 \\
+-6.0 & 0.00 & 0.00 & -3.0 & 0.00 & -6.0 & -8.0 & -3.0 & -3.0 & -3.0 & -8.0 & 0.00 & -6.0 & -3.0 & -3.0 & 0.00 \\
+-4.0 & -5.0 & -9.0 & -10. & 0.00 & -10. & -6.0 & 0.00 & -9.0 & -10. & -4.0 & 0.00 & -6.0 & -1.0 & -2.0 & 0.00 \\
+-3.0 & 0.00 & 0.00 & -9.0 & 0.00 & -4.0 & -7.0 & 0.00 & -5.0 & 0.00 & -2.0 & 0.00 & -9.0 & -2.0 & -7.0 & 0.00 \\
 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
--0.44 & -0.31 & 0.00 & -0.062 & 0.00 & -0.50 & -0.12 & -0.062 & -0.62 & -0.62 & -0.50 & 0.00 & -0.56 & -0.56 & -0.38 & 0.00 \\
--0.31 & -0.12 & -0.56 & -0.12 & -0.50 & -0.56 & -0.19 & -0.25 & -0.19 & -0.38 & -0.12 & -0.31 & -0.44 & -0.12 & -0.44 & -0.19 \\
--0.38 & 0.00 & 0.00 & -0.62 & 0.00 & -0.44 & -0.56 & -0.12 & -0.31 & 0.00 & -0.44 & 0.00 & 0.00 & -0.31 & -0.19 & 0.00 \\
--0.19 & 0.00 & 0.00 & -0.38 & 0.00 & -0.31 & -0.25 & 0.00 & -0.50 & -0.50 & -0.19 & 0.00 & -0.31 & -0.44 & -0.31 & 0.00 \\
+-7.0 & -5.0 & 0.00 & -1.0 & 0.00 & -8.0 & -2.0 & -1.0 & -10. & -10. & -8.0 & 0.00 & -9.0 & -9.0 & -6.0 & 0.00 \\
+-5.0 & -2.0 & -9.0 & -2.0 & -8.0 & -9.0 & -3.0 & -4.0 & -3.0 & -6.0 & -2.0 & -5.0 & -7.0 & -2.0 & -7.0 & -3.0 \\
+-6.0 & 0.00 & 0.00 & -10. & 0.00 & -7.0 & -9.0 & -2.0 & -5.0 & 0.00 & -7.0 & 0.00 & 0.00 & -5.0 & -3.0 & 0.00 \\
+-3.0 & 0.00 & 0.00 & -6.0 & 0.00 & -5.0 & -4.0 & 0.00 & -8.0 & -8.0 & -3.0 & 0.00 & -5.0 & -7.0 & -5.0 & 0.00 \\
 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
--0.12 & -0.12 & -0.25 & -0.25 & -0.25 & -0.62 & -0.38 & -0.12 & -0.19 & -0.25 & -0.19 & -0.25 & -0.44 & -0.062 & -0.62 & -0.31
+-2.0 & -2.0 & -4.0 & -4.0 & -4.0 & -10. & -6.0 & -2.0 & -3.0 & -4.0 & -3.0 & -4.0 & -7.0 & -1.0 & -10. & -5.0
 \end{array}\right)
 $$
+
+If you consider a column (that corresponds to a hero) of that matrix, the row
+player aims to find the row that gives the highest score, which because we've
+taken the opposite of the threat score corresponds to minimising the threat
+posed by the column hero. This is in essence a **risk averse** approach, at the
+very end I'll comment on what happens to the results when players aim to
+maximise the threat they pose.
 
 Now that I've described the data (you can find all the data written to specific
 csv files [here]()) I'll go on to talk about the game theory used to try and
@@ -171,24 +181,22 @@ basics and how Sagemath can be used to find Nash equilibria):
 **INCLUDE VIDEO HERE**
 
 Before talking about equilibria let's just look at best response dynamics.
-Looking at the list of threat above for [Adagio]() it looks like if an opponent
-is playing Adagio, your **best response** is to play [Skaarf]().
 
 Using Sage we can first of all build up the [normal form game](link to sagemath
 docs) for a given number of guides:
 
 {% highlight python %}
-def build_game(row_player_file, col_player_file):
-    """Import the bi matrices and create the game object"""
-    bi_matrices = []
-    for fle in [row_player_file, col_player_file]:
-        f = open(fle, 'r')
-        csvrdr = csv.reader(f)
-        bi_matrices.append(-matrix([[float(ele) for ele in row] for row in csvrdr]))
-        f.close()
-
-    return NormalFormGame(bi_matrices)
-g = build_game("A-01.csv", "B-01.csv")
+sage: def build_game(row_player_file, col_player_file):
+....:    """Import the bi matrices and create the game object"""
+....:    bi_matrices = []
+....:    for fle in [row_player_file, col_player_file]:
+....:        f = open(fle, 'r')
+....:        csvrdr = csv.reader(f)
+....:        bi_matrices.append(-matrix([[float(ele) for ele in row] for row in csvrdr]))
+....:        f.close()
+....:
+....:    return NormalFormGame(bi_matrices)
+sage: g = build_game("A-01.csv", "B-01.csv")
 {% endhighlight %}
 
 Using this and the `best_response` method on Sagemath `NormalFormGames` we can
@@ -197,13 +205,18 @@ player. The cool thing is that Sagemath has some awesome graph theory written
 in there so we can transform that in to a nice picture (again: all the code for
 this can be found [here]()):
 
-![best response graph for 1st guide]({{site.baseurl}}/assets/images/plot-br-01.png)
+![best response graph for 1st guide]({{site.baseurl}}/assets/images/risk-averse-plot-br-01.svg)
 
-**NOT SURE IF THIS IS CORRECT CHECK WHEN YOU HAVE WIFI**
+That plot confirms what we have seen earlier, we see that [Krul]() is a best
+response to [Fortress]() or [Rona](). Sadly, because there are so many zeros
+when just using the first guide, there are a bunch of heros that are not
+considered a threat to any of the players so they have multiple best responses
+and our graph is messy.
 
-That plot confirms what we have seen earlier, if your plays [Adagio](), the
-graph points at the heroes that you should play against him: [Adagio](),
-[Ringo](), [Taka]() and [Vox]().
+Here is the best response graph when taking the mean threats over all front
+page guides:
+
+![best response graph for all guides]({{site.baseurl}}/assets/images/risk-averse-plot-br-all.svg)
 
 Note that Game Theory assumes **that everyone know that everyone know that
 everyone knows... all this**. So for example if two players both player Adagio
@@ -211,11 +224,6 @@ we are at an equilibrium. However if one player plays [Saw]() then the graph
 indicates that the opponent should play [Koshka](), which means that the first
 player should then deviate and play [Fortress]() which is then also an
 equilibrium (bot players are playing best responses to each other).
-
-Here is the best response graph when taking the mean threats over all front
-page guides:
-
-![best response graph for all guides]({{site.baseurl}}/assets/images/plot-br-all.png)
 
 From here on I will continue the analysis using the average utility from all
 the guides (I'll come back to this at the end).
@@ -226,23 +234,28 @@ indicating how players should randomly pick a hero. Here for example is the 4th
 equilibrium computed by Sagemath:
 
 {% highlight python %}
+sage: g.obtain_nash(algorithm='lrs')[3]
 [(0, 0, 0, 0, 0, 0, 0, 0, 3947/17781, 0, 3194/17781, 0, 8795/17781, 0, 0, 615/5927),
  (0, 0, 0, 0, 0, 0, 0, 0, 3947/17781, 0, 3194/17781, 0, 8795/17781, 0, 0, 615/5927)]
 {% endhighlight %}
 
-This particular equilibria has both players playing a mix of: [Fortress](), [Glaive](), [Petal]() and [Koshka]().
+This particular equilibria has both players playing a mix of: [Fortress](),
+[Glaive](), [Petal]() and [Koshka]().
 
 Here is the mean probability distribution for both players, while the
 particular values should be ignored what is of interest is the heroes that are
-not played at all. **In essence these heroes, accross all the equilibria and
+not played at all. **In essence these heroes, accross all the equilibria are
 not deemed playable**:
 
-![ne graph for all guides]({{site.baseurl}}/assets/images/plot-ne-all.png)
+![ne graph for all
+guides]({{site.baseurl}}/assets/images/risk-averse-plot-ne-all.svg)
 
-We see that this confirms how the previous graph was colored showing the heroes that should be played in blue.
+We see that this confirms how the previous graph was colored showing the heroes
+that should be played in blue.
 
 Note that the number of guides and the reliability of all this has a huge
-effect of the conclusions made. Here are two gifs that show the effect of the number of guides used:
+effect of the conclusions made. Here are two gifs that show the effect of the
+number of guides used:
 
 ![best response dynamics animation]({{site.baseurl}}/assets/images/br.gif)
 
@@ -250,7 +263,33 @@ effect of the conclusions made. Here are two gifs that show the effect of the nu
 
 and here is a plot of the number of equilibria for each guide:
 
-![number of equilibria]({{site.baseurl}}/assets/images/number_of_equilibria.png)
+![number of equilibria]({{site.baseurl}}/assets/images/risk-averse_number_of_equilibria.svg)
+
+Up until now all the results are for when players aim to minimise the threat
+posed to them. In the next section I'll invert that (python wise it's a minor
+swapping around of some inputs) and consider the situation where you want to
+pick a hero that is aims to be the most threatening.
+
+**Seeking to be a threat**
+
+First of all here is the best response graph:
+
+![best response graph for all
+guides]({{site.baseurl}}/assets/images/threatening-plot-br-all.svg)
+
+Here is the average of the NE:
+
+![best response graph for all
+guides]({{site.baseurl}}/assets/images/threatening-plot-ne-all.svg)
+
+Those 3 players have certainly been able to rip through me on more than one
+occasion...
+
+Finally here are the Nash equilibria for when a threatening player (plotted in
+black) is playing against a threat averse player (plotted in grey):
+
+![best response graph for all
+guides]({{site.baseurl}}/assets/images/asymmetric-plot-ne-all.svg)
 
 **Conclusion**
 
@@ -269,14 +308,58 @@ analysis has two weaknesses:
   post one day. Nonetheless this has been a fun application of game theory and
   still has value I believe.
 
-**So to conclude, basing things on the data available to me, I'd suggest that the
-choice of heros for an isolated job like jungling and/or laneing is in fact
-reduced to a set from:**
+**So to conclude, basing things on the data available to me, I'd suggest that
+(when both players are acting in a risk averse way) the choice of heros for an
+isolated job like jungling and/or laneing is in fact reduced to a set from:**
 
+- [Adagio]()
+- [Catherine]()
+- [Koshka]()
+- [Petal]()
 - [Glaive]()
 - [Fortress]()
-- CHECK THIS PROPERLY
-- CHECK THIS PROPERLY
+
+If **you and your opponent aim to be threatening**, the choice is from:
+
+- [Glaive]()
+- [Krul]()
+- [Taka]()
+
+Finally if **you aim to be threatening, playing against a player aiming to be
+risk averse** the choice is from:
+
+- [Glaive]()
+- [Krul]()
+- [Taka]()
+- [Koshka]()
+
+and vice versa:
+
+- [Adagio]()
+- [Catherine]()
+- [Petal]()
+- [Glaive]()
+- [Fortress]()
+
+(Interestingly for this last type of game there were in general just 1 equilibrium.)
+
+Based on all of this, I would suggest (looking across all of that summary) that
+(disclaimer: based on the wiki threat data) the __best__ [vainglory]() hero is
+[Glaive](). Again though, this does not take in to account any of the very
+important team dynamics. I plan to keep on being a protector with [Ardan]() and
+just doing my best to stay alive...
+
+Another point is that this shows that vainglory is perhaps not immediately
+balanced. A perfectly balanced game (like [Rock Paper Scissor]() for example)
+has a Nash Equilibria that evenly plays all strategies:
+
+{% highlight python %}
+sage: g = game_theory.normal_form_games.RPS()
+sage: g.obtain_nash()
+[[(1/3, 1/3, 1/3), (1/3, 1/3, 1/3)]]
+{% endhighlight %}
+
+Please do take a look at all the code/data at [this repository]().
 
 This was a fun application of mathematical modelling, I also learnt how to
 scrape with BeautifulSoup but I mainly look forward to using this in my game
