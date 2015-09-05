@@ -350,6 +350,7 @@ risk averse** the choice is from:
 
 - [Glaive](http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive)
 - [Krul](http://www.vaingloryfire.com/vainglory/wiki/heroes/krul)
+- [Catherine](http://www.vaingloryfire.com/vainglory/wiki/heroes/catherine)
 - [Taka](http://www.vaingloryfire.com/vainglory/wiki/heroes/taka)
 - [Koshka](http://www.vaingloryfire.com/vainglory/wiki/heroes/koshka)
 
