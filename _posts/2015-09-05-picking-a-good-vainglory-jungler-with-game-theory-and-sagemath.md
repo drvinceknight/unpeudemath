@@ -390,5 +390,5 @@ repository](https://github.com/drvinceknight/vainglory-analysis).
 This was a fun application of mathematical modelling, I also learnt how to
 scrape with BeautifulSoup but I mainly look forward to using this in my game
 theory class this year. I might even suggest we spend 25 minutes of one class
-having a game on the big scren assuming there are 5 players of
+having a game on the big screen assuming there are 5 players of
 [Vainglory](http://www.vainglorygame.com) in my class.
