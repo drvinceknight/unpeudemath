@@ -10,7 +10,7 @@ comments   : false
 ---
 
 I've recently been playing a really cool video game:
-[vainglory](http://www.vainglorygame.com/). This is described as a MOBA which I
+[Vainglory](http://www.vainglorygame.com)ttp://www.vainglorygame.com)ttp://www.vainglorygame.com/). This is described as a MOBA which I
 must admit I had never heard off until this year when my students mentioned it
 to me, but basically it's an online multi player game in which players form two
 teams of 6 heroes and fight each other. The choice of the heroes is very
@@ -38,7 +38,8 @@ playing strategy in the game:
 - Roam: a hero who roams in between the two and whose main job is to support the
   other two players.
 
-My personal strategy is to pick a roamer/protector: [Ardan]() (pic below),
+My personal strategy is to pick a roamer/protector:
+[Ardan](http://www.vaingloryfire.com/vainglory/wiki/heroes/ardan) (pic below),
 
 ![Ardan](http://www.gamezebo.com/wp-content/uploads/2015/02/ardan.jpg)
 
@@ -50,12 +51,13 @@ players.  If you google something like 'vainglory best strategy' it comes up.
 If you look up each hero you get **a collection of guides ranked by votes**
 each with all sorts of information which includes the where each and every
 other hero sits on a threat level (from 1 to 10). Here is the threat meter for
-[Ardan]() from the top guide:
+[Ardan](http://www.vaingloryfire.com/vainglory/wiki/heroes/ardan) from the top guide:
 
-![Threat for Ardan]()
+![Threat for Ardan
+(2015-09-05)]({{site.baseurl}}/assets/images/ardan_threat_meter.png)
 
 So from that guide it looks like if your opponent is going to be isolated with
-[Ardan]() then you should pick **HERO**. **In some guides the threat meter does
+[Ardan](http://www.vaingloryfire.com/vainglory/wiki/heroes/ardan) then you should pick **HERO**. **In some guides the threat meter does
 not list all the heros**. This is particularly important as it's these threat
 meters that I've used as a source of data for **how good a given hero is
 against other heros**.
@@ -70,9 +72,11 @@ to go up against another team that is playing a single jungler/laner.
 
 **Scraping the data**
 
-First things first: I used Python with the [BeautifulSoup]() and [requests]()
-library. For example here is how I got the lists of all the heroes (and the url
-to their own respective page on the wiki):
+First things first: I used Python with the
+[BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) and
+[requests](http://www.python-requests.org/en/latest/) library. For example here
+is how I got the lists of all the heroes (and the url to their own respective
+page on the wiki):
 
 {% highlight python %}
 >>> page = requests.get('http://www.vaingloryfire.com/vainglory/wiki/heroes')
@@ -99,8 +103,9 @@ to their own respective page on the wiki):
  u'vox': u'/vainglory/wiki/heroes/vox'}
 {% endhighlight %}
 
-(Note there that I'm removing a brand new hero: [Skye]() as she was released
-pretty much at the same time as I was writing this post.)
+(Note there that I'm removing a brand new hero:
+[Skye](http://www.vaingloryfire.com/vainglory/wiki/heroes/skye) as she was
+released pretty much at the same time as I was writing this post.)
 
 You can see the [JuPyTer notebook]() which shows the code. The main
 technicality is that I only scraped guides from the front page for each hero. As
@@ -108,30 +113,30 @@ I'll describe later, I ran my analysis taking the average threats for a variety
 of cases: only taking the first guide, only taking the first 2 guides, the first
 3 guides etc...
 
-Here for example is the threats data for [Adagio]() if you only look at [this
-first guide]():
+Here for example is the threats data for [Adagio](http://www.vaingloryfire.com/vainglory/wiki/heroes/adagio) if you only look at [this
+first guide](http://www.vaingloryfire.com/vainglory/guide/unbeatable-adagio-130):
 
 {% highlight python %}
 [0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 7, 0, 0]
 {% endhighlight %}
 
 Cross referencing that with the order given by the list of heroes above we see
-that [Skaarf]() ranks a 7 on the threat meter to [Adagio](), and [Ringo]() and
-[Joule]() a 4. **All the 0s are what I've decided to do when a threat meter
+that [Skaarf](http://www.vaingloryfire.com/vainglory/wiki/heroes/skaarf) ranks a 7 on the threat meter to [Adagio](http://www.vaingloryfire.com/vainglory/wiki/heroes/adagio), and [Ringo](http://www.vaingloryfire.com/vainglory/wiki/heroes/ringo) and
+[Joule](http://www.vaingloryfire.com/vainglory/wiki/heroes/joule) a 4. **All the 0s are what I've decided to do when a threat meter
 does not include a given hero: indicating that that hero is not a threat to
 that hero.** I don't really like this as a solution but it's probably the least
 worst way to deal with it (if anyone has a better way of handling this please
 let me know in the comments).
 
-Here is the threats data for [Krul]():
+Here is the threats data for [Krul](http://www.vaingloryfire.com/vainglory/wiki/heroes/krul):
 
 {% highlight python %}
 [6, 3, 4, 3, 6, 4, 3, 7, 5, 5, 4, 0, 6, 6, 5, 0]
 {% endhighlight %}
 
-We see that in this case the only heroes that pose no threat to [Krul]() are
-[Fortress]() and [Rona](). Thus if your opponent is playing those heroes
-[Krul]() is a best response.
+We see that in this case the only heroes that pose no threat to [Krul](http://www.vaingloryfire.com/vainglory/wiki/heroes/krul) are
+[Fortress](http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress) and [Rona](http://www.vaingloryfire.com/vainglory/wiki/heroes/rona). Thus if your opponent is playing those heroes
+[Krul](http://www.vaingloryfire.com/vainglory/wiki/heroes/krul) is a best response.
 
 As will be described in the next section, we need to build up a matrix of these
 rows which basically shows how well a given hero does against others. Here is
@@ -140,22 +145,22 @@ the threats **when using just the top guide**:
 
 $$
 \left(\begin{array}{rrrrrrrrrrrrrrrr}
-0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & -4.0 & 0.00 & 0.00 & 0.00 & -4.0 & 0.00 & 0.00 & -7.0 & 0.00 & 0.00 \\
--5.0 & -3.0 & 0.00 & -4.0 & 0.00 & -5.0 & -2.0 & -4.0 & -8.0 & -7.0 & -7.0 & 0.00 & -5.0 & -9.0 & -3.0 & 0.00 \\
-0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
--6.0 & -3.0 & -4.0 & -3.0 & -6.0 & -4.0 & -3.0 & -7.0 & -5.0 & -5.0 & -4.0 & 0.00 & -6.0 & -6.0 & -5.0 & 0.00 \\
--4.0 & -6.0 & -5.0 & -7.0 & -2.0 & -4.0 & -5.0 & -6.0 & -9.0 & -9.0 & -3.0 & 0.00 & -5.0 & -1.0 & -4.0 & -6.0 \\
--7.0 & 0.00 & 0.00 & -2.0 & 0.00 & 0.00 & -10. & 0.00 & -8.0 & 0.00 & -7.0 & 0.00 & -5.0 & -6.0 & -8.0 & 0.00 \\
--6.0 & 0.00 & 0.00 & -3.0 & 0.00 & -6.0 & -8.0 & -3.0 & -3.0 & -3.0 & -8.0 & 0.00 & -6.0 & -3.0 & -3.0 & 0.00 \\
--4.0 & -5.0 & -9.0 & -10. & 0.00 & -10. & -6.0 & 0.00 & -9.0 & -10. & -4.0 & 0.00 & -6.0 & -1.0 & -2.0 & 0.00 \\
--3.0 & 0.00 & 0.00 & -9.0 & 0.00 & -4.0 & -7.0 & 0.00 & -5.0 & 0.00 & -2.0 & 0.00 & -9.0 & -2.0 & -7.0 & 0.00 \\
-0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
--7.0 & -5.0 & 0.00 & -1.0 & 0.00 & -8.0 & -2.0 & -1.0 & -10. & -10. & -8.0 & 0.00 & -9.0 & -9.0 & -6.0 & 0.00 \\
--5.0 & -2.0 & -9.0 & -2.0 & -8.0 & -9.0 & -3.0 & -4.0 & -3.0 & -6.0 & -2.0 & -5.0 & -7.0 & -2.0 & -7.0 & -3.0 \\
--6.0 & 0.00 & 0.00 & -10. & 0.00 & -7.0 & -9.0 & -2.0 & -5.0 & 0.00 & -7.0 & 0.00 & 0.00 & -5.0 & -3.0 & 0.00 \\
--3.0 & 0.00 & 0.00 & -6.0 & 0.00 & -5.0 & -4.0 & 0.00 & -8.0 & -8.0 & -3.0 & 0.00 & -5.0 & -7.0 & -5.0 & 0.00 \\
-0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
--2.0 & -2.0 & -4.0 & -4.0 & -4.0 & -10. & -6.0 & -2.0 & -3.0 & -4.0 & -3.0 & -4.0 & -7.0 & -1.0 & -10. & -5.0
+0 & 0 & 0 & 0 & 0 & 0 & -4 & 0 & 0 & 0 & -4 & 0 & 0 & -7 & 0 & 0 \\
+-5 & -3 & 0 & -4 & 0 & -5 & -2 & -4 & -8 & -7 & -7 & 0 & -5 & -9 & -3 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-6 & -3 & -4 & -3 & -6 & -4 & -3 & -7 & -5 & -5 & -4 & 0 & -6 & -6 & -5 & 0 \\
+-4 & -6 & -5 & -7 & -2 & -4 & -5 & -6 & -9 & -9 & -3 & 0 & -5 & -1 & -4 & -6 \\
+-7 & 0 & 0 & -2 & 0 & 0 & -10 & 0 & -8 & 0 & -7 & 0 & -5 & -6 & -8 & 0 \\
+-6 & 0 & 0 & -3 & 0 & -6 & -8 & -3 & -3 & -3 & -8 & 0 & -6 & -3 & -3 & 0 \\
+-4 & -5 & -9 & -10 & 0 & -10 & -6 & 0 & -9 & -10 & -4 & 0 & -6 & -1 & -2 & 0 \\
+-3 & 0 & 0 & -9 & 0 & -4 & -7 & 0 & -5 & 0 & -2 & 0 & -9 & -2 & -7 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-7 & -5 & 0 & -1 & 0 & -8 & -2 & -1 & -10 & -10 & -8 & 0 & -9 & -9 & -6 & 0 \\
+-5 & -2 & -9 & -2 & -8 & -9 & -3 & -4 & -3 & -6 & -2 & -5 & -7 & -2 & -7 & -3 \\
+-6 & 0 & 0 & -10 & 0 & -7 & -9 & -2 & -5 & 0 & -7 & 0 & 0 & -5 & -3 & 0 \\
+-3 & 0 & 0 & -6 & 0 & -5 & -4 & 0 & -8 & -8 & -3 & 0 & -5 & -7 & -5 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-2 & -2 & -4 & -4 & -4 & -10 & -6 & -2 & -3 & -4 & -3 & -4 & -7 & -1 & -10 & -5
 \end{array}\right)
 $$
 
@@ -172,7 +177,7 @@ see what the equilibrium choice of strategies should/could be.
 
 **Game theoretic analysis**
 
-All of this has been done using [Sagemath](), a great open source mathematics
+All of this has been done using [Sagemath](http://www.sagemath.org/), a great open source mathematics
 package that offers an alternative to Maple, Mathematica etc...
 
 If you're not familiar with game theory, this video might help (it shows the
@@ -182,8 +187,9 @@ basics and how Sagemath can be used to find Nash equilibria):
 
 Before talking about equilibria let's just look at best response dynamics.
 
-Using Sage we can first of all build up the [normal form game](link to sagemath
-docs) for a given number of guides:
+Using Sage we can first of all build up the [normal form
+game](http://doc.sagemath.org/html/en/reference/game_theory/sage/game_theory/normal_form_game.html)
+for a given number of guides:
 
 {% highlight python %}
 sage: def build_game(row_player_file, col_player_file):
@@ -207,11 +213,14 @@ this can be found [here]()):
 
 ![best response graph for 1st guide]({{site.baseurl}}/assets/images/risk-averse-plot-br-01.svg)
 
-That plot confirms what we have seen earlier, we see that [Krul]() is a best
-response to [Fortress]() or [Rona](). Sadly, because there are so many zeros
-when just using the first guide, there are a bunch of heros that are not
-considered a threat to any of the players so they have multiple best responses
-and our graph is messy.
+That plot confirms what we have seen earlier, we see that
+[Krul](http://www.vaingloryfire.com/vainglory/wiki/heroes/krul) is a best
+response to
+[Fortress](http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress) or
+[Rona](http://www.vaingloryfire.com/vainglory/wiki/heroes/rona). Sadly, because
+there are so many zeros when just using the first guide, there are a bunch of
+heros that are not considered a threat to any of the players so they have
+multiple best responses and our graph is messy.
 
 Here is the best response graph when taking the mean threats over all front
 page guides:
@@ -220,10 +229,13 @@ page guides:
 
 Note that Game Theory assumes **that everyone know that everyone know that
 everyone knows... all this**. So for example if two players both player Adagio
-we are at an equilibrium. However if one player plays [Saw]() then the graph
-indicates that the opponent should play [Koshka](), which means that the first
-player should then deviate and play [Fortress]() which is then also an
-equilibrium (bot players are playing best responses to each other).
+we are at an equilibrium. However if one player plays
+[Saw](http://www.vaingloryfire.com/vainglory/wiki/heroes/saw) then the graph
+indicates that the opponent should play
+[Koshka](http://www.vaingloryfire.com/vainglory/wiki/heroes/koshka), which means
+that the first player should then deviate and play
+[Fortress](http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress) which is
+then also an equilibrium (bot players are playing best responses to each other).
 
 From here on I will continue the analysis using the average utility from all
 the guides (I'll come back to this at the end).
@@ -239,8 +251,8 @@ sage: g.obtain_nash(algorithm='lrs')[3]
  (0, 0, 0, 0, 0, 0, 0, 0, 3947/17781, 0, 3194/17781, 0, 8795/17781, 0, 0, 615/5927)]
 {% endhighlight %}
 
-This particular equilibria has both players playing a mix of: [Fortress](),
-[Glaive](), [Petal]() and [Koshka]().
+This particular equilibria has both players playing a mix of: [Fortress](http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress),
+[Glaive](http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive), [Petal](http://www.vaingloryfire.com/vainglory/wiki/heroes/petal) and [Koshka](http://www.vaingloryfire.com/vainglory/wiki/heroes/koshka).
 
 Here is the mean probability distribution for both players, while the
 particular values should be ignored what is of interest is the heroes that are
@@ -312,46 +324,50 @@ analysis has two weaknesses:
 (when both players are acting in a risk averse way) the choice of heros for an
 isolated job like jungling and/or laneing is in fact reduced to a set from:**
 
-- [Adagio]()
-- [Catherine]()
-- [Koshka]()
-- [Petal]()
-- [Glaive]()
-- [Fortress]()
+- [Adagio](http://www.vaingloryfire.com/vainglory/wiki/heroes/adagio)
+- [Catherine](http://www.vaingloryfire.com/vainglory/wiki/heroes/catherine)
+- [Koshka](http://www.vaingloryfire.com/vainglory/wiki/heroes/koshka)
+- [Petal](http://www.vaingloryfire.com/vainglory/wiki/heroes/petal)
+- [Glaive](http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive)
+- [Fortress](http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress)
 
 If **you and your opponent aim to be threatening**, the choice is from:
 
-- [Glaive]()
-- [Krul]()
-- [Taka]()
+- [Glaive](http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive)
+- [Krul](http://www.vaingloryfire.com/vainglory/wiki/heroes/krul)
+- [Taka](http://www.vaingloryfire.com/vainglory/wiki/heroes/taka)
 
 Finally if **you aim to be threatening, playing against a player aiming to be
 risk averse** the choice is from:
 
-- [Glaive]()
-- [Krul]()
-- [Taka]()
-- [Koshka]()
+- [Glaive](http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive)
+- [Krul](http://www.vaingloryfire.com/vainglory/wiki/heroes/krul)
+- [Taka](http://www.vaingloryfire.com/vainglory/wiki/heroes/taka)
+- [Koshka](http://www.vaingloryfire.com/vainglory/wiki/heroes/koshka)
 
 and vice versa:
 
-- [Adagio]()
-- [Catherine]()
-- [Petal]()
-- [Glaive]()
-- [Fortress]()
+- [Adagio](http://www.vaingloryfire.com/vainglory/wiki/heroes/adagio)
+- [Catherine](http://www.vaingloryfire.com/vainglory/wiki/heroes/catherine)
+- [Petal](http://www.vaingloryfire.com/vainglory/wiki/heroes/petal)
+- [Glaive](http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive)
+- [Fortress](http://www.vaingloryfire.com/vainglory/wiki/heroes/fortress)
 
 (Interestingly for this last type of game there were in general just 1 equilibrium.)
 
 Based on all of this, I would suggest (looking across all of that summary) that
-(disclaimer: based on the wiki threat data) the __best__ [vainglory]() hero is
-[Glaive](). Again though, this does not take in to account any of the very
-important team dynamics. I plan to keep on being a protector with [Ardan]() and
-just doing my best to stay alive...
+(disclaimer: based on the wiki threat data) the __best__
+[Vainglory](http://www.vainglorygame.com) hero is
+[Glaive](http://www.vaingloryfire.com/vainglory/wiki/heroes/glaive). Again
+though, this does not take in to account any of the very important team
+dynamics. I plan to keep on being a protector with
+[Ardan](http://www.vaingloryfire.com/vainglory/wiki/heroes/ardan) and just doing
+my best to stay alive...
 
 Another point is that this shows that vainglory is perhaps not immediately
-balanced. A perfectly balanced game (like [Rock Paper Scissor]() for example)
-has a Nash Equilibria that evenly plays all strategies:
+balanced. A perfectly balanced game (like [Rock Paper
+Scissor](https://en.wikipedia.org/wiki/Rock-paper-scissors) for example) has a
+Nash Equilibria that evenly plays all strategies:
 
 {% highlight python %}
 sage: g = game_theory.normal_form_games.RPS()
@@ -364,5 +380,6 @@ Please do take a look at all the code/data at [this repository]().
 This was a fun application of mathematical modelling, I also learnt how to
 scrape with BeautifulSoup but I mainly look forward to using this in my game
 theory class this year. I might even suggest we spend 25 minutes of one class
-having a game on the big scren assuming there are 5 players of [Vainglory]() in
-my class.
+having a game on the big scren assuming there are 5 players of
+[Vainglory](http://www.vainglorygame.com)ttp://www.vainglorygame.com)ttp://www.vainglorygame.com)
+in my class.
