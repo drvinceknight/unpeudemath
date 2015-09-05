@@ -181,9 +181,13 @@ All of this has been done using [Sagemath](http://www.sagemath.org/), a great op
 package that offers an alternative to Maple, Mathematica etc...
 
 If you're not familiar with game theory, this video might help (it shows the
-basics and how Sagemath can be used to find Nash equilibria):
+basics of game theory and how Sagemath can be used to find Nash equilibria):
 
-**INCLUDE VIDEO HERE**
+<div class="video">
+    <figure>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/QjXAvRiU4Og?rel=0" frameborder="0" allowfullscreen></iframe>
+    </figure>
+</div>
 
 Before talking about equilibria let's just look at best response dynamics.
 
