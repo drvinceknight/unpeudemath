@@ -6,7 +6,7 @@ tags       :
 - sage
 - gametheory
 - vainglory
-comments   : false
+comments   : true
 ---
 
 I've recently been playing a really cool video game:
