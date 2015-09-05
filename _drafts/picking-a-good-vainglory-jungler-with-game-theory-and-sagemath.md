@@ -107,11 +107,12 @@ page on the wiki):
 [Skye](http://www.vaingloryfire.com/vainglory/wiki/heroes/skye) as she was
 released pretty much at the same time as I was writing this post.)
 
-You can see the [JuPyTer notebook]() which shows the code. The main
-technicality is that I only scraped guides from the front page for each hero. As
-I'll describe later, I ran my analysis taking the average threats for a variety
-of cases: only taking the first guide, only taking the first 2 guides, the first
-3 guides etc...
+You can see the [JuPyTer
+notebook](https://github.com/drvinceknight/vainglory-analysis/blob/master/scrape_heroes.ipynb)
+which shows the code. The main technicality is that I only scraped guides from
+the front page for each hero. As I'll describe later, I ran my analysis taking
+the average threats for a variety of cases: only taking the first guide, only
+taking the first 2 guides, the first 3 guides etc...
 
 Here for example is the threats data for [Adagio](http://www.vaingloryfire.com/vainglory/wiki/heroes/adagio) if you only look at [this
 first guide](http://www.vaingloryfire.com/vainglory/guide/unbeatable-adagio-130):
@@ -172,8 +173,10 @@ very end I'll comment on what happens to the results when players aim to
 maximise the threat they pose.
 
 Now that I've described the data (you can find all the data written to specific
-csv files [here]()) I'll go on to talk about the game theory used to try and
-see what the equilibrium choice of strategies should/could be.
+csv files
+[here](https://github.com/drvinceknight/vainglory-analysis/tree/master/data))
+I'll go on to talk about the game theory used to try and see what the
+equilibrium choice of strategies should/could be.
 
 **Game theoretic analysis**
 
@@ -213,7 +216,8 @@ Using this and the `best_response` method on Sagemath `NormalFormGames` we can
 build up all the best responses (according to a given number of guides) go each
 player. The cool thing is that Sagemath has some awesome graph theory written
 in there so we can transform that in to a nice picture (again: all the code for
-this can be found [here]()):
+this can be found
+[here](https://github.com/drvinceknight/vainglory-analysis/blob/master/analyse_game.ipynb)):
 
 ![best response graph for 1st guide]({{site.baseurl}}/assets/images/risk-averse-plot-br-01.svg)
 
@@ -379,7 +383,8 @@ sage: g.obtain_nash()
 [[(1/3, 1/3, 1/3), (1/3, 1/3, 1/3)]]
 {% endhighlight %}
 
-Please do take a look at all the code/data at [this repository]().
+Please do take a look at all the code/data at [this
+repository](https://github.com/drvinceknight/vainglory-analysis).
 
 This was a fun application of mathematical modelling, I also learnt how to
 scrape with BeautifulSoup but I mainly look forward to using this in my game
