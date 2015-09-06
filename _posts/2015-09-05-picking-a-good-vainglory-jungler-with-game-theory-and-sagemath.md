@@ -10,7 +10,7 @@ comments   : true
 ---
 
 I've recently been playing a really cool video game:
-[Vainglory](http://www.vainglorygame.com)ttp://www.vainglorygame.com)ttp://www.vainglorygame.com/). This is described as a MOBA which I
+[Vainglory](http://www.vainglorygame.com). This is described as a MOBA which I
 must admit I had never heard off until this year when my students mentioned it
 to me, but basically it's an online multi player game in which players form two
 teams of 6 heroes and fight each other. The choice of the heroes is very
