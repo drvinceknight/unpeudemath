@@ -20,13 +20,12 @@ below:
 
 ![]({{site.baseurl}}/assets/images/tree.png)
 
-James Campbell (going in to an industrial placement year) picked up where
-he left off last Summer (James built the first parts of Game Theory code
-for Sagemath) and developed a test for degeneracy of games. This involves
-building a corresponding linear system for the game and testing a
-particular condition. James and I wrote a blog post about some of the
-theory here:
-http://vknight.org/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/
+James Campbell (going in to an industrial placement year) picked up where he
+left off last Summer (James built the first parts of Game Theory code for
+Sagemath) and developed a test for degeneracy of games. This involves building a
+corresponding linear system for the game and testing a particular condition.
+James and I wrote a blog post about some of the theory here:
+[http://vknight.org/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/](http://vknight.org/unpeudemath/code/2015/06/25/on_testing_degeneracy_of_games/).
 
 Rhys Ward (going in to his first year) has been working at the interface
 between extensive form games and normal form games. His main contribution
