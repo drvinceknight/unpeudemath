@@ -48,3 +48,5 @@ talk here: https://www.youtube.com/watch?v=v4kKYr5I2io
 All of this code will now be reviewed by the Sagemath community and will
 (just as James’s code last year) be eventually available to anyone who wants
 to study game theory.
+
+**Note: this blog post is based on a similar Cardiff University newsletter item.**
