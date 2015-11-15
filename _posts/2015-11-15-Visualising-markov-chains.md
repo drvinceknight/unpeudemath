@@ -154,4 +154,4 @@ diagram (but how could it be?) it's a nice quick an easy way to visualise a
 Markov chain as you're working on it.
 
 [Here is a JuPyTer notebook with all the above
-code]({{site.baseurl}}/assets/code/Visualising Markov Chains.ipynb).
+code](https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Visualising%20Markov%20Chains.ipynb).
