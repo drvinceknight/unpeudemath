@@ -22,7 +22,7 @@ $$f(27)=2-7=-5$$
 
 and
 
-$$f(27562)=2-7+5-2+4=4$$
+$$f(27562)=2-7+5-6+4=-4$$
 
 It is immediate to note that for \\(N< 100\\) \\(f(N)=0\\) if and only if 11 divides \\(N\\) (\\(11\;\|\;N\\) for short).
 Before trying to prove our statement we could check it for a few more numbers:
