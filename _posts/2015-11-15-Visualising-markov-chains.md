@@ -134,17 +134,17 @@ nx.write_dot(G, 'mc.dot')
 
 Once we've done that we have a standard network file format, so we can use the
 command line to convert that to whatever format we want, here I'm creating the
-png file below (and deleting various the `ps` file):
+png file below:
 
 {% highlight bash %}
-$ neato -Tps -Goverlap=scale mc.dot -o mc.ps; convert mc.ps mc.png; rm mc.ps
+$ neato -Tps -Goverlap=scale mc.dot -o mc.ps; convert mc.ps mc.png
 {% endhighlight %}
 
 ![]({{site.baseurl}}/assets/images/mc.png)
 
 The [`.dot`]({{site.baseurl}}/assets/images/mc.dot) file is a standard graph
 format but you can also just open up the
-[`.ps`]({{site.baseurl}}/assets/images/mc.dot) file in whatever you want and
+[`.ps`]({{site.baseurl}}/assets/images/mc.ps) file in whatever you want and
 modify the image. Here it is in inkscape:
 
 ![]({{site.baseurl}}/assets/images/mc_in_inkscape.png)
@@ -154,4 +154,4 @@ diagram (but how could it be?) it's a nice quick an easy way to visualise a
 Markov chain as you're working on it.
 
 [Here is a JuPyTer notebook with all the above
-code]("{{site.baseurl}}/assets/code/Visualising Markov Chains.ipynb").
+code]({{site.baseurl}}/assets/code/Visualising Markov Chains.ipynb).
