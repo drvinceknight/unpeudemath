@@ -150,7 +150,7 @@ modify the image. Here it is in inkscape:
 ![]({{site.baseurl}}/assets/images/mc_in_inkscape.png)
 
 Even if the above is not as immediately esthetically pleasing as a nice Tikz
-diagram (but how could it be?) it's a nice quick an easy way to visualise a
+diagram (but how could it be?) it's a nice quick and easy way to visualise a
 Markov chain as you're working on it.
 
 [Here is a JuPyTer notebook with all the above
