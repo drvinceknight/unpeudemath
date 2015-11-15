@@ -152,3 +152,6 @@ modify the image. Here it is in inkscape:
 Even if the above is not as immediately esthetically pleasing as a nice Tikz
 diagram (but how could it be?) it's a nice quick an easy way to visualise a
 Markov chain as you're working on it.
+
+[Here is a JuPyTer notebook with all the above
+code]("{{site.baseurl}}/assets/code/Visualising Markov Chains.ipynb").
