@@ -4,7 +4,7 @@ import random
 import copy
 
 max_size = 25  # Max size of tournaments considered (maximum size of the sample)
-tournaments = 100  # Number of tournaments of each size to run (number of samples)
+tournaments = 20  # Number of tournaments of each size to run (number of samples)
 repetitions = 10  # Number of repetitions of each tournament (for a given sample)
 
 test_strategies = [axl.EvolvedLookerUp, axl.TitForTat, axl.Cooperator, axl.Defector, axl.DoubleCrosser]
