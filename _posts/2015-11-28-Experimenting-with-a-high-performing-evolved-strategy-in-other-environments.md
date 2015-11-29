@@ -194,7 +194,7 @@ The above creates tournaments up to a size of 25 other strategies, with 20 rando
 
 I then used [this JuPyTer notebook](https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Experimenting_with_the_evolved_lookerup.ipynb) to analyse the data.
 
-Here is what we see for the `EvolvedTitForTat` strategy:
+Here is what we see for the `EvolvedLookerUp` strategy:
 
 ![]({{site.baseurl}}/assets/images/rank-lookerup.svg)
 ![]({{site.baseurl}}/assets/images/wins-lookerup.svg)
