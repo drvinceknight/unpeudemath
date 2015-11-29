@@ -6,7 +6,7 @@ tags       :
 - axelrod
 - python
 - evolution
-comments   : false
+comments   : true
 ---
 
 [A common misconception about evolution is that "The fittest organisms in a
