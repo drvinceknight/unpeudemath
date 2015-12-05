@@ -164,7 +164,7 @@ gremlins...) ?????:
 What's more confusing is that it's not completely wrong because that does
 overall look 'ok' (correct number of strategies at the beginning, end and
 various commits are right there). **So does anyone know why the above doesn't
-work properlu?**
+work properly?**
 
 I'm really hoping this [xkcd comic](http://xkcd.com/386/) kicks in and someone
 tells me what's wrong with what I've done:
