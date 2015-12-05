@@ -5,7 +5,7 @@ categories : code
 tags       :
 - git
 - axelrod
-comments   : false
+comments   : true
 ---
 
 This blog post is a direct application of [Cunningham's
