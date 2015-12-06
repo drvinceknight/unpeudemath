@@ -250,7 +250,7 @@ import time
 import csv
 
 
-path_to_repo = "../../../Axelrod"
+path_to_repo = "~/src/Axelrod"
 repo = Repo(path_to_repo)
 
 all_commits = [c for c in repo.iter_commits()]
