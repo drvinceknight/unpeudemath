@@ -16,7 +16,8 @@ to post the wrong answer". With the other core developers of the
 paper and I wanted to see the evolution of a particular property of the library
 through the 2000+ commits (mainly to include a nice graph in the paper). This
 post will detail how I've cycled through all the commits and recorded the
-particular property I'm interested in.
+particular property I'm interested in. **EDIT: thanks to Mario for the comments:
+see the edits in bold to see the what I didn't quite get right.**
 
 The [Axelrod](https://github.com/Axelrod-Python/Axelrod) library is a
 collaborative project that allows anyone to submit strategies for the iterated
@@ -35,6 +36,15 @@ The goal of this post is to obtain the plot below:
 
 ![The number of strategies over
 time]({{site.baseurl}}/assets/images/strategies_over_time.svg)
+
+---
+
+**EDIT: here is the correct plot:**
+
+![The correct number of strategies over
+time]({{site.baseurl}}/assets/images/correct_strategies_over_time.svg)
+
+---
 
 Here is how I've managed that:
 
@@ -170,3 +180,118 @@ I'm really hoping this [xkcd comic](http://xkcd.com/386/) kicks in and someone
 tells me what's wrong with what I've done:
 
 ![Duty Calls http://xkcd.com/386/](http://imgs.xkcd.com/comics/duty_calls.png)
+
+---
+
+**EDIT: Big thanks to Mario Wenzel below in the comments for figuring out
+everythig that wasn't quite right.**
+
+Here's the script to count the strategies (writing to file instead of piping
+and also with correct error catching to deal with changes within the
+library):
+
+{% highlight python %}
+from sys import argv
+import csv
+
+
+try:
+   import axelrod
+
+   strategies = []
+
+   try:
+       if type(axelrod.strategies) is list:
+           strategies += axelrod.strategies
+   except (AttributeError, TypeError):
+       pass
+
+   try:
+       if type(axelrod.ordinary_strategies) is list:
+           strategies += axelrod.ordinary_strategies
+   except (AttributeError, TypeError):
+       pass
+
+   try:
+       if type(axelrod.basic_strategies) is list:
+           strategies += axelrod.basic_strategies
+   except (AttributeError, TypeError):
+       pass
+
+   try:
+       if type(axelrod.cheating_strategies) is list:
+           strategies += axelrod.cheating_strategies
+   except (AttributeError, TypeError):
+       pass
+
+   count = len(set(strategies))
+
+   f = open('data', 'a')
+   csvwrtr = csv.writer(f)
+   csvwrtr.writerow([argv[1], count, argv[2]])
+   f.close()
+
+except:
+   pass
+{% endhighlight %}
+
+
+Here is the modified script to roll through the commits (basically the same
+as before but it calls the other script with the `-B` flag (to avoid
+importing compiled files) and also without the need to sleep:
+
+
+{% highlight python %}
+from git import Repo
+import axelrod
+import os
+import subprocess
+import time
+import csv
+
+
+path_to_repo = "../../../Axelrod"
+repo = Repo(path_to_repo)
+
+all_commits = [c for c in repo.iter_commits()]
+
+git = repo.git
+
+
+number_of_strategies = []
+dates = []
+git.checkout('master')
+
+try:
+    os.remove('data')
+except OSError:
+    pass
+
+for c in sorted(all_commits, key=lambda x:x.committed_date):
+
+    for rubbish in [".DS_Store",
+                    "axelrod/.DS_Store",
+                    "axelrod/tests/.DS_Store",
+                    "axelrod/strategies/.DS_Store"]:  # Having to delete some files that were not in gitignore at the time of the commit
+        try:
+            os.remove(path_to_repo + rubbish)
+        except OSError:
+            pass
+
+    git.checkout(c)
+
+    try:
+        subprocess.call(['python2', '-B', 'number_of_strategies.py', str(c.committed_date), c.hexsha])
+        dates.append(c.committed_date)
+
+    except ImportError:
+        pass
+
+git.checkout('master')
+{% endhighlight %}
+
+
+It looks like you should delete all `pyc` files from the repository in
+question and run the second script with the `-B` tag.
+
+Thanks again Mario!
