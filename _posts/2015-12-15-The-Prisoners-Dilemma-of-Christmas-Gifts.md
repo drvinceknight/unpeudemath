@@ -228,3 +228,22 @@ The final piece of analysis I will carry out is a parameter sweep of the above:
 - \\(3\leq R < T\\)
 - \\(1\leq P < R\\)
 - \\(0\leq S < P\\)
+
+All of this data sweep is in [this csv
+file]({{site.baseurl}}/assets/code/christmas.csv'). Out of those X records we
+see that X % had people cooperating (and not giving gifts). Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:
+
+- \\(P\\):
+- \\(R\\):
+- \\(S\\):
+- \\(T\\):
+
+Which shows that ...
+
+**TLDR**
+
+Agreeing to not give gifts at Christmas can be an evolutionary stable strategy,
+however in cases where the **feel good factor** of giving a gift is very high
+then no matter what happens everyone will end up giving gifts to everyone.
+
+**Merry christmas 🎄🎁⛄️.**
