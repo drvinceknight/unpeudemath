@@ -6,15 +6,16 @@ tags       :
 - python
 - axelrod
 - christmas
-comments   : false
+comments   : true
 ---
 
-On twitter [@alexip](https://twitter.com/alexip) tweeted ["'Let's agree not to
-give each other presents for Christmas' is just another case of the prisoner's
+This post gives a game theoretic explanation as to why we exchange gifts. On
+twitter [@alexip](https://twitter.com/alexip) tweeted ["'Let's agree not to give
+each other presents for Christmas' is just another case of the prisoner's
 dilemma #gametheory"](https://twitter.com/alexip/status/673573450036981762).
 This post builds on that and investigates the premise fully in an evolutionary
-context investigating different values of how good it feel to give and receive a
-gift :)
+context investigating different values of how good it feels to give and receive
+a gift :)
 
 [![Photo of alex's
 tweet]({{site.baseurl}}/assets/images/tweet_about_xmas.png)](https://twitter.com/alexip/status/673573450036981762)
@@ -26,9 +27,7 @@ Christmas:
 
 > Camille: Sounds great.
 
-**Let us know describe how this situation corresponds to a prisoner's dilemma.**
-Now Alex and Camille are both very kind selfless people who prefer the feeling
-of giving gifts than of receiving them:
+**Let us describe how this situation corresponds to a prisoner's dilemma.**
 
 - If Alex and Camille **cooperate** and indeed keep their promise of not getting
   gifts than let us assume they both get a utility of \\(R\\) (_reward_).
@@ -50,32 +49,31 @@ utilities:
 $$T > R > P > S$$
 
 In this case we see that if Camille chooses to cooperate then Alex's __best
-response__ is to play defect (as \\(T>R\\):
+response__ is to play defect (as \\(T>R\\)):
 
 > If Camille is indeed going to not give a gift, then Alex should give a gift.
 
 **Also** if Camille chooses to defect then Alex's __best response__ is to defect
-once again:
+once again (as \\(P>S\\)):
 
 > If Camille is going to 'break the promise' then Alex should give a gift.
 
 **So no matter what happens: Alex should defect.**
 
-(In game theory this is what is called a dominating strategy.) This is indeed
-called [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
-and is what Alex was referring to in his original tweet.
+In game theory this is what is called a dominating strategy, and indeed this
+situation is referred to as a [Prisoner's
+Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma) and is what Alex
+was referring to in his original tweet.
 
-**So far all we are really modelling is a one of exchange of gifts.**
+## How does reputation effect gift giving?
+
+**So far all we are really modelling is a SINGLE exchange of gifts.**
 If we were to exchange gifts every year we would perhaps learn to trust each
-other and that when Camille says they are not going to give a gift that they
-will indeed not do so.
-
-Perhaps Camille would be willing to take a risk and cooperate one Christmas and
-observe what Alex does: if Alex cooperates then they could potentially continue
-to cooperate.
+other, so that when Camille says they are not going to give a gift Alex has
+reason to believe that they will indeed not do so.
 
 This is called an **iterated Prisoner's dilemma** and has been the subject of a
-great amount of work.
+great amount of academic work.
 
 Let us consider two types of behaviour that Camille and Alex could choose to
 exhibit, they could be:
@@ -102,13 +100,13 @@ means that the particular player cooperates, the 🎁 that they don't and give a
 gift).
 
 Most of the ongoing Iterated Prisoner's Dilemma research is directly due to a
-computer tournament run by [Robert
-Axelrod](http://www-personal.umich.edu/~axe/) in the 1980. In that work Axelrod
-invited a variety of computer strategies to be submitted and they then played
-against each other. You can read more about that here:
+computer tournament run by [Robert Axelrod](http://www-personal.umich.edu/~axe/)
+in the 1980s. In that work Axelrod invited a variety of computer strategies to
+be submitted and they then played against each other. You can read more about
+that here:
 [axelrod.readthedocs.org/en/latest/reference/description.html](http://axelrod.readthedocs.org/en/latest/reference/description.html)
-but the important thing is that there are a bunch of 'behaviours' that have
-been well studied and that we will look at here:
+but the important thing is that there are a bunch of 'behaviours' that have been
+well studied and that we will look at here:
 
 1. Cooperator: never give gifts
 2. Defector: always give gifts
@@ -120,8 +118,8 @@ been well studied and that we will look at here:
   against the promise: give a gift no matter what.
 
 What we will now do is see how much utility (how people feel about their gift
-giving) if we have a situation where 6 people exchange gifts for 50 years and
-each person acts according to one of the above behaviours.
+giving behaviour) if we have a situation where 6 people exchange gifts for 50
+years and each person acts according to one of the above behaviours.
 
 For our utility we will use the following values of \\(R, P, S, T\\):
 
@@ -147,6 +145,8 @@ Here is how we can do this in python:
 We see that the people that do the best are the last two: TwoTitForTat and
 Grudger. These are people who are quick enough to react to people who won't
 keep their promise but that do give hope to people who will!
+
+## At a population level: evolution of gift giving
 
 We can consider this in an evolutionary context where we see how the behaviour
 is allowed to evolve amongst a whole population of people. This particular type
@@ -196,20 +196,6 @@ We see that for the default values of \\(R, P, S, T\\) we have:
 {% endhighlight %}
 
 As already seen we have that for these values we end up with everyone keeping to the promise.
-
-What if we substantially increase (by a factor of 10) the value of \\(T\\): the
-utility of being tempted to give a gift (and defect):
-
-{% highlight python %}
->>> check_if_end_pop_cooperates(r=3, p=1, s=0, t=50)
-(True, [0.0, 0.0, 0.0, 0.06083, 0.46958, 0.46958])
-{% endhighlight %}
-
-We see that in this instance the last population again has no alternators or
-defectors:
-
-![Increasing t by factor of 10]({{site.baseurl}}/assets/images/t_factor_of_10_christmas_evo.svg)
-
 Let us increase the value of \\(T\\) by a factor of 100:
 
 {% highlight python %}
@@ -222,6 +208,8 @@ one in return is very large, the overall population will always give a gift:
 
 ![Increasing t by factor of 100]({{site.baseurl}}/assets/images/t_factor_of_100_christmas_evo.svg)
 
+## Seeing the effect of how good giving gifts makes us feel
+
 The final piece of analysis I will carry out is a parameter sweep of the above:
 
 - \\(5\leq T \leq 100\\)
@@ -230,20 +218,46 @@ The final piece of analysis I will carry out is a parameter sweep of the above:
 - \\(0\leq S < P\\)
 
 All of this data sweep is in [this csv
-file]({{site.baseurl}}/assets/code/christmas.csv'). Out of those X records we
-see that X % had people cooperating (and not giving gifts). Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:
+file]({{site.baseurl}}/assets/code/christmas.csv). Here is the distribution of
+parameters for which everyone gives a gift (reneging on the promise):
 
-- \\(P\\):
-- \\(R\\):
-- \\(S\\):
-- \\(T\\):
+![Parameters for kept
+promise]({{site.baseurl}}/assets/images/parameters_for_which_gifts_are_not_given.svg)
 
-Which shows that ...
+Here is the distribution of parameters for which everyone keeps their promise
+and does not give gifts:
 
-**TLDR**
+![Parameters for kept
+promise]({{site.baseurl}}/assets/images/parameters_for_which_gifts_are_given.svg)
+
+We see that people keep their promise if the \\(T\\) utility (the utility of
+being tempted to break the promise) is very high compared to all other
+utilities.
+
+Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:
+
+- \\(P\\): 4.682273
+- \\(R\\): -4.464960
+- \\(S\\): -0.030519
+- \\(T\\): -0.142463
+
+The only parameter that has a positive effect on keeping the promise is \\(R\\)
+which is the reward for the promise being kept.
+
+## TLDR
 
 Agreeing to not give gifts at Christmas can be an evolutionary stable strategy,
-however in cases where the **feel good factor** of giving a gift is very high
-then no matter what happens everyone will end up giving gifts to everyone.
+but this is only in the specific case where the utility of 'giving' is less than
+the utility of 'not giving'. **Given that in practice this promise is almost always broken
+(that's my personal experience anyway) this would suggest that people enjoy
+giving gifts a lot more than receiving them.**
 
 **Merry christmas 🎄🎁⛄️.**
+
+---
+
+- [Jupyter notebook to produce graphics for
+  this](https://github.com/drvinceknight/unpeudemath/tree/gh-pages/assets/code/prisoners_dilemma_of_giving_gifts.ipynb)
+- [Python script to carry out parameter
+  sweep]({{site.baseurl}}/assets/code/generate_christmas_data.py)
+- [The Axelrod library](http://axelrod.readthedocs.org/en/latest/)
