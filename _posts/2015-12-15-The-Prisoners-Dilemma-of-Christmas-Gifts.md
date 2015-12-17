@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "The Prisoner's Dilemma of giving Christmas Gifts"
+title      : "The Dilemma of giving Christmas Gifts"
 categories : code
 tags       :
 - python
