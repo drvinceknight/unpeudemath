@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1554.2858"
+   height="937.14288"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="prisonersdilemma.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3936"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5361"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4963"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4775"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4754"
+       is_visible="true" />
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3933"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path3939"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3152"
+       is_visible="true" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="933.87757"
+     inkscape:cy="613.42857"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1233"
+     inkscape:window-height="643"
+     inkscape:window-x="4"
+     inkscape:window-y="1"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(562.85714,134.20925)">
+    <path
+       d="m 300,252.36218 c 0,34.71504 -30.70047,62.85715 -68.57143,62.85715 -37.87095,0 -68.57142,-28.14211 -68.57142,-62.85715 0,-34.71504 30.70047,-62.85714 68.57142,-62.85714 37.87096,0 68.57143,28.1421 68.57143,62.85714 z"
+       sodipodi:ry="62.857143"
+       sodipodi:rx="68.571426"
+       sodipodi:cy="252.36218"
+       sodipodi:cx="231.42857"
+       id="path5349"
+       style="opacity:0.5;fill:#000080;fill-opacity:0.10638296;stroke:none"
+       sodipodi:type="arc"
+       transform="translate(202.85714,171.42857)" />
+    <path
+       d="m 300,252.36218 c 0,34.71504 -30.70047,62.85715 -68.57143,62.85715 -37.87095,0 -68.57142,-28.14211 -68.57142,-62.85715 0,-34.71504 30.70047,-62.85714 68.57142,-62.85714 37.87096,0 68.57143,28.1421 68.57143,62.85714 z"
+       sodipodi:ry="62.857143"
+       sodipodi:rx="68.571426"
+       sodipodi:cy="252.36218"
+       sodipodi:cx="231.42857"
+       id="path4750"
+       style="opacity:0.5;fill:#ff0000;fill-opacity:0.10638296;stroke:none"
+       sodipodi:type="arc"
+       transform="translate(-5.7142857,177.14286)" />
+    <path
+       transform="translate(200,8.5714314)"
+       sodipodi:type="arc"
+       style="opacity:0.5;fill:#ff0000;fill-opacity:0.10638296;stroke:none"
+       id="path4769"
+       sodipodi:cx="231.42857"
+       sodipodi:cy="252.36218"
+       sodipodi:rx="68.571426"
+       sodipodi:ry="62.857143"
+       d="m 300,252.36218 c 0,34.71504 -30.70047,62.85715 -68.57143,62.85715 -37.87095,0 -68.57142,-28.14211 -68.57142,-62.85715 0,-34.71504 30.70047,-62.85714 68.57142,-62.85714 37.87096,0 68.57143,28.1421 68.57143,62.85714 z" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.5;fill:#0000ff;fill-opacity:0.10638296;stroke:none"
+       id="path3148"
+       sodipodi:cx="231.42857"
+       sodipodi:cy="252.36218"
+       sodipodi:rx="68.571426"
+       sodipodi:ry="62.857143"
+       d="m 300,252.36218 c 0,34.71504 -30.70047,62.85715 -68.57143,62.85715 -37.87095,0 -68.57142,-28.14211 -68.57142,-62.85715 0,-34.71504 30.70047,-62.85714 68.57142,-62.85714 37.87096,0 68.57143,28.1421 68.57143,62.85714 z" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.5;fill:#0000ff;fill-opacity:0.10638296;stroke:none"
+       id="path4743"
+       sodipodi:cx="-337.14285"
+       sodipodi:cy="429.50504"
+       sodipodi:rx="194.28572"
+       sodipodi:ry="80"
+       d="m -142.85713,429.50504 c 0,44.18278 -86.98468,80 -194.28572,80 -107.30104,0 -194.28572,-35.81722 -194.28572,-80 0,-44.18278 86.98468,-80 194.28572,-80 107.30104,0 194.28572,35.81722 194.28572,80 z"
+       transform="translate(-31.428571,-5.7142857)" />
+    <path
+       transform="translate(8.8571429,293.42857)"
+       d="m -142.85713,429.50504 c 0,44.18278 -86.98468,80 -194.28572,80 -107.30104,0 -194.28572,-35.81722 -194.28572,-80 0,-44.18278 86.98468,-80 194.28572,-80 107.30104,0 194.28572,35.81722 194.28572,80 z"
+       sodipodi:ry="80"
+       sodipodi:rx="194.28572"
+       sodipodi:cy="429.50504"
+       sodipodi:cx="-337.14285"
+       id="path4763"
+       style="opacity:0.5;fill:#ff2a2a;fill-opacity:0.10638296;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.5;fill:#ff2a2a;fill-opacity:0.10638296;stroke:none"
+       id="path5345"
+       sodipodi:cx="-337.14285"
+       sodipodi:cy="429.50504"
+       sodipodi:rx="194.28572"
+       sodipodi:ry="80"
+       d="m -142.85713,429.50504 c 0,44.18278 -86.98468,80 -194.28572,80 -107.30104,0 -194.28572,-35.81722 -194.28572,-80 0,-44.18278 86.98468,-80 194.28572,-80 107.30104,0 194.28572,35.81722 194.28572,80 z"
+       transform="translate(1126,-483.71429)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       x="196.00502"
+       y="263.48257"
+       id="text5579"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="196.00502"
+         y="263.48257"
+         id="tspan5581"><tspan
+           x="196.00502"
+           y="263.48257"
+           style="font-style:italic;-inkscape-font-specification:Mongolian Baiti Italic"
+           id="tspan5583">R, R</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       x="400.97379"
+       y="264.08804"
+       id="text5585"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="400.97379"
+         y="264.08804"
+         id="tspan5587"><tspan
+           x="400.97379"
+           y="264.08804"
+           style="font-style:italic;-inkscape-font-specification:Mongolian Baiti Italic"
+           id="tspan5589">S, T</tspan><tspan
+           dx="0"
+           x="467.69254"
+           y="264.08804"
+           style="font-style:italic;-inkscape-font-specification:Mongolian Baiti Italic"
+           id="tspan5591" /></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       x="191.41518"
+       y="440.62543"
+       id="text5601"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="191.41518"
+         y="440.62543"
+         id="tspan5603"><tspan
+           x="191.41518"
+           y="440.62543"
+           style="font-style:italic;-inkscape-font-specification:Mongolian Baiti Italic"
+           id="tspan5605">T, S</tspan><tspan
+           dx="0"
+           x="258.13394"
+           y="440.62543"
+           style="font-style:italic;-inkscape-font-specification:Mongolian Baiti Italic"
+           id="tspan5607" /></tspan><tspan
+         sodipodi:role="line"
+         x="191.41518"
+         y="490.62543"
+         id="tspan5609"><tspan
+           x="191.41518"
+           y="490.62543"
+           style="font-style:italic;-inkscape-font-specification:Mongolian Baiti Italic"
+           id="tspan5611" /></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       x="408.57144"
+       y="438.68195"
+       id="text3015"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3017"
+         x="408.57144"
+         y="438.68195">P, P</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       x="185.71429"
+       y="35.219326"
+       id="text3140"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3142"
+         x="185.71429"
+         y="35.219326">Alex's choice: C or D</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3144"
+       y="21.799681"
+       x="-475.56534"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         y="21.799681"
+         x="-475.56534"
+         id="tspan3146"
+         sodipodi:role="line">Camille's choice: C or D</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart)"
+       d="m 220,186.6479 c 0,0 -41.00313,-153.441534 -102.85714,-191.4285745 C 32.784216,-56.588715 -89.260695,-10.356753 -177.14286,35.219325 -242.94697,69.345624 -295.9539,131.5116 -328.57143,198.07647 c -23.35539,47.66298 -25.71428,157.14286 -25.71428,157.14286"
+       id="path3150"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       x="-361.40067"
+       y="403.79074"
+       id="text3155"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3157"
+         x="-361.40067"
+         y="403.79074">Both Cooperate</tspan><tspan
+         sodipodi:role="line"
+         x="-361.40067"
+         y="453.79074"
+         id="tspan3159">(Don't give gifts)</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4757"
+       y="700.93359"
+       x="-327.11496"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       xml:space="preserve"><tspan
+         id="tspan4761"
+         y="700.93359"
+         x="-327.11496"
+         sodipodi:role="line">Camille Defects</tspan><tspan
+         y="750.93359"
+         x="-327.11496"
+         sodipodi:role="line"
+         id="tspan4767">(Alex gets a gift)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart)"
+       d="m 214.28571,509.50504 c 4.58011,54.88938 -19.78814,111.37942 -62.85714,145.71429 -40.04969,31.92785 -92.195397,43.89511 -142.8571414,51.42857 -41.6424456,6.19228 -83.6378656,10.01004 -125.7142886,11.42857"
+       id="path4773"
+       inkscape:path-effect="#path-effect4775"
+       inkscape:original-d="m 214.28571,509.50504 c 0,0 -24.31674,109.48139 -62.85714,145.71429 C 114.55451,689.88566 57.983172,695.69661 8.5714286,706.6479 -32.509264,715.75275 -117.14286,718.07647 -117.14286,718.07647"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc" />
+    <path
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       inkscape:original-d="m 521.14658,259.78703 c 0,0 109.48139,-24.31674 145.71429,-62.85714 34.66633,-36.87406 40.47728,-93.4454 51.42857,-142.857141"
+       inkscape:path-effect="#path-effect4963"
+       id="path4961"
+       d="m 521.14658,259.78703 c 54.47118,0.61628 108.78315,-22.81241 145.71429,-62.85714 35.24119,-38.2123 54.22697,-90.95058 51.42857,-142.857141"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       x="790.02789"
+       y="-76.209267"
+       id="text5339"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="790.02789"
+         y="-76.209267"
+         id="tspan5341">Alex Defects</tspan><tspan
+         id="tspan5343"
+         sodipodi:role="line"
+         x="790.02789"
+         y="-26.209267">(Camille gets a gift)</tspan></text>
+    <path
+       transform="translate(1134.2857,228.57143)"
+       d="m -142.85713,429.50504 c 0,44.18278 -86.98468,80 -194.28572,80 -107.30104,0 -194.28572,-35.81722 -194.28572,-80 0,-44.18278 86.98468,-80 194.28572,-80 107.30104,0 194.28572,35.81722 194.28572,80 z"
+       sodipodi:ry="80"
+       sodipodi:rx="194.28572"
+       sodipodi:cy="429.50504"
+       sodipodi:cx="-337.14285"
+       id="path5351"
+       style="opacity:0.5;fill:#000080;fill-opacity:0.10638296;stroke:none"
+       sodipodi:type="arc" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5353"
+       y="643.79071"
+       x="798.5993"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Mongolian Baiti;-inkscape-font-specification:Mongolian Baiti"
+       xml:space="preserve"><tspan
+         y="643.79071"
+         x="798.5993"
+         id="tspan5355"
+         sodipodi:role="line">Both Defect</tspan><tspan
+         id="tspan5357"
+         y="693.79071"
+         x="798.5993"
+         sodipodi:role="line">(Give gifts)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 811.42857,558.07647 C 809.46888,531.62691 798.17637,505.96212 780,486.6479 763.20342,468.79985 741.0576,456.60151 717.80455,448.85724 694.5515,441.11297 670.10654,437.606 645.71429,435.21933 c -40.80628,-3.99271 -81.90937,-4.9486 -122.85715,-2.85715"
+       id="path5359"
+       inkscape:path-effect="#path-effect5361"
+       inkscape:original-d="m 811.42857,558.07647 c 0,0 -12.59212,-53.48889 -31.42857,-71.42857 -34.70941,-33.05695 -87.25719,-42.16443 -134.28571,-51.42857 -40.19107,-7.91723 -122.85715,-2.85715 -122.85715,-2.85715"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc" />
+  </g>
+</svg>
