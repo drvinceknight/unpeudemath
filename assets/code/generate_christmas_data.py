@@ -1,4 +1,5 @@
 import axelrod as axl
+import numpy as np
 import csv
 
 family = [axl.Cooperator(),
@@ -29,13 +30,25 @@ csvwtr.writerow(['R', 'P', 'S', 'T', 'Promise',
                  'Grudger'])
 f.close()
 
-for t in range(5, 101):
-    for r in range(3, t):
-        for p in range(1, r):
-            for s in range(0, p):
+max_t = 100
+number_of_t = 15
+number_of_r = 15
+number_of_p = 15
+number_of_s = 15
+
+for t in np.linspace(5, max_t, number_of_t):
+    for r in np.linspace(3, t, number_of_r, endpoint=False):
+        for p in np.linspace(1, r, number_of_p, endpoint=False):
+
+            data = []
+            for s in np.linspace(0, p, number_of_s, endpoint=False):
                 promise, pop = check_if_end_pop_cooperates(r=r, p=p, s=s, t=t)
 
-                f = open('christmas.csv', 'a')
-                csvwtr = csv.writer(f)
-                csvwtr.writerow([r, p, s, t, promise] + pop)
-                f.close()
+                data.append([r, p, s, t, promise] + pop)
+
+            # Write data every 15 'number_of_s' experiments
+            f = open('christmas.csv', 'a')
+            csvwtr = csv.writer(f)
+            for row in data:
+                csvwtr.writerow(row)
+            f.close()
