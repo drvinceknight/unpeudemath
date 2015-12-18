@@ -21,10 +21,16 @@ def check_if_end_pop_cooperates(r=3, p=1, s=0, t=5,
 
 # Read in data that is already there
 f = open('christmas.csv', 'r')
+print("Reading data")
 csvrdr = csv.reader(f)
-datadict = {(eval(row[0]), eval(row[1]), eval(row[2]), eval(row[3])):row[4] for row
-        in data}
+raw_data = [row for row in csvrdr]
+datadict = {(round(eval(row[0]), 5),
+             round(eval(row[1]), 5),
+             round(eval(row[2]), 5),
+             round(eval(row[3]), 5)): row[4] for row
+            in raw_data[1:]}
 f.close()
+print("{} data points in data".format(len(datadict)))
 
 #csvwtr = csv.writer(f)
 #csvwtr.writerow(['R', 'P', 'S', 'T', 'Promise',
@@ -37,7 +43,7 @@ f.close()
 #f.close()
 
 max_t = 100
-number_of_t = 15
+number_of_t = 100
 number_of_r = 15
 number_of_p = 15
 number_of_s = 15
@@ -48,7 +54,7 @@ for t in np.linspace(5, max_t, number_of_t):
 
             data = []
             for s in np.linspace(0, p, number_of_s, endpoint=False):
-                if (t, r, p, s) not in datadict:
+                if (round(t, 5), round(r, 5), round(p, 5), round(s, 5)) not in datadict:
                     promise, pop = check_if_end_pop_cooperates(r=r, p=p, s=s, t=t)
 
                     data.append([r, p, s, t, promise] + pop)
