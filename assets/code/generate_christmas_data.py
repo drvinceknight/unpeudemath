@@ -26,15 +26,15 @@ datadict = {(eval(row[0]), eval(row[1]), eval(row[2]), eval(row[3])):row[4] for 
         in data}
 f.close()
 
-csvwtr = csv.writer(f)
-csvwtr.writerow(['R', 'P', 'S', 'T', 'Promise',
-                 'Cooperator',
-                 'Defector',
-                 'Alternator',
-                 'TitForTat',
-                 'TwoTitsForTat',
-                 'Grudger'])
-f.close()
+#csvwtr = csv.writer(f)
+#csvwtr.writerow(['R', 'P', 'S', 'T', 'Promise',
+                 #'Cooperator',
+                 #'Defector',
+                 #'Alternator',
+                 #'TitForTat',
+                 #'TwoTitsForTat',
+                 #'Grudger'])
+#f.close()
 
 max_t = 100
 number_of_t = 15
