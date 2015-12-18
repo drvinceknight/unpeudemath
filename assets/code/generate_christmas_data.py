@@ -19,7 +19,13 @@ def check_if_end_pop_cooperates(r=3, p=1, s=0, t=5,
     last_pop = [round(pop, digits) for pop in evo.population_sizes[-1]]
     return last_pop[1] == last_pop[2] == 0, last_pop
 
-f = open('christmas.csv', 'w')
+# Read in data that is already there
+f = open('christmas.csv', 'r')
+csvrdr = csv.reader(f)
+datadict = {(eval(row[0]), eval(row[1]), eval(row[2]), eval(row[3])):row[4] for row
+        in data}
+f.close()
+
 csvwtr = csv.writer(f)
 csvwtr.writerow(['R', 'P', 'S', 'T', 'Promise',
                  'Cooperator',
@@ -42,9 +48,10 @@ for t in np.linspace(5, max_t, number_of_t):
 
             data = []
             for s in np.linspace(0, p, number_of_s, endpoint=False):
-                promise, pop = check_if_end_pop_cooperates(r=r, p=p, s=s, t=t)
+                if (t, r, p, s) not in datadict:
+                    promise, pop = check_if_end_pop_cooperates(r=r, p=p, s=s, t=t)
 
-                data.append([r, p, s, t, promise] + pop)
+                    data.append([r, p, s, t, promise] + pop)
 
             # Write data every 15 'number_of_s' experiments
             f = open('christmas.csv', 'a')
