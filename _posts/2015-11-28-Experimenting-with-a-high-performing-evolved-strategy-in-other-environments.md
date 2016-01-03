@@ -192,7 +192,7 @@ The above creates tournaments up to a size of 25 other strategies, with 20 rando
 
 ## Analysing the data
 
-I then used [this JuPyTer notebook](https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Experimenting_with_the_evolved_lookerup.ipynb) to analyse the data.
+I then used [this Jupyter notebook](https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Experimenting_with_the_evolved_lookerup.ipynb) to analyse the data.
 
 Here is what we see for the `EvolvedLookerUp` strategy:
 

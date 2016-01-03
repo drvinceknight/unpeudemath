@@ -107,7 +107,7 @@ page on the wiki):
 [Skye](http://www.vaingloryfire.com/vainglory/wiki/heroes/skye) as she was
 released pretty much at the same time as I was writing this post.)
 
-You can see the [JuPyTer
+You can see the [Jupyter
 notebook](https://github.com/drvinceknight/vainglory-analysis/blob/master/scrape_heroes.ipynb)
 which shows the code. The main technicality is that I only scraped guides from
 the front page for each hero. As I'll describe later, I ran my analysis taking

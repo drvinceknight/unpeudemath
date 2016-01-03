@@ -153,5 +153,5 @@ Even if the above is not as immediately esthetically pleasing as a nice Tikz
 diagram (but how could it be?) it's a nice quick and easy way to visualise a
 Markov chain as you're working on it.
 
-[Here is a JuPyTer notebook with all the above
+[Here is a Jupyter notebook with all the above
 code](https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Visualising%20Markov%20Chains.ipynb).
