@@ -236,10 +236,10 @@ utilities.
 
 Carrying out a simple logistic regression we see the coefficients of each of the variables as follows:
 
-- \\(P\\): 3.007720
-- \\(R\\): -2.830106
-- \\(S\\): 0.010675
-- \\(T\\): -0.107508
+- \\(P\\): 3.121547
+- \\(R\\): -2.942909
+- \\(S\\): 0.007738
+- \\(T\\): -0.107386
 
 The parameters that have a positive effect on keeping the promise is \\(R\\) and
 \\(S\\) which is the reward for the promise being kept and for not giving a gift
