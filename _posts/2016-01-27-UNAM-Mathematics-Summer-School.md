@@ -5,7 +5,7 @@ categories : mathematics
 tags       :
 - mathematics
 - namibia
-comments   : false
+comments   : true
 ---
 
 I am writing this post just after two extraordinary weeks in Namibia. This is a
