@@ -65,9 +65,8 @@ $ pip install selenium
 {% endhighlight %}
 
 Now let us write some tests!
-Open up a file called `functional_tests.py` and fill it with this:
-
-{% gist drvinceknight/d2494432ba5b284869ae %}
+Open up a file called `functional_tests.py` and fill it with this the code shown
+[at this gist](https://gist.github.com/drvinceknight/d2494432ba5b284869ae)
 
 Run the tests:
 
@@ -77,9 +76,7 @@ $ python functional_tests.py
 
 This will open up Firefox and (assuming all is well) return nothing in the shell.
 
-So now let us modify the test file:
-
-{% gist drvinceknight/b9a80c84418f750a632f %}
+So now let us modify the test file [as shown in this gist](https://gist.github.com/drvinceknight/b9a80c84418f750a632f).
 
 Note that I am getting ready to change the base jekyll template and build my site about writing tests.
 Run the tests:
@@ -94,9 +91,7 @@ AssertionError
 This time around we get an assertion error :)
 
 Now we can go about changing our site (we are doing some TDD right now).
-Here is the new config file (note I have only changed the `title` field):
-
-{% gist drvinceknight/a5d7e0d311bb0ce7f050 %}
+[Here is the new config file](https://gist.github.com/drvinceknight/a5d7e0d311bb0ce7f050) (note I have only changed the `title` field):
 
 Now when we run the tests we get no assertion error:
 
@@ -113,9 +108,11 @@ The above is an extremely simple example of what Selenium can do and also of how
 1. If you know how to write unit tests but are not sure about Selenium take a look at [the Selenium site](http://docs.seleniumhq.org/docs/03_webdriver.jsp) (you can click on a button for Python or indeed whatever interface you would like to use). That site has a good collection of what Selenium can do (check what happens when clicking on links, checking content etc...). This is also helpful: [https://selenium-python.readthedocs.org/](https://selenium-python.readthedocs.org/).
 2. If you are happy with Selenium but not unit tests then there are a variety of great tutorials around but to be honest I cannot recommend the [Test Driven Development with Python Book](http://chimera.labs.oreilly.com/books/1234000000754/ch01.html) enough. [Harry Percival](https://twitter.com/hjwp) did a great job.
 
-Here are some tests I wrote today for the site my students have put together for [Code Club](http://cardiffmathematicscodeclub.github.io/):
+[Here are some tests I wrote
+today](https://gist.github.com/drvinceknight/fe5fc98748013dc09930) for the site
+my students have put together for [Code
+Club](http://cardiffmathematicscodeclub.github.io/):
 
-{% gist drvinceknight/fe5fc98748013dc09930 %}
 
 In there you can see examples of all of the above (clicking on links, checking content, checking things against a database etc...) but also the way I document the code (using what is called a 'User Story' which explains what a user should/would see).
 You can also see the way to properly 'tear down' the tests (so that Firefox closes).
