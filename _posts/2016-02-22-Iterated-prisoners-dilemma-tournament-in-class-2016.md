@@ -27,7 +27,7 @@ tournament as there was a box of chocolates on offer.
 You can see the results of each duel and overall in the following photo:
 
 ![Results of the
-tournament](./assets/images/ipd-2016.jpg)
+tournament]({{site.baseurl}}/assets/images/ipd-2016.jpg)
 
 Because of the coalitions we had to use a tie breaker (which you can see in the
 tiny bottom right corner of the board): a game of Rock Paper Scissors Spock
