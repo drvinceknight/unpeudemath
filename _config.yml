@@ -10,8 +10,9 @@ plus_username: "+VincentKnight"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
-highlighter: pygments
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
 paginate: 5
 
 gems: [jekyll-paginate]
