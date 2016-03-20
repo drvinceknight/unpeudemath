@@ -1,3 +1,4 @@
 _site
 *.ipynb_checkpoints*
 *.DS_Store
+assets/code/twittersecrets.py
