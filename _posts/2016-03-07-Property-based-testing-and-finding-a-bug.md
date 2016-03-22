@@ -26,50 +26,80 @@ software.
 
 I'm slowly slowly learning that hypothesis is ridiculously clever but at a very
 basic level what it allows you to do is take 1 test and instead of testing a
-single example,, test a whole range of parameters.
+single example, test a whole range of parameters.
 
-Here's a simple example, let's consider the following function:
+Here's a simple example, based on a short demo I gave at
+[the collaborations workshop 2016 in Edinburgh](http://www.software.ac.uk/cw16).
+You can find the slides I gave for that at this link:
+[vknight.org/Talks/2016-03-22-Division-by-11-and-property-based-testing-with-hypothesis/index.html#/](http://vknight.org/Talks/2016-03-22-Division-by-11-and-property-based-testing-with-hypothesis/index.html#/).
+
+Let us write a function that tests divisibility by 11 (assuming that we don't
+know about `% 11`. To do this we'll use the following property:
+
+> A number is divisible by 11 if and only if the alternating (in sign) sum of
+> the number’s digits is 0.
+
+For example: 121 is divisible by 11 because \(1-2+1=0\) (side note: if you're
+about to yell at me in the comments please read the rest of this post).
+
+Let's save below in a file called `main.py`:
 
 ```python
-def count_steps(a, b, step_size):
-    """A simple function to count 1 dimensional steps from a to b"""
-    steps = 0
-    position = a
-    while position < b:
-       position += step_size
-       steps += 1
-    return steps
+def divisible_by_11(number):
+    """Uses above criterion to check if number is divisible by 11"""
+    string_number = str(number)
+    alternating_sum = sum([(-1) ** i * int(d) for i, d
+                           in enumerate(string_number)])
+    return alternating_sum == 0
 ```
 
-The very simplest way to write a unit test for the above function is to write
-the following in a simple script and call it `steps.py` (note that this is not
-TDD, I've written the function first here):
+Now if we write out some examples we get expected behaviour:
+
+```python
+>>> import main
+>>> for k in range(10):
+...     print(main.divisible_by_11(11 * k))
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+```
+
+**But** let's write an actual test suite. Here's a very basic unittest that
+we'll save in `test_main.py`:
 
 ```python
 import unittest
+import main
 
-def count_steps(a, b, step_size):
-    """A simple function to count 1 dimensional steps from a to b"""
-    steps = 0
-    position = a
-    while position < b:
-       position += step_size
-       steps += 1
-    return steps
+class TestDivisible(unittest.TestCase):
+    def test_divisible_by_11(self):
 
-class testCountSteps(unittest.testcase):
-    def test_count_steps(self):
-        a = 5
-        b = 10
-        step_size = 2.5
-        expected_count = 2
-        self.assertEqual(count_steps(a, b, step_size), expected_count)
+        for k in range(10):
+            self.assertTrue(main.divisible_by_11(11 * k))
+            self.assertFalse(main.divisible_by_11(11 * k + 1))
+
+        # Some more examples
+        self.assertTrue(main.divisible_by_11(121))
+        self.assertTrue(main.divisible_by_11(12122))
+
+        self.assertFalse(main.divisible_by_11(123))
+        self.assertFalse(main.divisible_by_11(12123))
 ```
 
-We can then run this by using the following:
+The above tests the first 10 numbers divisible by 11 (and that that number + 1
+is not) and also some specific tests (121 and 12123).
+
+We then run this by using the following:
 
 ```bash
-$ python -m unittest steps
+$ python -m unittest test_main
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
@@ -77,188 +107,182 @@ Ran 1 test in 0.000s
 OK
 ```
 
-Before feeling happy about a test we really should check that it fails properly
-(otherwise it's perhaps not running correctly. So changing `b=10` to `b=25` in
-the `test_count_steps` and rerunning gives:
+At this point we could be very happy and proud of ourselves: we have tested well written software that can be shipped and used by researchers world wide to test the divisibility of a number by 11!!!
+
+**This is how mathematics breaks.**
+
+![Everything is wrong.](http://vknight.org/Talks/2016-03-22-Division-by-11-and-property-based-testing-with-hypothesis/img/disaster.gif)
+
+Let's write a [hypothesis](https://hypothesis.readthedocs.org/en/latest/) test.
+We'll write the following in `test_property_main.py`:
+
+```python
+import unittest
+import main
+
+from hypothesis import given  # This is how we will define inputs
+from hypothesis.strategies import integers  # This is the type of input we will use
+
+class TestDivisible(unittest.TestCase):
+
+    @given(k=integers(min_value=1))  # This is the main decorator
+    def test_divisible_by_11(self, k):
+        self.assertTrue(main.divisible_by_11(11 * k))
+```
+
+The above is actually a simpler test than before: we're only testing that a
+number that we **know** is divisible by 11 is in fact getting the expected
+output from our function.
+
+Let's run it:
 
 ```bash
-$ python -m unittest steps
+$ python -m unittest test_propert_main
+Falsifying example: test_divisible_by_11(self=<test_property_main.TestDivisible testMethod=test_divisible_by_11>, k=19)
 F
 ======================================================================
-FAIL: test_count_steps (steps.testCountSteps)
-A simple function to count 1 dimensional steps from a to b
+FAIL: test_divisible_by_11 (test_property_main.TestDivisible)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/vince/tmp/steps.py", line 19, in test_count_steps
-    self.assertEqual(count_steps(a, b, step_size), expected_count)
-AssertionError: 8 != 2
+  File "test_property_main.py", line 10, in test_divisible_by_11
+    def test_divisible_by_11(self, k):
+  File "/usr/local/lib/python2.7/site-packages/hypothesis/core.py", line 502, in wrapped_test
+    print_example=True, is_final=True
+  File "/usr/local/lib/python2.7/site-packages/hypothesis/executors.py", line 57, in default_new_style_executor
+    return function(data)
+  File "/usr/local/lib/python2.7/site-packages/hypothesis/core.py", line 103, in run
+    return test(*args, **kwargs)
+  File "test_property_main.py", line 11, in test_divisible_by_11
+    self.assertTrue(main.divisible_by_11(11 * k))
+AssertionError: False is not true
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.000s
+Ran 1 test in 0.058s
 
 FAILED (failures=1)
 ```
 
-So things, are looking good! I could try to write a few more **examples** in to
-the tests and that's a good first step towards getting confidence in my results.
+We get an error! An right at the top we get the `Falsifying example` so we see
+that our function fails for `k=19`. For, `k=19` the number being tested is
+\\(19\times 11=209\\). That number is obviously divisible by 11 (by
+construction) but it's alternating sum is in fact 11 **which is not 0**.
 
-**But that's just it, those are just examples.**
+At this point, as [described in this previous blog post about divisibility by
+11](http://vknight.org/unpeudemath/code/2014/11/22/on-divisibility-by-11/) I
+can let slip the **correct** property for divisibility by 11:
 
-This is where property based testing and hypothesis comes in.  I can use
-hypothesis to parametrize that test and check the 'properties' of the output
-for a range of sampled parameters.
+> A number is divisible by 11 if and only if the alternating (in sign) sum of
+> the number’s digits is divisible by 11.
 
-Here is how this is done:
+(There's a simple algebraic proof of that at [the older blog
+post](http://vknight.org/unpeudemath/code/2014/11/22/on-divisibility-by-11/).)
+
+Now let's modify our `main.py` (note that I'm using a slightly better
+modification than the lazy one I gave in the demo at the collaboration
+workshop):
 
 ```python
-import unittest
-
-from hypothesis import given
-from hypothesis.strategies import integers, floats
-
-def count_steps(a, b, step_size):
-    """A simple function to count 1 dimensional steps from a to b"""
-    steps = 0
-    position = a
-    while position < b:
-       position += step_size
-       steps += 1
-    return steps
-
-class testCountSteps(unittest.testcase):
-    @given(a=integers(), b=integers(), step_size=floats())
-    def test_count_steps(self, a, b, step_size):
-        self.assertLessEqual(count_steps(a, b, step_size), b / step_size)
-        self.assertGreaterEqual(count_steps(a, b, step_size), 1)
+def divisible_by_11(number):
+    """Uses above criterion to check if number is divisible by 11"""
+    string_number = str(number)
+    # Using abs as the order of the alternating sum doesn't matter.
+    alternating_sum = abs(sum([(-1) ** i * int(d) for i, d
+                               in enumerate(string_number)]))
+    # Recursively calling the function
+    return (alternating_sum in [0, 11]) or divisible_by_11(alternating_sum)
 ```
 
-Running the above gives:
+Running the tests:
 
 ```bash
-$ python -m unittest steps
-Falsifying example: test_count_steps(self=<steps.testCountSteps testMethod=test_count_steps>, a=0, b=0, step_size=0.0)
-E
-======================================================================
-ERROR: test_count_steps (steps.testCountSteps)
+$ python -m unittest test_propert_main
+.
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/vince/tmp/steps.py", line 17, in test_count_steps
-    def test_count_steps(self, a, b, step_size):
-  File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/hypothesis/core.py", line 502, in wrapped_test
-    print_example=True, is_final=True
-  File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/hypothesis/executors.py", line 57, in default_new_style_executor
-    return function(data)
-  File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/hypothesis/core.py", line 103, in run
-    return test(*args, **kwargs)
-  File "/Users/vince/tmp/steps.py", line 18, in test_count_steps
-    self.assertLessEqual(count_steps(a, b, step_size), b / step_size)
-ZeroDivisionError: float division by zero
+Ran 1 test in 0.043s
+
+OK
 ```
 
-The top there tells me that a test has failed for the case of `step_size=0.0`,
-from that point it's quick to notice that the code is also only suited for
-cases where `a>b` so let's modify the test and function:
+As we hoped!
+
+**I think the above is a good example of why property based testing and tools
+like hypothesis are useful for research software.**
+
+It helped identify an error in my mathematical thought process, an error that I
+in fact thought I had tested properly (using the `test_main.py` tests). If it
+wasn't for hypothesis I would have shipped code that redefined what it meant to
+be divisible by 11.
+
+**If you only came here to get a basic working example of hypothesis you can stop now :)**
+
+Obviously the above is a simple example but **hypothesis** recently found a bug
+in [Axelrod](http://axelrod.readthedocs.org/en/latest/) (the python package for
+reproducing Iterated Prisoner's Dilemma tournaments).
+
+Axelrod creates tournaments of players picked from one of the (at time of
+writing) 123 strategies. Here is one of the tests that randomly selects
+strategies to create tournaments and check that they run:
 
 ```python
-import unittest
+    @given(s=lists(sampled_from(axelrod.strategies),
+                   min_size=2,  # Errors are returned if less than 2 strategies
+                   max_size=5, unique=True),
+           turns=integers(min_value=2, max_value=50),
+           repetitions=integers(min_value=2, max_value=4),
+           rm=random_module())
+    @settings(max_examples=50, timeout=0)
+    @example(s=test_strategies, turns=test_turns, repetitions=test_repetitions,
+             rm=random.seed(0))
+    def test_property_serial_play(self, s, turns, repetitions, rm):
+        """Test serial play using hypothesis"""
+        # Test that we get an instance of ResultSet
 
-from hypothesis import given
-from hypothesis.strategies import integers, floats
+        players = [strat() for strat in s]
 
-def count_steps(a, b, step_size):
-    """A simple function to count 1 dimensional steps from a to b"""
-    if step_size == 0:
-        raise ZeroDivisionError()
-    steps = 0
-    position = a
-    while position < b:
-       position += step_size
-       steps += 1
-    return steps
-
-class testCountSteps(unittest.testcase):
-    @given(a=integers(), b=integers(), step_size=floats())
-    def test_count_steps(self, a, b, step_size):
-        assume(step_size != 0)
-        self.assertLessEqual(count_steps(a, b, step_size), b / step_size)
-        self.assertGreaterEqual(count_steps(a, b, step_size), 1)
-
-    @given(a=integers(), b=integers()))
-    def test_zero_step_size(self, a, b):
-        step_size = 0
-        self.assertRaiseError(count_steps(a, b, step_size), ZeroDivisionError)
+        tournament = axelrod.Tournament(
+            name=self.test_name,
+            players=players,
+            game=self.game,
+            turns=turns,
+            repetitions=repetitions)
+        results = tournament.play()
+        self.assertIsInstance(results, axelrod.ResultSet)
+        self.assertEqual(len(results.cooperation), len(players))
+        self.assertEqual(results.nplayers, len(players))
+        self.assertEqual(results.players, players)
 ```
 
-Running the above now gives:
+Without going in to precise details, at one point hypothesis found that two
+particular strategies could not play together. [Here is the github issue that
+documented this](https://github.com/Axelrod-Python/Axelrod/issues/465). These
+were:
 
+- `Backstabber`
+- `MindReader`
 
-```bash
-$ python -m unittest steps
-Falsifying example: test_count_steps(self=<steps.testCountSteps testMethod=test_count_steps>, a=0, b=0, step_size=5e-324)
-F.
-======================================================================
-FAIL: test_count_steps (steps.testCountSteps)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/vince/tmp/steps.py", line 19, in test_count_steps
-    def test_count_steps(self, a, b, step_size):
-  File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/hypothesis/core.py", line 502, in wrapped_test
-    print_example=True, is_final=True
-  File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/hypothesis/executors.py", line 57, in default_new_style_executor
-    return function(data)
-  File "/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/hypothesis/core.py", line 103, in run
-    return test(*args, **kwargs)
-  File "/Users/vince/tmp/steps.py", line 22, in test_count_steps
-    self.assertGreaterEqual(count_steps(a, b, step_size), 1)
-AssertionError: 0 not greater than or equal to 1
+These two strategies **did in fact** already play in a tournament together. The
+main tournament that includes all cheating strategies, but the side effect of
+that is that another cheating strategy played `BackStabber` first and overwrite
+it's strategy (meaning it could then play nice with `MindReader`). **Hypothesis
+however created a tournament were they were directly opposed and then our bug
+occured.**
 
-----------------------------------------------------------------------
-Ran 2 tests in 0.104s
+Anyway, it's now fixed and the test includes a `@example` statement to ensure
+that the specific bug is in fact fixed: [you can see this in the source
+code](https://github.com/Axelrod-Python/Axelrod/blob/master/axelrod/tests/unit/test_tournament.py#L120).
 
-FAILED (failures=1)
-```
+In practice, the recommendation is to use a combination of property based tests
+and traditional example based tests (as there are some specific things that
+need to be checked) **but I think all test suites can be improved by using
+tools like hypothesis, in particular research software**.
 
-You see now that hypothesis found a another problem and this has nothing to do
-with th step_size, indeed if `a=b` then my original assumption in writing the
-test is now falsified. In this instance I'll go ahead and change my test as I'm
-actually happy to take 0 steps.
+Helpful links:
 
-Of course we've lost the original test that checked the actual value, I could
-compliment the test I have with some example tests (always a good idea) but I
-can also just throw in a quick manual calculation of what the number of steps
-should be.
+- [@DRMacIver](https://twitter.com/DRMacIver): David is the writer of Hypothesis.
+- [Github repo](https://github.com/DRMacIver/hypothesis).
+- [Documentation](https://hypothesis.readthedocs.org/en/latest/).
 
-```python
-import unittest
-
-from hypothesis import given, assume
-from hypothesis.strategies import integers, floats
-
-def count_steps(a, b, step_size):
-    """A simple function to count 1 dimensional steps from a to b"""
-    if step_size == 0.0:
-        raise ZeroDivisionError()
-    steps = 0
-    position = a
-    while position < b:
-       position += step_size
-       steps += 1
-    return steps
-
-class testCountSteps(unittest.TestCase):
-    @given(a=integers(min_value=0, max_value=10),
-           b=integers(min_value=1, max_value=20),
-           step_size=floats(min_value=.5,
-                            allow_infinity=False,
-                            allow_nan=False))
-    def test_count_steps(self, a, b, step_size):
-        counted_steps = count_steps(a, a + b, step_size)
-        self.assertLessEqual(counted_steps, (a + b) / step_size + 1)
-        self.assertGreaterEqual(counted_steps, 0)
-
-    @given(a=integers(), b=integers())
-    def test_zero_step_size(self, a, b):
-        step_size = 0
-        self.assertRaises(ZeroDivisionError, count_steps, a, b, step_size)
-```
-
+Finally, if you're of the irc persuasion, I really recommend dropping in at
+`#hypothesis` on freenode. Here's a direct link to the channel on irccloud:
+[www.irccloud.com/invite?channel=%23hypothesis&hostname=irc.freenode.net&port=6697&ssl=1](https://www.irccloud.com/invite?channel=%23hypothesis&hostname=irc.freenode.net&port=6697&ssl=1).
+Everyone there has always been very helpful.
