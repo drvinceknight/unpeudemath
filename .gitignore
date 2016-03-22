@@ -1,3 +1,5 @@
 _site
 *.ipynb_checkpoints*
 *.DS_Store
+assets/code/twittersecrets.py
+assets/code/__pycache__/
