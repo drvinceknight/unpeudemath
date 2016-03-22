@@ -6,7 +6,7 @@ tags       :
 - python
 - axelrod
 - hypothesis
-comments   : false
+comments   : true
 ---
 
 I really have fallen in love with [test driven
