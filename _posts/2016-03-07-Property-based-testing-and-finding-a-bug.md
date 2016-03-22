@@ -16,7 +16,7 @@ tests, which makes programming a lot easier (for me). In Namibia I was lucky
 enough to meet and chat with [David MacRiver](http://www.drmaciver.com/), the
 main developer of the
 [hypothesis](https://hypothesis.readthedocs.org/en/latest/) package. Before
-that the [The Axelrod project](http://axelrod.readthedocs.org/en/latest/) had
+that [the Axelrod project](http://axelrod.readthedocs.org/en/latest/) had
 already incorporated some of what hypothesis is for: property based testing.
 This blog post will briefly describe what that is, how it took some hours of
 sleep away from me (in a good way) and why it's particularly great for research
@@ -274,7 +274,8 @@ code](https://github.com/Axelrod-Python/Axelrod/blob/master/axelrod/tests/unit/t
 In practice, the recommendation is to use a combination of property based tests
 and traditional example based tests (as there are some specific things that
 need to be checked) **but I think all test suites can be improved by using
-tools like hypothesis, in particular research software**.
+tools like hypothesis, in particular research software**. With research software
+a robust testing framework helps not only test the code but also the ideas.
 
 Helpful links:
 
