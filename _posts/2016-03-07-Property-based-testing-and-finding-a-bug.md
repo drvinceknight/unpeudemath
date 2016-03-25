@@ -31,7 +31,7 @@ single example, test a whole range of parameters.
 Here's a simple example, based on a short demo I gave at
 [the collaborations workshop 2016 in Edinburgh](http://www.software.ac.uk/cw16).
 You can find the slides I gave for that at this link:
-[vknight.org/Talks/2016-03-22-Division-by-11-and-property-based-testing-with-hypothesis/index.html#/](http://vknight.org/Talks/2016-03-22-Division-by-11-and-property-based-testing-with-hypothesis/index.html#/).
+[vknight.org/Talks/2016-03-22-Division-by-11-and-property-based-testing-with-hypothesis/](http://vknight.org/Talks/2016-03-22-Division-by-11-and-property-based-testing-with-hypothesis/).
 
 Let us write a function that tests divisibility by 11 (assuming that we don't
 know about `% 11`. To do this we'll use the following property:
@@ -168,7 +168,7 @@ that our function fails for `k=19`. For, `k=19` the number being tested is
 construction) but it's alternating sum is in fact 11 **which is not 0**.
 
 At this point, as [described in this previous blog post about divisibility by
-11](http://vknight.org/unpeudemath/code/2014/11/22/on-divisibility-by-11/) I
+11](http://vknight.org/unpeudemath/code/2014/11/22/on-divisibility-by-11.html) I
 can let slip the **correct** property for divisibility by 11:
 
 > A number is divisible by 11 if and only if the alternating (in sign) sum of
