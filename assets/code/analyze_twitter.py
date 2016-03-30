@@ -16,23 +16,22 @@ def analyse_user(user_id=None):
     followers = api.followers_ids(user_id=user_id)
     try:
         last_tweet = api.user_timeline(user_id=user_id, count=1)[0]
+        return followers, last_tweet.created_at
     except IndexError:
-        last_tweet.text = False
-        last_tweet.created_at = False
-    return followers, last_tweet.text, last_tweet.created_at
+        return followers, False
+
 
 class Follower(object):
     """Holds data"""
-    def __init__(self, user_id, followers, last_tweet_text, last_tweet_date):
+    def __init__(self, user_id, followers, last_tweet_date):
         self.user_id = user_id
         self.followers = followers
-        self.last_tweet_text = last_tweet_text
         self.last_tweet_date = last_tweet_date
 
     def write_to_csv(self, file="followers.csv"):
         with open('followers.csv', 'a') as f:
             writer = csv.writer(f)
-            row = [self.user_id, self.last_tweet_date, self.last_tweet_text,
+            row = [self.user_id, self.last_tweet_date,
                    len(self.followers)] + self.followers
             writer.writerow(row)
 
