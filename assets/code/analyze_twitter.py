@@ -33,7 +33,7 @@ class Follower(object):
         with open('followers.csv', 'a') as f:
             writer = csv.writer(f)
             row = [self.user_id, self.last_tweet_date, self.last_tweet_text,
-                   len(self.followers), *self.followers]
+                   len(self.followers)] + self.followers
             writer.writerow(row)
 
 if __name__ == "__main__":
