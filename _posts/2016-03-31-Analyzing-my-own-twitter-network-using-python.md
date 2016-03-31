@@ -211,7 +211,8 @@ This is how many people haven't tweeted for a year (for me: 95).
 Once I've done that, I can go through and find out the user names of them (and
 even use the api to unfollow them if I cared to):
 
-```uth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+```python
+>>> auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 >>> auth.set_access_token(token, token_secret)
 
 >>> api = tweepy.API(auth, wait_on_rate_limit=True,
