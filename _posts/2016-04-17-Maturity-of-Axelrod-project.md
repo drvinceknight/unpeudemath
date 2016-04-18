@@ -114,7 +114,7 @@ workshop](http://www.software.ac.uk/cw16) I attended last month.
 The work the entire set of contributors (25 at the moment of writing) has done
 is really awesome. A **completely personal highlight** has been working with
 the 3 other core developers on this: [Owen
-Campbell](https://github.com/meatballs), [Mark Harper](,
+Campbell](https://github.com/meatballs), [Marc Harper](,
 and://github.com/marcharper) and [Karol Langner](https://github.com/langner).
 
 Karol was the one who suggested (a while back):
