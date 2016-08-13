@@ -5,7 +5,7 @@ categories : python
 tags       :
 - statistics
 - python
-comments   : false
+comments   : true
 ---
 
 Working with [Nikoleta](https://twitter.com/nikoletaglyn) we recently needed to
