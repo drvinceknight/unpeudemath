@@ -107,7 +107,7 @@ plt.figure()
 plt.violinplot(data);
 x1, x2 = plt.xlim()
 plt.plot((x1, x2), (line(x1), line(x2)), '--',
-         label="$y = {0:.2f}x + {0:.2f}$ ($p={0:.2f}$)".format(slope,
+         label="$y = {0:.2f}x + {1:.2f}$ ($p={2:.2f}$)".format(slope,
                                                                intercept,
                                                                p_val),
          ),
