@@ -117,3 +117,6 @@ plt.legend(loc=4);
 which gives:
 
 ![]({{site.baseurl}}/assets/images/regression_anova.svg)
+
+**Edit** [Here is a jupyter notebook with all of the
+above.]({{site.baseurl}}/assets/code/Analysis%20of%20variance%20with%20different%20sized%20samples%20in%20Python.ipynb)
