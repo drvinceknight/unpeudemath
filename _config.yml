@@ -16,3 +16,6 @@ kramdown:
 paginate: 5
 
 gems: [jekyll-paginate]
+
+collections:
+- notebooks
