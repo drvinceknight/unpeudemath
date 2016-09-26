@@ -1,0 +1,12 @@
+Filename: profile.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     6  30.2265625000 MiB   0.0000000000 MiB   @profile(precision=precision, stream=fp)
+     7                             def basic_mean(N=5):
+     8  34.0742187500 MiB   3.8476562500 MiB       nbrs = list(range(0, 10 ** N))
+     9  34.0742187500 MiB   0.0000000000 MiB       total = sum(nbrs)
+    10  34.0742187500 MiB   0.0000000000 MiB       mean = total / len(nbrs)
+    11  34.0742187500 MiB   0.0000000000 MiB       return mean
+
+

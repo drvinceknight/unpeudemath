@@ -1,0 +1,28 @@
+Filename: profile_even.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     6  30.3281250000 MiB   0.0000000000 MiB   @profile(precision=precision, stream=fp)
+     7                             def basic_mean(N=5):
+     8  32.1289062500 MiB   1.8007812500 MiB       nbrs = [n for n in range(0, 10 ** N) if n % 2 == 0]
+     9  32.3984375000 MiB   0.2695312500 MiB       total = sum(nbrs)
+    10  32.3984375000 MiB   0.0000000000 MiB       mean = total / len(nbrs)
+    11  32.3984375000 MiB   0.0000000000 MiB       return mean
+
+
+Filename: profile_even.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    13  32.0234375000 MiB   0.0000000000 MiB   @profile(precision=precision, stream=fp)
+    14                             def basic_mean_with_gen(N=5):
+    15  32.0234375000 MiB   0.0000000000 MiB       nbrs = (n for n in range(0, 10 ** N) if n % 2 == 0)
+    16  32.0234375000 MiB   0.0000000000 MiB       total = 0
+    17  32.0234375000 MiB   0.0000000000 MiB       count = 0
+    18  32.0234375000 MiB   0.0000000000 MiB       for n in nbrs:
+    19  32.0234375000 MiB   0.0000000000 MiB           total += n
+    20  32.0234375000 MiB   0.0000000000 MiB           count += 1
+    21  32.0234375000 MiB   0.0000000000 MiB       mean = total / count
+    22  32.0234375000 MiB   0.0000000000 MiB       return mean
+
+
