@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "Make file to convert all Jupyter notebooks in a directory to pdfs"
+title      : "A make file to convert all Jupyter notebooks in a directory to pdfs"
 categories : python
 tags       :
 - python
