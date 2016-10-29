@@ -389,7 +389,11 @@ Empirical:
 
 For example, the empirical distribution sees at least one individual waiting for
 a total of 100 time units! (Remember, individuals are arriving on average once
-every 2 time units and being served, on average every time unit!).
+every 2 time units and being served, on average every time unit!). Also 5% of
+individuals waited more than 37 time units in the empiral distribution but still
+for more _conservative_ distributions 5% of individuals had waits larger than:
+4.72 times units (Weibull), 4.76 time units (Exponential), 2.84 time units
+(Uniform) etc...
 
 **But** just as we mentioned when looking at Anscombe's quartet it's important
 to not just look at summary statistics so here is some visualisation:
