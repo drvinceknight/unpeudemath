@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "Anscombes quarter, variability and studying queues with Python"
+title      : "Anscombes quartert, variability and studying queues with Python"
 categories : mathematics
 tags       :
 - python
