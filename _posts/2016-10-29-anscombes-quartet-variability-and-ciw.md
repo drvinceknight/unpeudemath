@@ -311,7 +311,7 @@ of distributions that all have the same mean service time and compare these:
 ```
 
 (More info can be found at the ciw documentation on distributions:
-http://ciw.readthedocs.io/en/latest/Features/distributions.html.)
+[ciw.readthedocs.io/en/latest/Features/distributions.html](http://ciw.readthedocs.io/en/latest/Features/distributions.html).)
 
 Let us know simulate the queueing process for all the above distribution:
 
