@@ -389,9 +389,10 @@ Empirical:
 
 For example, the empirical distribution sees at least one individual waiting for
 a total of 100 time units! (Remember, individuals are arriving on average once
-every time unit and being served, on average every half a time unit!).
+every 2 time units and being served, on average every time unit!).
 
-**But** just as we mentioned when looking at Anscombe's quartet it's important to not just look at summary statistics so here is some visualisation:
+**But** just as we mentioned when looking at Anscombe's quartet it's important
+to not just look at summary statistics so here is some visualisation:
 
 
 ```python
@@ -424,8 +425,8 @@ every time unit and being served, on average every half a time unit!).
 
 
 We see that the empirical distribution has by far the longest tail with some
-individuals have more than 80 time units spent waiting. Whilst this
-distribution is pretty artificial. It is fairly realistic to assume that there
+individuals having more than 80 time units spent waiting. Whilst this
+distribution is pretty artificial, it is fairly realistic to assume that there
 is a particular procedure or service that often takes no time at all **but**
 rarely does take a lot of more time. Examples of these will include healthcare
 operations where non routine procedures sometimes are needed.
@@ -438,7 +439,8 @@ more complex systems.
 
 **Side note**
 
-Ciw is already pretty well developed and has full 100% test coverage **but** is always looking for contributions (of any level) so please take a look at:
+Ciw is already pretty well developed and has full 100% test coverage **but** is
+always looking for contributions (of any level) so please take a look at:
 
 - The github repo: [github.com/CiwPython/Ciw](https://github.com/CiwPython/Ciw)
 - A talk given by Geraint Palmer describing the library and his research so far:
