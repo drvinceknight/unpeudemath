@@ -195,9 +195,9 @@ distribution](https://en.wikipedia.org/wiki/Log-normal_distribution).
 
 When studying queues, as well as building analytical models it is possible to
 simulate the process using pseudo random number generators. One piece of
-software (the main developer being [Paul
-Harper](http://www.profpaulharper.com/) and my PhD student: [Geraint
-Palmer](http://www.geraintianpalmer.org.uk/)) that allows for this is
+software (the main developer being [Geraint
+Palmer](http://www.geraintianpalmer.org.uk/) who is studying for his PhD with [Paul
+Harper](http://www.profpaulharper.com/) and I) that allows for this is
 [ciw](http://ciw.readthedocs.io/en/latest/) (the name is Welsh for queue! :)).
 
 What I'll do in the rest of this post is build a simulation model of a single
