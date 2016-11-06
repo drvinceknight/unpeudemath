@@ -13,8 +13,10 @@ software for computing Nash equilibria of strategic games. A numpy of algorithms
 are implemented that take advantage of the higher dimensional geometry relating
 to the theory of games. In this post I will describe an approach for finding
 Nash equilibria (of 2 player games) that reduces to solving two simple Matrix
-equations. This can be implemented in Python using just numpy, I will also
-introduce (briefly) a library that does just that.
+equations. This can be implemented in Python using just numpy (and is already
+implemented in
+[sagemath](http://doc.sagemath.org/html/en/reference/game_theory/sage/game_theory/normal_form_game.html)),
+I will also introduce (briefly) a library that does just that.
 
 Consider a 2 player game with row player having \\(m\\) strategies and column
 player \\(n\\) strategies. This can be represented by two matrices \\(A,
