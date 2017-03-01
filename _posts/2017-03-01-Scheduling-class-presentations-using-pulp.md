@@ -19,7 +19,7 @@ programming implemented in the Python library
 I have previously done this using [Sagemath](http://www.sagemath.org/) but this
 year I decided to use Pulp ("A python Linear Programming API"). This probably
 follows from [@DRMacIver](https://twitter.com/DRMacIver)'s talk at PyCon UK
-2017: ["Easy solutions to hard
+2016: ["Easy solutions to hard
 problems"](https://www.youtube.com/watch?v=OkusHEBOhmQ) in which I saw Pulp for
 the first time.
 
