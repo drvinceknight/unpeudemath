@@ -255,3 +255,6 @@ Namibia](https://na.pycon.org/en/):
 Finally, if you'd like to see some great photos from the conference you can see
 them here:
 [www.flickr.com/photos/phoenix-project/sets/72157680441007095/with/32934148716/](https://www.flickr.com/photos/phoenix-project/sets/72157680441007095/with/32934148716/)
+
+(PS: Big thanks to [@geraintpalmer](https://twitter.com/geraintpalmer) for the
+help to make the nice plots!)
