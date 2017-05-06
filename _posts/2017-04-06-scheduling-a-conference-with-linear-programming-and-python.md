@@ -269,7 +269,7 @@ underlying mathematical problem is being solved (it took 24 seconds using the
 spec laptop). The `GPLK` solver is an open source solver that you need to
 install separately, but you can also use `conference_scheduler` without
 installing any other software as it comes with `pulp` which in turn comes with a
-default solver (you can just leave `solver=` blank).
+default solver (`solver` is an optional argument).
 
 ```python
 >>> from conference_scheduler import scheduler
