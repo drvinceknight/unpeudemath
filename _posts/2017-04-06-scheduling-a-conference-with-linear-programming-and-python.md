@@ -395,7 +395,13 @@ Let us also take a closer look at the education talks:
 >>> for item in schedule:
 ... 	if item.event in talks and "Education" in item.event.tags:
 ...         print(f"{item.event.name} at {item.slot.starts_at} in {item.slot.venue}")
+Developing CS education - how can you help at 18-Sep-2016 11:15 in Assembly room
+Why do kids need to code and how can we help? at 18-Sep-2016 12:00 in Assembly room
+Children's Day Show and Tell at 18-Sep-2016 12:30 in Room D
 ```
+
+We see that all the Education talks are in the same session on the final day
+(as we wanted!).
 
 This is a very basic use of the library, you'll note for example that I've
 ignored the capacity of the slots and the demand for talks. This can be used as
