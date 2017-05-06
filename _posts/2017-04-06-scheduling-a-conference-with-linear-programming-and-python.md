@@ -64,7 +64,7 @@ $$
 If you would
 like to read a full mathematical formulation of these things take a look at the
 library documentation:
-http://conference-scheduler.readthedocs.io/en/latest/background/mathematical_model.html
+[conference-scheduler.readthedocs.io/en/latest/background/mathematical_model.html](http://conference-scheduler.readthedocs.io/en/latest/background/mathematical_model.html)
 
 Once we have that mathematical formulation, **integer linear programming**, a
 mathematical technique for optimising problems with a lot of linearity (like
