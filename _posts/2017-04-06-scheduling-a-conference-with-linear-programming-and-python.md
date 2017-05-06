@@ -266,10 +266,12 @@ Let us concatenate all our events:and slots:
 Now we can re schedule PyCon 2016, note that this can take a little time as the
 underlying mathematical problem is being solved (it took 24 seconds using the
 `GPLK` solver on my low
-spec laptop)
+spec laptop). The `GPLK` solver is an open source solver that you need to
+install separately, but you can also use `conference_scheduler` without
+installing any other software as it comes with `pulp` which in turn comes with a
+default solver (you can just leave `solver=` blank).
 
 ```python
-
 >>> from conference_scheduler import scheduler
 >>> schedule = scheduler.schedule(events, slots, solver=GPLK())
 ```
@@ -278,7 +280,6 @@ The output of `scheduler.schedule` is a generator of schedule items (a named
 tuple of event and slots). Let us put that in a sorted list:
 
 ```python
-
 schedule = sorted(schedule, key=lambda item: item.slot.starts_at)
 ```
 
