@@ -16,6 +16,13 @@ mathematics comes to the rescue. I'll describe in this post how I use linear
 programming implemented in the Python library
 [Pulp](https://github.com/coin-or/pulp) to get the schedule easily.
 
+**TLDR** We built a python library for scheduling conferences, you can find the
+source code
+here:[github.com/PyconUK/ConferenceScheduler](https://github.com/PyconUK/ConferenceScheduler),
+the documentation is here:
+[conference-scheduler.readthedocs.io/en/latest/](http://conference-scheduler.readthedocs.io/en/latest/)
+and you can `pip install conference_scheduler`.
+
 I have previously done this using [Sagemath](http://www.sagemath.org/) but this
 year I decided to use Pulp ("A python Linear Programming API"). This probably
 follows from [@DRMacIver](https://twitter.com/DRMacIver)'s talk at PyCon UK
