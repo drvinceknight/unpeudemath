@@ -9,23 +9,25 @@ tags       :
 comments   : false
 ---
 
-The Iterated prisoners dilemma (IPD) has been an active area of study for since
-the 1980s. With a team of over 40 contributors we have built a Python library
-that allows for sustainable study of it:
+The Iterated prisoners dilemma (IPD) has been an active area of study since the
+1980s following [Robert Axelrod's](https://en.wikipedia.org/wiki/Robert_Axelrod)
+computer tournaments. With a team of over 50 contributors I am one of many who
+have built a Python library that allows for sustainable study of it:
 [github.com/Axelrod-Python/Axelrod](https://github.com/Axelrod-Python/Axelrod).
 This library is now coming of age and a number of research projects are making
 use of it. This blog post will describe two related pieces of work. Recent
-(2012) work as well as the results of Axelrod's original work have lead to a
-belief that simple strategies do just as well (if not better) than more complex
-ones. The two papers I'm going to describe show that's not really true.
+(2012) research as well as the results of Axelrod's original tournaments have
+lead to a belief that simple strategies do just as well (if not better) than
+more complex ones. The two papers I'm going to describe show that's not really
+true.
 
 This is joint work with a number of talented people:
 
-- [Marc Harper]()
-- [Owen Campbell]()
-- [Nikoleta Glynatsi]()
-- [Martin Jones]()
-- [Georgios ...]()
+- [Marc Harper](http://www.marcharper.net/)
+- [Owen Campbell](https://twitter.com/opcampbell)
+- [Nikoleta Glynatsi](https://twitter.com/opcampbell)
+- [Martin Jones](http://mojones.net/)
+- [Georgios Koutsovoulos](https://github.com/GDKO)
 
 The two papers in question are:
 
@@ -40,8 +42,9 @@ second paper) of strategies and training them using reinforcement learning
 algorithms.
 
 Reinforcement learning refers to a collection of algorithms that train a model
-by exploring a space of actions and evaluating consequences of those actions: so
-good actions are typically chosen more often than bad actions. The reinforcement
+by exploring a space of actions and evaluating consequences of those actions:
+good actions are typically chosen more often than bad actions as the algorithm
+is allowed to "walk through" the state space. The reinforcement
 learning algorithms we have use are genetic algorithms and particle swarm
 optimisation algorithms.
 
@@ -55,7 +58,7 @@ This strategy was first written about by Martin Jones:
 [mojones.net/evolving-strategies-for-an-iterated-prisoners-dilemma-tournament.html](http://mojones.net/evolving-strategies-for-an-iterated-prisoners-dilemma-tournament.html).
 
 The idea of that strategy is that it maps a given state of a history of recent
-plays by both opponents and the opponents early plays to an action: whether to
+plays and the early plays of the opponent to an action: whether to
 cooperate or defect.
 
 The reinforcement learning algorithm (in this case a genetic algorithm) aims to
@@ -63,8 +66,9 @@ learn what best mapping to use.
 
 We do this for two settings:
 
-1. A Moran process: an evolutionary model of invasion and resistance across time
-   during which high performing individuals are more likely to be replicated.
+1. [A Moran process](https://en.wikipedia.org/wiki/Moran_process): an
+   evolutionary model of invasion and resistance across time during which high
+   performing individuals are more likely to be replicated.
 2. A tournament: very similar to Axelrod's famous tournaments of the 1980s.
 
 This corresponds to the two papers.
@@ -76,7 +80,7 @@ In the first paper we observe a number of neat things:
   Moran process of resisting invasion: where a single individual of another type
   is introduced.
 - The size of the population is important. In a lot of theoretic work, Moran
-  processes are only studied for \\(N=2\\) however we she a boundary as to the
+  processes are only studied for \\(N=2\\) however we observe a boundary as to the
   performance of strategies across the case \\(N=2\\) and \\(N>2\\). This could
   have important ramifications from the point of view of theoretic studies.
 
@@ -98,7 +102,10 @@ close in terms of Moran processes) and I've only covered some of my personal
 highlights above. It would not have been possible without the
 [Axelrod](http://axelrod.readthedocs.org/) library which not only let us run the
 tournaments and Moran processes **but also** gives us access to a large strategy
-space (close to 200) with which our archetypes can be trained.
+space (close to 200) with which our archetypes can be trained. It's also been
+helpful to be able to [Cardiff University's
+hardware](http://www.cardiff.ac.uk/advanced-research-computing) to run the
+numerous simulations.
 
 My co author Marc has written a much more informed blog post that you should go
 read []() and if this is of interest you should take a look at the papers.
