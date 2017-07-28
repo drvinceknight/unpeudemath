@@ -6,7 +6,7 @@ tags       :
 - axelrod
 - math
 - game-theory
-comments   : false
+comments   : true
 ---
 
 The Iterated prisoners dilemma (IPD) has been an active area of study since the
@@ -107,7 +107,5 @@ helpful to be able to [Cardiff University's
 hardware](http://www.cardiff.ac.uk/advanced-research-computing) to run the
 numerous simulations.
 
-My co author Marc has written a much more informed blog post that you should go
-read []() and if this is of interest you should take a look at the papers.
 The links above are on the arxiv pre print server and we are currently working
 to submit to leading journals.
