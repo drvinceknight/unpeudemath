@@ -52,7 +52,7 @@ There are a number of strategy archetypes described in the second paper but
 here's a diagrammatic representation of a particular type of one of them called
 a LookerUp strategy:
 
-![]({{site.baseurl}}/assets/images/lookerup.svg)
+![]({{site.baseurl}}/assets/images/lookerup.jpg)
 
 This strategy was first written about by Martin Jones:
 [mojones.net/evolving-strategies-for-an-iterated-prisoners-dilemma-tournament.html](http://mojones.net/evolving-strategies-for-an-iterated-prisoners-dilemma-tournament.html).
