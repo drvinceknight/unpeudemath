@@ -109,3 +109,6 @@ numerous simulations.
 
 The links above are on the arxiv pre print server and we are currently working
 to submit to leading journals.
+
+EDIT: Here's a link to a blog post Marc Harper wrote about the papers:
+[marcharper.codes/2017-07-31/axelrod.html](http://marcharper.codes/2017-07-31/axelrod.html).
