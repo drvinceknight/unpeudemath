@@ -25,7 +25,7 @@ This is joint work with a number of talented people:
 
 - [Marc Harper](http://www.marcharper.net/)
 - [Owen Campbell](https://twitter.com/opcampbell)
-- [Nikoleta Glynatsi](https://twitter.com/opcampbell)
+- [Nikoleta Glynatsi](https://twitter.com/NikoletaGlyn)
 - [Martin Jones](http://mojones.net/)
 - [Georgios Koutsovoulos](https://github.com/GDKO)
 
