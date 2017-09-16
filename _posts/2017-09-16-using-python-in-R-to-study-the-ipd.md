@@ -149,3 +149,6 @@ algorithms): [nashpy.readthedocs.io](http://nashpy.readthedocs.io).
 I'm really impressed with `reticulate` as an interface to Python from R. The
 README seems to have sufficient information to get started:
 [github.com/rstudio/reticulate#overview](https://github.com/rstudio/reticulate#overview)
+
+EDIT: [Here is a Jupyter notebook with all the above
+code](https://github.com/drvinceknight/unpeudemath/blob/gh-pages/assets/code/Using%20Python%20in%20R%20with%20reticulate.ipynb).
