@@ -16,7 +16,7 @@ work on the same project for example.
 In
 this blog post I'll describe the mathematical model used to quantify how good an
 allocation is and then show how we used Python (specifically the
-[`pulp`](https://github.com/coin-or/pulp) library to get the best possible
+[`pulp`](https://github.com/coin-or/pulp) library) to get the best possible
 allocation.
 
 In our [School](http://www.cardiff.ac.uk/mathematics) the process of allocating
@@ -70,7 +70,7 @@ $$
 
 We will return to \\(\alpha, \omega\\) shortly but first let us consider how we
 will represent a given allocation. This will be denoted by a matrix
-\\(x\in\{0, 1\}^{I\times J}\\) where:
+\\(x\in\\{0, 1\\}^{I\times J}\\) where:
 
 
 $$
@@ -111,8 +111,8 @@ preference but also the workload implications on staff who supervise them:
 Assuming there are \\(K\\) supervisors these upper bounds will be denoted by:
 
 $$
-\beta\in\mathbb{Z}^{J}\qquad
-\kappa\in\mathbb{R}^{J}
+\beta\in\mathbb{Z}^{K}\qquad
+\kappa\in\mathbb{R}^{K}
 $$
 
 We capture the projects supervised by each member of staff using
@@ -178,7 +178,8 @@ The objective function used is (in a maximisation framework):
 
 $$c(x) = \sum_{i=1}^{I}\sum_{j=1}^{J}x_{ij}\frac{\alpha_{i}}{A_{ij}}$$
 
-thus $\alpha_{i}/A_{ij}$ is a scaling assigned to project $j$ when picked by student $i$:
+thus \\(\alpha_{i}/A_{ij}\\) is a scaling assigned to project \\(j\\) when
+picked by student \\(i\\):
 
 - If the project is highly ranked it (so less preferable) it contributes less;
 - If the student has a high mark it contributes more.
@@ -191,7 +192,7 @@ thus $\alpha_{i}/A_{ij}$ is a scaling assigned to project $j$ when picked by stu
 
 An important part of the objective function \\(c\\) is that it is linear in
 \\(x\\) (there are no terms like \\(x_{13} ^ 2\\)). This implies that we can use
-a clever mathematical tool call [Integer Linear
+a neat mathematical tool call [Integer Linear
 Programming](https://en.wikipedia.org/wiki/Integer_programming) to find a
 solution to the problem of optimising \\(c(x)\\) over the constraints listed
 above.
@@ -276,7 +277,7 @@ Note that all of this can be implemented and done directly in Python which is
 Open source. The one library that is needed is called `pulp` which can be
 installed straightforwardly using `pip install pulp`.
 
-The solution approach here is **exact** it uses integer linear programming,
+The solution approach here is **exact**: it uses integer linear programming,
 theoretically, as the problem becomes more complex it could take more
 computational time to find a solution. In these cases heuristic algorithms such
 as [simulated annealing](https://en.wikipedia.org/wiki/Simulated_annealing) or
@@ -284,13 +285,14 @@ as [simulated annealing](https://en.wikipedia.org/wiki/Simulated_annealing) or
 used. **However** in practice, this should scale readily for the "usual" class
 size.
 
-One of the great uses of this type of approach is that it's first of all
-transparent but second of all takes no time to create a new solution given a set
-of inputs. Whilst it took a bit of time this Summer to write down the
+One of the great uses of this type of approach is that it is first of all
+transparent (if students ask why they have been allocated a certain project we
+can say why). Second of all, it takes no time to create a new solution given a
+set of inputs. Whilst it took a bit of time this Summer to write down the
 mathematical model and the Python code (most of the difficulties with the code
-was actually reading in the various inputs), next year this should hopefully
+was actually reading in the various inputs), next year this should 
 take no time at all.
 
-Finally, the mathematical model is hopefully generic enough to be usable by
+Finally, the mathematical model is generic enough to be usable by
 others however if there are certain constraints that are not captured these
 should be (famous last words) straightforward to add.
