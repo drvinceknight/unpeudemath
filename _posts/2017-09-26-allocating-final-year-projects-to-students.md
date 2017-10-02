@@ -21,7 +21,7 @@ allocation.
 
 In our [School](http://www.cardiff.ac.uk/mathematics) the process of allocating
 project starts with all members of staff writing project descriptions which are
-then circulated to students. Students are then asked to rank their top 5
+then circulated to students. Students are then asked to rank their top 4
 projects.
 
 ---
@@ -41,10 +41,10 @@ second student's 3rd choice project would be project 7:
 $$
 A = 
 \begin{pmatrix}
-    0 & 2 & 3 & 1 & 4 & 5 & 0 & 0 \\
-    1 & 2 & 0 & 0 & 5 & 4 & 0 & 3 \\
-    0 & 2 & 0 & 0 & 4 & 1 & 3 & 5 \\
-    5 & 4 & 0 & 3 & 0 & 0 & 1 & 2 \\
+    0 & 2 & 3 & 1 & 4 & 0 & 0 & 0 \\
+    1 & 2 & 0 & 0 & 0 & 4 & 0 & 3 \\
+    0 & 2 & 0 & 0 & 4 & 1 & 3 & 0 \\
+    0 & 4 & 0 & 3 & 0 & 0 & 1 & 2 \\
 \end{pmatrix}
 $$
 
