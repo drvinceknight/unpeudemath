@@ -72,7 +72,7 @@ won't go in to the background of the model more than I need to.)
 
 Let us consider a normalised population of individuals of men and woman
 (although of course this applies to other underrepresented groups)
-represented by a vector \\(x=(x_1, x_2\\) where \\(x_1 + x_2 = 1\\) so that
+represented by a vector \\(x=(x_1, x_2)\\) where \\(x_1 + x_2 = 1\\) so that
 \\(x_1\\) represents the proportion of men and \\(x_2\\) the proportion of
 women.
 
