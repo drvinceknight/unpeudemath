@@ -150,7 +150,7 @@ than women: \\(x = (.55, .45)\\).
 >>> plt.plot(xs)
 ```
 
-![]({{site.baseurl}}/assets/images/meritocracy_evolution.pdf)
+![]({{site.baseurl}}/assets/images/meritocracy_evolution.svg)
 
 We see that very quickly the proportion of women in our population decreases.
 This is simply due to the evolutionary fact that one of the types of individual
@@ -164,7 +164,7 @@ Note that if we run this with a perfect initial population then we get:
 >>> plt.plot(xs)
 ```
 
-![]({{site.baseurl}}/assets/images/meritocracy_evolution_perfect.pdf)
+![]({{site.baseurl}}/assets/images/meritocracy_evolution_perfect.svg)
 
 So indeed, even with a slight bias (\\(r=1.05\\) when there is a perfect initial
 situation then the gender balance remains. I won't go in to it here but this
