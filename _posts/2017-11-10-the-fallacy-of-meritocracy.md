@@ -178,7 +178,8 @@ many unconscious biases for this to hold.
 
 That doesn't mean all is lost. Just as is described in that Royal Society
 video on unconscious bias, it's important to be aware of our biases and attempt
-to keep them in mind.
+to keep them in mind. Ensuring diversity on committees and in teaching is one
+approach to creating an environment in which everyone can strive.
 
 For example, when I read my research students' work, if my initial reaction is
 that it's "not good" but that that's because it's actually "different to how I
