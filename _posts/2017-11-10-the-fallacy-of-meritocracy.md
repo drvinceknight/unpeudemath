@@ -49,7 +49,7 @@ frameborder="0" gesture="media" allowfullscreen></iframe>
 Another reason is the well researched phenomena that with all things being equal
 we are more likely to be receptive/enthusiastic/positive with/to things/people
 who are like us. Here is an interesting piece about this:
-https://sites.psu.edu/aspsy/2015/04/17/similar-to-me-effect-in-the-workplace/. 
+[sites.psu.edu/aspsy/2015/04/17/similar-to-me-effect-in-the-workplace/](https://sites.psu.edu/aspsy/2015/04/17/similar-to-me-effect-in-the-workplace/). 
 
 I
 know I'm guilty of this myself, for example when reading some of my research
@@ -72,7 +72,7 @@ won't go in to the background of the model more than I need to.)
 
 Let us consider a normalised population of individuals of men and woman
 (although of course this applies to other underrepresented groups)
-represented by a vector \\x=(x_1, x_2\\) where \\(x_1 + x_2 = 1\\) so that
+represented by a vector \\(x=(x_1, x_2\\) where \\(x_1 + x_2 = 1\\) so that
 \\(x_1\\) represents the proportion of men and \\(x_2\\) the proportion of
 women.
 
