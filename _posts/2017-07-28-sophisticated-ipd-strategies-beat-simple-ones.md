@@ -35,7 +35,9 @@ The two papers in question are:
    Mechanisms: an empirical study of the Moran process for the iterated
    Prisoner's dilemma](https://arxiv.org/abs/1707.06920)
 2. [Reinforcement Learning Produces Dominant Strategies for the Iterated
-   Prisoner's Dilemma](https://arxiv.org/abs/1707.06307)
+   Prisoner's Dilemma](https://arxiv.org/abs/1707.06307) EDIT: Here is the
+   published version:
+   [journals.plos.org/plosone/article?id=10.1371/journal.pone.0188046](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0188046)
 
 Both of these papers look at using a family (referred to as archetypes in the
 second paper) of strategies and training them using reinforcement learning
