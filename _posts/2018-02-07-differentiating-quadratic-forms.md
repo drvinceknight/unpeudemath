@@ -76,7 +76,7 @@ The identity that my student and I have been using is for the derivative
 of a quadratic form:
 
 $$
-\frac{dv ^ T A v}{dv} = 2v^T(A + A^ T)
+\frac{dv ^ T A v}{dv} = v^T(A + A^ T)
 $$
 
 and more specifically in the case where \\(A ^ T = A\\) (\\(A ^ T\\) is the
