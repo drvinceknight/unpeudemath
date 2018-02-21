@@ -11,7 +11,8 @@ comments   : false
 In this blog post I'll show some LaTeX code (tikz) for drawing [radar plots](https://en.wikipedia.org/wiki/Radar_chart).
 
 I'm currently in Windhoek for [PyCon Namibia](na.pycon.org/en/) and I'm giving a
-talk entitled "Four stories: four models of learning Python". In this talk I
+talk entitled ["Four stories: four models of learning
+Python"](https://vknight.org/Talks/2018-02-22-four-stories-four-models/index.pdf). In this talk I
 discuss 4 different classes and I wanted a nice diagrammatic way of representing
 the differences of these classes (what are the goals, how many students etc...).
 
