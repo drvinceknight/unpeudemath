@@ -5,7 +5,7 @@ categories : math
 tags       :
 - python
 - datascience
-comments   : false
+comments   : true
 ---
 
 The best account on twitter is [@dog_rates](https://twitter.com/dog_rates). This
@@ -30,30 +30,33 @@ href="https://twitter.com/dog_rates/status/975887646223462400?ref_src=twsrc%5Etf
 <script async src="https://platform.twitter.com/widgets.js"
 charset="utf-8"></script>
 
-I'm sure you would agree: Armas is a **very** good dog and he has gotten a
+I'm sure you would agree: Armas is a **very** good dog and he has gotten a high
 number of likes and retweets but is **13/10** influencing that? Is **13** indeed
 the *correct* score? Would a more accurate score (perhaps 12? perhaps 14?) have
-made him get more likes and retweets (the cuddles of the twitter world)?
+made him get more likes and retweets (the "cuddles" of the twitter world)?
 
 **I in no way intend to offer any doubt as to the expertise of
 [@dog_rates](https://twitter.com/dog_rates) but I will analyse things and
-hopefully (don't worry) confirm that they're doing an excellent job.**
+hopefully confirm that they're doing an excellent job.**
+
+(Spoiler: don't worry all the dogs are rated h\*ckin well.)
 
 There are essentially 2 steps to this analysis:
 
 - Collecting the data;
 - Carrying out a number of statistical measuring techniques.
 
-I will do all of this using the python programming language which is one of the
-most popular programming tools for scientific research. (Important scientific
-research like evaluating [@dog_rates](https://twitter.com/dog_rates).
+I will do all of this using the [python](https://www.python.org) programming
+language which is one of the most popular programming tools for scientific
+research. (Important scientific research like evaluating
+[@dog_rates](https://twitter.com/dog_rates).
 
 If you would like the source code for the analysis you can find it here:
-https://github.com/drvinceknight/DataScienceingDogRates
+[https://github.com/drvinceknight/DataScienceingDogRates](github.com/drvinceknight/DataScienceingDogRates)
 
 ## The data
 
-The raw data looks like:
+The raw data looks something like:
 
 ```python
                created_at                                          full_text  like_count  retweet_count
@@ -62,11 +65,10 @@ The raw data looks like:
 3217  2017-02-20 17:00:04  This is Bronte. She's fairly h*ckin aerodynami...       22256           3565
 3216  2017-02-20 17:09:13  No, I did not expect @jk_rowling to have a dog...        7611            496
 3215  2017-02-20 17:10:07                      @thatswattsup @jk_rowling yes         504              7
-...
 ```
 
 Using a bit of [regular
-expressions](https://en.wikipedia.org/wiki/Regular_expression) I also get:
+expressions]("https://en.wikipedia.org/wiki/Regular_expression") I also get:
 
 - `score`: the score given to the doggo;
 - `scale`: the scale for the score (usually 10);
@@ -74,7 +76,7 @@ expressions](https://en.wikipedia.org/wiki/Regular_expression) I also get:
 
 As you can see in the sample of data there, I am collecting the replies and
 various other pieces of data **but** for my work I need to only include **true**
-ratings of doggos:
+ratings of doggos. So I reject any tweet that doesn't follow these rules:
 
 - The `score` is between 0 and 20;
 - The `scale` is 10;
@@ -89,7 +91,7 @@ tweet.
 
 Here is a plot showing the relationship between the `log` of these two counts:
 
-![]({{FIX}}/img/log_retweets_v_log_likes.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/log_retweets_v_log_likes.png)
 
 That looks like a pretty linear relationship and indeed if we fit a linear
 regression model to this we obtain an \\(R^2\\) value of \\(0.817\\) with a
@@ -101,11 +103,11 @@ $$\log(Y)\approx a\log(X) + b$$
 
 which can be simplified to give:
 
-$$Y = e ^ {{a}\log(x) + b}$$
+$$Y = e ^ {a\log(x) + b}$$
 
 Here is this specific relationship:
 
-![]({{FIX}}/img/retweets_v_likes.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/retweets_v_likes.png)
 
 This will allow us to mainly concentrate on likes for the rest of our analysis.
 (We could have just as arbitrarily chosen retweets.)
@@ -115,27 +117,29 @@ This will allow us to mainly concentrate on likes for the rest of our analysis.
 If we take a look at the number of likes of each tweet over time we see that
 there is an increasing trend:
 
-![]({{FIX}}/img/likes_v_time.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/likes_v_time.png)
 
 I suspect that this is linked to the growth in followers (and potentially users
 of twitter) over time.
 
 To correct for this we'll fit a trend line to our data:
 
-![]({{FIX}}/img/likes_v_time_with_trend.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/likes_v_time_with_trend.png)
 
 Once we have done that we will now only consider the *detrended* number of
 likes, ie the difference of the number of likes the tweet got with the trend.
+So, if a tweet has a positive detrended count that implies the doggo got more
+than expected.
 
 So we can, for example take a look at how the time of the day affects things:
 
-![]({{FIX}}/img/likes_v_hour.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/likes_v_hour.png)
 
 We see that doggos posted at 5am GMT seem to get the most likes.
 
 Also, it's not great to be a doggo posted on a Friday apparently (poor doggos):
 
-![]({{FIX}}/img/likes_v_day.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/likes_v_day.png)
 
 This is only slightly insightful, there will always be better and/or worse times
 of the day to post things.
@@ -149,27 +153,28 @@ doggos) advantage some doggos over others in terms of the likes they receive?**
 Looking at the number of doggos given each rating we see that \\(15/10\\) is
 very rare and that most doggos are a \\(13/10\\).
 
-![]({{FIX}}/img/counts_v_score.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/count_v_score.png)
 
 Let us see how this affects the likes:
 
-![]({{FIX}}/img/likes_v_score.svg)
+![](https://raw.githubusercontent.com/drvinceknight/DataScienceingDogRates/master/img/likes_v_score.png)
 
 That plot shows the variation of the number of (detrended) likes for each group
 of scores. The small horizontal line shows an average (the median). It's clear
-that \\(15/10\)) get a higher average than all other doggos (they are probably
+that \\(15/10\\) gets a higher average than all other doggos (they are probably
 very very good doggos) but what about the range from \\(11/10\\) to \\(14/10\\)?
 
 If we just consider those ratings and perform a statistical test called analysis
 of variance or
 [ANOVA](https://en.wikipedia.org/wiki/Analysis_of_variance) we actually
 **THANKFULLY** see that there is no (statistically significant)
-difference between how like the doggos are based on their score.
+difference between how liked the doggos are based on their score.
 
-There is other analysis that could be carried out but frankly I feel embarrassed
-for doubting the expertise of [@dog_rates](https://twitter.com/dog_rates): they
-are a professional high quality dog rating service and I should have known that
-any analysis of the data would only confirm this.
+There is other analysis that could be carried out but frankly **I feel
+embarrassed for doubting the expertise of
+[@dog_rates](https://twitter.com/dog_rates)**: they are a professional high
+quality dog rating service and I should have known that any analysis of the
+data would only confirm this.
 
 ## Summary
 
