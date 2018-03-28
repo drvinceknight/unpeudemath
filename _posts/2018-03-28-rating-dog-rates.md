@@ -161,8 +161,8 @@ Let us see how this affects the likes:
 
 That plot shows the variation of the number of (detrended) likes for each group
 of scores. The small horizontal line shows an average (the median). It's clear
-that \\(15/10\\) gets a higher average than all other doggos (they are probably
-very very good doggos) but what about the range from \\(11/10\\) to \\(14/10\\)?
+that **15/10** gets a higher average than all other doggos (they are probably
+very very good doggos) but what about the range from **11/10** to **14/10**?
 
 If we just consider those ratings and perform a statistical test called analysis
 of variance or
@@ -182,7 +182,7 @@ This involved a few things:
 
 - Grabbing the tweets using the [Tweepy](http://www.tweepy.org) library.
 - Cleaning and extracting further data using the
-  [Pandas](https://pandas.pydata.org/pandas-docs/stable/)
+  [Pandas](https://pandas.pydata.org/pandas-docs/stable/) library.
 - Analysing things using statistical methods and visualisation:
   - [statsmodels](https://www.statsmodels.org/stable/index.html)
   - [sklearn](http://scikit-learn.org)
