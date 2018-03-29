@@ -16,7 +16,7 @@ important, by using some statistical techniques (for the purposes of being fancy
 I could choose to call linear regression: *machine learning*) I will check that
 the number of likes and retweets a dog gets isn't influenced by the rating
 chosen by [@dog_rates](https://twitter.com/dog_rates) because after all: [*they
-are good dogs Brunt*](http://knowyourmeme.com/memes/they're-good-dogs-brent).
+are good dogs Brunt*](http://knowyourmeme.com/memes/theyre-good-dogs-brent).
 
 Here is an example of one of their tweets:
 
@@ -198,6 +198,27 @@ If by any weird way [@dog_rates](https://twitter.com/dog_rates) happens to read
 this, I would not have been able to do this without Riggins, he's a very good
 dog and helped tremendously. (Always tries his best.)
 
-![](https://lh3.googleusercontent.com/Neue_55Y45Wd8IRefBs12rTgUstA3F19Hsa_jGSlR9mn5LzHhNy9OPXQu7P078yU6m6bUX6aBAFFfPIUuoc0l4TZWG0CHYuHM1pOkGKZt7mqF-56zyuVOHTgzhSuYr8bsjCZEU-hN4IXon7gvKrDvfBVn1VPeW9e2BzRZR0Py9gDqi5a8DFZfm4pBenDEVQECdxtUdh9pW6ksuHR3kVuxBvqCnR3LFN9NNFMd2hlCx8ysmQwCTrkiSCWu_9piBkcKJD0TyGrJKRhj5tyHV3WR2f1cObkvnb8n7XgZ1E1j_ulvNDqyJvRrsIrsl4VYUUSGK9hCibXT-HCi19EyaP-2xHIcOu5ooT8vYSWT9wdO36eJfJcpkWv3q1oNqcD_CvTMihfsNP7uYzttGLIUIbslIapCrA3Sac2TxC6uFQ-aW8jt2xuqiXw2wCk9sTlda3w9zsZkek9gQ5ipl7wUoqco42nPyNHTnEhQhc5qNpB87H1lvIdsPoOhCXmEkD7C4st4UOlpiY91xdTw1eFRH_2HxGofulz_snpOcHfZ5MbmfrRd7unpCvmD7KibOKbSe7szduVSgRGL2zfMkAa5Fv9XHuD9NuEshH9GA=w947-h629-no)
+![]({{site.baseurl}}/assets/images/riggins_flying.jpg)
 
-![](https://lh3.googleusercontent.com/Y9Zi9rq6yXMpbXzKQvl6TEs1mBXmItqyNYiv6LNd4HVrdLhZHv77IIg4-76ZZJDJ1hKx9dnz-V9J9Plwst0Pr4llD5_sHKzVfp0cUimBwXaABhosagDD9NKHB3f-fvE-AqiOrE68iYQ7etISugYB4_yP2XklAkq8FKhTkNOiVN73SQSL9wFPm5Z4CsBhx75h9M7jiCvphB7ET-82wvSG-FBQS8m782mnVA-8SQUNt_NkhQhjsC-dMHAITuKO8YbBAIPd6EXrhkcdbYeirBcwUXhzk6J9zP1ql_FaUpRynco4m3E1l42tZYEbuGp7PDIyzzipHmv0FMszy5k0rXng75z94KIcoKmvCriMPIE0a-nrgDxu9A-4sSbl6Uvhw5AxY8MEEVK11ozAdWlJ1jwhiiUgLL_fOFkvES3nibEHwJlDcbte_x0SB9eAJ7owhVb-QMrJaNh9lK6A5ltYHC_1UquNTPpiNnFyKiVVt05R3zqumtGxLEIX21FV_wLK33psmlv8yIPRYhXomSPsscOjzjXy-ROHT5sC5NYdxEzR_GdtPT2P838obxGGO0Q8yEIFS6kjNSh_-D7P2jJNpjL97fjkBA0GgH7LFg=w947-h629-no)
+![]({{site.baseurl}}/assets/images/riggins_smiling.jpg)
+
+## EDITS
+
+Here's a tweet showing links to some other cool analysis done on
+[@dog_rates](https://twitter.com/dog_rates):
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">🐕 important <a href="https://twitter.com/dog_rates?ref_src=twsrc%5Etfw">@dog_rates</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> posts:<br><br>🐾 relationship between likes/RTs and ratings, by <a href="https://twitter.com/drvinceknight?ref_src=twsrc%5Etfw">@drvinceknight</a> <a href="https://t.co/iDg3j4inzz">https://t.co/iDg3j4inzz</a><br>🐾 relationship between ratings and dog names, by me<a href="https://t.co/GaEITaDoqA">https://t.co/GaEITaDoqA</a><br>🐾 ratings through time, by <a href="https://twitter.com/dhmontgomery?ref_src=twsrc%5Etfw">@dhmontgomery</a> <br> <a href="https://t.co/E0sIe2Tka6">https://t.co/E0sIe2Tka6</a></p>&mdash; Luis D. Verde (@LuisDVerde) <a href="https://twitter.com/LuisDVerde/status/979101929371561990?ref_src=twsrc%5Etfw">March 28, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+[@dog_rates](https://twitter.com/dog_rates) pointed out that the reason for the
+Friday dip is that those are usually doggos that need a bit more help and
+support. Be sure to signal boost as much as possible!:
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">i can
+offer some insight into the peculiarities you found. for example: Friday posts
+are gofundme’s and include a link in the tweet, resulting in a significant
+decrease in RTs/likes</p>&mdash; WeRateDogs™ (@dog_rates) <a
+href="https://twitter.com/dog_rates/status/979092927136911360?ref_src=twsrc%5Etfw">March
+28, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js"
+charset="utf-8"></script>
