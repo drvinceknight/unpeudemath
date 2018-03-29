@@ -63,8 +63,6 @@ The raw data looks something like:
 3219  2017-02-20 00:53:27  This is Poppy. She just arrived. 13/10 would s...       16007           2296
 3218  2017-02-20 04:41:25                     @JenLiaLongo :,) @GoodDogsGame          14              0
 3217  2017-02-20 17:00:04  This is Bronte. She's fairly h*ckin aerodynami...       22256           3565
-3216  2017-02-20 17:09:13  No, I did not expect @jk_rowling to have a dog...        7611            496
-3215  2017-02-20 17:10:07                      @thatswattsup @jk_rowling yes         504              7
 ```
 
 Using a bit of [regular
