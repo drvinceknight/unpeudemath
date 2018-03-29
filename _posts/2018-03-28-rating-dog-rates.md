@@ -52,7 +52,7 @@ research. (Important scientific research like evaluating
 [@dog_rates](https://twitter.com/dog_rates).
 
 If you would like the source code for the analysis you can find it here:
-[https://github.com/drvinceknight/DataScienceingDogRates](github.com/drvinceknight/DataScienceingDogRates)
+[github.com/drvinceknight/DataScienceingDogRates](https://github.com/drvinceknight/DataScienceingDogRates)
 
 ## The data
 
