@@ -101,7 +101,7 @@ $$\log(Y)\approx a\log(X) + b$$
 
 which can be simplified to give:
 
-$$Y = e ^ {a\log(x) + b}$$
+$$Y = e ^ {a\log(X) + b}$$
 
 Here is this specific relationship:
 
