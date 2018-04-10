@@ -75,15 +75,15 @@ useful tools so first of all let's write a
 year:
 
 ```python
->>> import datetime as dt
->>> def dates_in_year(year):
-...     """
-...     Generator that yields all dates in a given year
-...     """
-...     date = dt.date(year, 1, 1)
-...     while date.year == year:
-...         yield date
-...         date += dt.timedelta(1)
+import datetime as dt
+def dates_in_year(year):
+    """
+    Generator that yields all dates in a given year
+    """
+    date = dt.date(year, 1, 1)
+    while date.year == year:
+        yield date
+        date += dt.timedelta(1)
 
 ```
 
@@ -91,15 +91,15 @@ We can then combine this with the number theoretic abilities of SymPy to get all
 dates that follow the condition:
 
 ```python
->>> def find_dates(year):
-...     """
-...     Generator that yields dates in a given year for which the sum of the
-...     prime factors of the date is equal to the month.
-...     """
-...     for date in dates_in_year(year):
-...         day, month = date.day, date.month
-...         if sum(sym.primefactors(day)) == month:
-...             yield date
+def find_dates(year):
+    """
+    Generator that yields dates in a given year for which the sum of the
+    prime factors of the date is equal to the month.
+    """
+    for date in dates_in_year(year):
+        day, month = date.day, date.month
+        if sum(sym.primefactors(day)) == month:
+            yield date
 
 ```
 
@@ -143,14 +143,14 @@ condition in 2017.
 a weekend?
 
 ```python
->>> def find_weekend_dates(year):
-...     """
-...     Generator that yields weekend dates in a given year for which the sum of
-...     the prime factors of a date is equal to the month.
-...     """
-...     for date in find_dates(year):
-...         if date.weekday() >= 5:
-...             yield date
+def find_weekend_dates(year):
+    """
+    Generator that yields weekend dates in a given year for which the sum of
+    the prime factors of a date is equal to the month.
+    """
+    for date in find_dates(year):
+        if date.weekday() >= 5:
+            yield date
 ```
 
 ```python
