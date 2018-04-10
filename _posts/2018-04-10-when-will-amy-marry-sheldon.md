@@ -59,7 +59,7 @@ So Sheldon should have said:
 
 **So what other days could this marriage date land on?**
 
-I'm going to investigate this using Python and it's fantastic
+I'm going to investigate this using Python and the fantastic
 [SymPy](http://www.sympy.org/en/index.html) library which will quickly get us the
 prime factors of a number.
 
