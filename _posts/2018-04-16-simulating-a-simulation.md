@@ -91,12 +91,13 @@ discussions that have resulted in how this activity looks now.
 
 The students will in pairs work out the various probabilities:
 
-- A hawk being selected for reproduction when there are 2 hawks: \\(6/8\\) and 1 Hawk: \\(1/2\\).
+- A hawk being selected for reproduction when there are 2 hawks: \\(3/4\\) and 1 Hawk: \\(1/2\\).
 - A hawk being selection for removal when there are 2 hawks: \\(2/3\\) and 1 Hawk: \\(1/3\\).
 
 Once this is done students will use a 6 sided dice (for the \\(1/2\\) and
-\\(1/3\\), \\(2/3\\) samples) and an 8 sided dice (for the \\(6/8\\)) to
-simulate the process.
+\\(1/3\\), \\(2/3\\) samples) and a 4 sided dice (for the \\(3/4\\)) to
+simulate the process (any other combination of appropriately sided dice would
+work).
 
 After they have done this a few times (once we arrive at 0 or 3 Hawks starting
 again), we'll have a group discussion, estimating the probability of a single
@@ -106,7 +107,7 @@ us find this probability.
 To check the timing of this (perhaps the specific parameters I've chosen will
 result in the process lasting way too long?) and to **double** check that the
 dice I'm using are the right ones I have written a simulation of the activity
-where I get the computer to roll 6 and 8 sided dice.
+where I get the computer to roll 6 and 4 sided dice.
 
 ## The simulation
 
@@ -148,7 +149,7 @@ class MoranProcess:
         self.number_of_hawks = number_of_hawks
         self.number_of_doves = 3 - number_of_hawks
 
-        self.dice_and_values_for_hawk_birth = {1: (6, {1, 2, 3}), 2: (8, {1, 2, 3, 4, 5, 6})}
+        self.dice_and_values_for_hawk_birth = {1: (6, {1, 2, 3}), 2: (4, {1, 2, 3})}
         self.dice_and_values_for_hawk_death = {1: (6, {1, 2}), 2: (6, {1, 2, 3, 4})}
 
         self.history = [(self.number_of_hawks, self.number_of_doves)]
@@ -221,7 +222,7 @@ The probability with which a Hawk takes over ("fixation probability"):
 ```python
 >>> counts = collections.Counter(end_states)
 >>> counts[3] / repetitions
-
+0.5452601
 ```
 
 That's the value we will be aiming to calculate. Here's a quick look at how many
